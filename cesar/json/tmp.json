@@ -1,0 +1,185 @@
+{
+  "metadata": [
+    {
+      "key": "Cotonou, le :",
+      "value": "02/05/2023"
+    },
+    {
+      "key": "Compte",
+      "value": ""
+    },
+    {
+      "key": "RIB",
+      "value": ""
+    },
+    {
+      "key": "Gestionnaire",
+      "value": ""
+    },
+    {
+      "key": "Periode",
+      "value": "Du 01/03/2022 Au 31/05/2022 Au 31/05/2022"
+    },
+    {
+      "key": "RELEVE DE COMPTE",
+      "value": ""
+    },
+    {
+      "key": "Solde au",
+      "value": "01/03/2022"
+    },
+    {
+      "key": "Date Operation",
+      "value": "Libelle Operation Date Valeur"
+    },
+    {
+      "key": "01/03/22",
+      "value": "AGIOS DU 31/01/22 AU 28/02/22 28/02/22"
+    },
+    {
+      "key": "18/03/22",
+      "value": "FRS VMRT AUTRES BQ SAL MARS 22 18/03/22"
+    },
+    {
+      "key": "18/03/22",
+      "value": "VIRT MULTIPLE CPTE A DEBITER 17/03/22"
+    },
+    {
+      "key": "01/04/22",
+      "value": "AGIOS DU 28/02/22 AU 31/03/22 31/03/22"
+    },
+    {
+      "key": "26/04/22",
+      "value": "VIRTEM O/ SODEXCA SARL 26/04/22"
+    },
+    {
+      "key": "26/04/22",
+      "value": "VIRT MULTIPLE CPTE A DEBITER 25/04/22"
+    },
+    {
+      "key": "03/05/22",
+      "value": "AGIOS DU 31/03/22 AU 30/04/22 30/04/22"
+    },
+    {
+      "key": "09/05/22",
+      "value": "FRS VMRT AUTR BQ DU 26/04/22 09/05/22"
+    },
+    {
+      "key": "19/05/22",
+      "value": "VIRT MULTIPLE CPTE A DEBITER 18/05/22"
+    },
+    {
+      "key": "19/05/22",
+      "value": "FRS VMRT SALAIRE MAI 2022 19/05/22"
+    },
+    {
+      "key": "27/05/22",
+      "value": "VRMENT RECU SODEXCA 25/05/22"
+    }
+  ],
+  "sections": [],
+  "footers": [],
+  "logos": [
+    "logo"
+  ],
+  "transactions": [
+    {
+      "col1": "Cotonou, le :"
+    },
+    {
+      "col1": "02/05/2023",
+      "col2": "Compte",
+      "col3": "RIB",
+      "col4": "Gestionnaire",
+      "col5": "Periode",
+      "col6": "Du 01/03/2022",
+      "col7": "Au 31/05/2022",
+      "col8": "Au 31/05/2022",
+      "col9": "RELEVE DE COMPTE",
+      "col10": "Solde au"
+    },
+    {
+      "col1": "01/03/2022",
+      "col2": "Date Operation",
+      "col3": "Libelle Operation",
+      "col4": "Date Valeur"
+    },
+    {
+      "col1": "01/03/22",
+      "col2": "AGIOS DU 31/01/22 AU 28/02/22"
+    },
+    {
+      "col1": "28/02/22"
+    },
+    {
+      "col1": "18/03/22",
+      "col2": "FRS VMRT AUTRES BQ SAL MARS 22"
+    },
+    {
+      "col1": "18/03/22"
+    },
+    {
+      "col1": "18/03/22",
+      "col2": "VIRT MULTIPLE CPTE A DEBITER"
+    },
+    {
+      "col1": "17/03/22"
+    },
+    {
+      "col1": "01/04/22",
+      "col2": "AGIOS DU 28/02/22 AU 31/03/22"
+    },
+    {
+      "col1": "31/03/22"
+    },
+    {
+      "col1": "26/04/22",
+      "col2": "VIRTEM O/ SODEXCA SARL"
+    },
+    {
+      "col1": "26/04/22"
+    },
+    {
+      "col1": "26/04/22",
+      "col2": "VIRT MULTIPLE CPTE A DEBITER"
+    },
+    {
+      "col1": "25/04/22"
+    },
+    {
+      "col1": "03/05/22",
+      "col2": "AGIOS DU 31/03/22 AU 30/04/22"
+    },
+    {
+      "col1": "30/04/22"
+    },
+    {
+      "col1": "09/05/22",
+      "col2": "FRS VMRT AUTR BQ DU 26/04/22"
+    },
+    {
+      "col1": "09/05/22"
+    },
+    {
+      "col1": "19/05/22",
+      "col2": "VIRT MULTIPLE CPTE A DEBITER"
+    },
+    {
+      "col1": "18/05/22"
+    },
+    {
+      "col1": "19/05/22",
+      "col2": "FRS VMRT SALAIRE MAI 2022"
+    },
+    {
+      "col1": "19/05/22"
+    },
+    {
+      "col1": "27/05/22",
+      "col2": "VRMENT RECU SODEXCA"
+    },
+    {
+      "col1": "25/05/22"
+    }
+  ]
+}

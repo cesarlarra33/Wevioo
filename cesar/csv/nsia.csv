@@ -1,0 +1,36 @@
+=== En-tête :
+Clé,Valeur
+Du 01/11/2024 Au 30/11/2024,
+Numéro de Compte,0100001260018912010
+Devise,XOF
+Solde Début Période,17 036 897 LOT/1143 QT/AGONTIKON COTONOU mustafa.yazibagli@summa.com.tr
+Total Débit,1 481 931
+Total Crédit,0 22952292075 22952292070
+Nombre Débit,6
+Nombre Crédit,0
+
+=== Titres de section :
+Titre de Section
+RELEVE DE COMPTE
+STE SUMMA CONSTRUCTION BENIN SARL
+
+=== Logos détectés :
+Bloc d’image identifié
+logo
+
+=== Pieds de page :
+Pied de page
+Chers M / Mme. Ce releve retrace l’enregistrement de vos operations sau cours de la peridote mentionne. Veuillez en verifier l’exactitude. Ledit releve sera considere comme approuve sauf reclamation ecrite de votre part au Responsable du Controle Permanente & Conformite dans les 30 jours qui suivent la fin de la peridote dudit releve.
+Pour toute information veuiller bien joindre votre gestionnaire : Tel: - Email :
+
+=== Transactions (otsl) :
+0,1,2,3,4,5,6
+04/11/2024,RETRAIT PAR CHQ HOUSINOU  SYLVAIIN,1815962,011,04/11/2024,250 000,16 786 897
+14/11/2024,TRF FAV. COMPTE - RECETTES  GLOBALES DGI,004,13/11/2024,451 231,16 335 666,
+15/11/2024,PAIEMENT DES CHQ RECUS. NO  1815963 FAV OMA LOG BENIN SARL  1815963,1815963,004,15/11/2024,129 700,16 205 966
+29/11/2024,RETRAIT PAR CHQ. YAZIBAGLI  MUSTAFA,1815964,000,29/11/2024,640 000,15 565 966
+30/11/2024,FRAIS DE TENUE DE COMPTE.,000,01/12/2024,10 000,15 555 966,
+30/11/2024,TAF SUR LES INTERETS /  COMMISSIONS.,000,01/12/2024,1 000,15 554 966,
+15 554 966,,,,,,
+1481 931,0,,,,,
+SOLDE,15 554 966,,,,,

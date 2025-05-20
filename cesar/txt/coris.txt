@@ -1,0 +1,612 @@
+ <doctag><picture><loc_5><loc_11><loc_61><loc_61><logo></picture>
+<text><loc_113><loc_43><loc_186><loc_48>: CORIS BANK INTERNATIONAL BJ</text>
+<text><loc_113><loc_53><loc_186><loc_58>: Age ………. 01001-PRINCIPALE</text>
+<text><loc_113><loc_63><loc_186><loc_68>: Date ………. 9 Janvier 2024</text>
+<text><loc_196><loc_53><loc_231><loc_58>a 12:49</text>
+<text><loc_113><loc_72><loc_186><loc_77>: Age ………. 9 Janvier 2024</text>
+<text><loc_196><loc_72><loc_231><loc_77>a 12:49</text>
+<text><loc_113><loc_82><loc_186><loc_87>: Compte No ………. 01001 XOF 251111</text>
+<text><loc_196><loc_82><loc_231><loc_87>Compte 01150024101-77</text>
+<text><loc_113><loc_92><loc_186><loc_97>: No Client ………. 011500</text>
+<text><loc_196><loc_92><loc_231><loc_97>Compte 0115002411-77</text>
+<text><loc_113><loc_102><loc_186><loc_107>: Date comptalDate value!Utilisateur! No piece</text>
+<text><loc_224><loc_102><loc_260><loc_107>: No eveOpe!</text>
+<text><loc_285><loc_102><loc_304><loc_107>Libelle</text>
+<text><loc_314><loc_102><loc_320><loc_107>!</text>
+<text><loc_339><loc_102><loc_364><loc_107>Debit</text>
+<text><loc_374><loc_102><loc_387><loc_107>!</text>
+<text><loc_406><loc_102><loc_428><loc_107>Credit</text>
+<text><loc_113><loc_112><loc_186><loc_117>: Date comptalDate value!Utilisateur! No piece</text>
+<text><loc_224><loc_112><loc_260><loc_117>: No eveOpe!</text>
+<text><loc_285><loc_112><loc_304><loc_117>Libelle</text>
+<text><loc_314><loc_112><loc_320><loc_117>!</text>
+<text><loc_339><loc_112><loc_364><loc_117>Debit</text>
+<text><loc_374><loc_112><loc_387><loc_117>!</text>
+<text><loc_406><loc_112><loc_428><loc_117>Credit</text>
+<text><loc_113><loc_122><loc_186><loc_127>: Date ………. 1</text>
+<text><loc_224><loc_122><loc_260><loc_127>: No eveOpe!</text>
+<text><loc_285><loc_122><loc_304><loc_127>1</text>
+<text><loc_314><loc_122><loc_320><loc_127>!</text>
+<text><loc_339><loc_122><loc_364><loc_127>Debit</text>
+<text><loc_374><loc_122><loc_387><loc_127>!</text>
+<text><loc_406><loc_122><loc_428><loc_127>Credit</text>
+<text><loc_113><loc_132><loc_186><loc_137>: Date ………. 1</text>
+<text><loc_224><loc_132><loc_260><loc_137>: No eveOpe!</text>
+<text><loc_285><loc_132><loc_304><loc_137>1</text>
+<text><loc_314><loc_132><loc_320><loc_137>!</text>
+<text><loc_339><loc_132><loc_364><loc_137>Debit</text>
+<text><loc_374><loc_132><loc_387><loc_137>!</text>
+<text><loc_406><loc_132><loc_428><loc_137>Credit</text>
+<text><loc_113><loc_142><loc_186><loc_147>: 1</text>
+<text><loc_224><loc_142><loc_260><loc_147>: No eveOpe!</text>
+<text><loc_285><loc_142><loc_304><loc_147>1</text>
+<text><loc_314><loc_142><loc_320><loc_147>!</text>
+<text><loc_339><loc_142><loc_364><loc_147>1</text>
+<text><loc_374><loc_142><loc_387><loc_147>!</text>
+<text><loc_406><loc_142><loc_428><loc_147>1.434.4531</text>
+<text><loc_113><loc_152><loc_186><loc_157>: 1</text>
+<text><loc_224><loc_152><loc_260><loc_157>: No eveOpe!</text>
+<text><loc_285><loc_152><loc_304><loc_157>1</text>
+<text><loc_314><loc_152><loc_320><loc_157>!</text>
+<text><loc_339><loc_152><loc_364><loc_157>1</text>
+<text><loc_374><loc_152><loc_387><loc_157>!</text>
+<text><loc_406><loc_152><loc_428><loc_157>1.345.4531</text>
+<text><loc_113><loc_162><loc_186><loc_167>: 1</text>
+<text><loc_224><loc_162><loc_260><loc_167>: No eveOpe!</text>
+<text><loc_285><loc_162><loc_304><loc_167>1</text>
+<text><loc_314><loc_162><loc_320><loc_167>!</text>
+<text><loc_339><loc_162><loc_364><loc_167>1</text>
+<text><loc_374><loc_162><loc_387><loc_167>!</text>
+<text><loc_406><loc_162><loc_428><loc_167>1.000.000</text>
+<text><loc_113><loc_172><loc_186><loc_177>: 1</text>
+<text><loc_224><loc_172><loc_260><loc_177>: No eveOpe!</text>
+<text><loc_285><loc_172><loc_304><loc_177>1</text>
+<text><loc_314><loc_172><loc_320><loc_177>!</text>
+<text><loc_339><loc_172><loc_364><loc_177>1</text>
+<text><loc_374><loc_172><loc_387><loc_177>!</text>
+<text><loc_406><loc_172><loc_428><loc_177>1.000.000</text>
+<text><loc_113><loc_182><loc_186><loc_187>: 1</text>
+<text><loc_224><loc_182><loc_260><loc_187>: No eveOpe!</text>
+<text><loc_285><loc_182><loc_304><loc_187>1</text>
+<text><loc_314><loc_182><loc_320><loc_187>!</text>
+<text><loc_339><loc_182><loc_364><loc_187>1</text>
+<text><loc_374><loc_182><loc_387><loc_187>!</text>
+<text><loc_406><loc_182><loc_428><loc_187>1.000.000</text>
+<text><loc_113><loc_192><loc_186><loc_197>: 1</text>
+<text><loc_224><loc_192><loc_260><loc_197>: No eveOpe!</text>
+<text><loc_285><loc_192><loc_304><loc_197>1</text>
+<text><loc_314><loc_192><loc_320><loc_197>!</text>
+<text><loc_339><loc_192><loc_364><loc_197>1</text>
+<text><loc_374><loc_192><loc_387><loc_197>!</text>
+<text><loc_406><loc_192><loc_428><loc_197>1.000.000</text>
+<text><loc_113><loc_202><loc_186><loc_207>: 1</text>
+<text><loc_224><loc_202><loc_260><loc_207>: No eveOpe!</text>
+<text><loc_285><loc_202><loc_304><loc_207>1</text>
+<text><loc_314><loc_202><loc_320><loc_207>!</text>
+<text><loc_339><loc_202><loc_364><loc_207>1</text>
+<text><loc_374><loc_202><loc_387><loc_207>!</text>
+<text><loc_406><loc_202><loc_428><loc_207>1.000.000</text>
+<text><loc_113><loc_212><loc_186><loc_217>: 1</text>
+<text><loc_224><loc_212><loc_260><loc_217>: No eveOpe!</text>
+<text><loc_285><loc_212><loc_304><loc_217>1</text>
+<text><loc_314><loc_212><loc_320><loc_217>!</text>
+<text><loc_339><loc_212><loc_364><loc_217>1</text>
+<text><loc_374><loc_212><loc_387><loc_217>!</text>
+<text><loc_406><loc_212><loc_428><loc_217>1.000.000</text>
+<text><loc_113><loc_222><loc_186><loc_227>: 1</text>
+<text><loc_224><loc_222><loc_260><loc_227>: No eveOpe!</text>
+<text><loc_285><loc_222><loc_304><loc_227>1</text>
+<text><loc_314><loc_222><loc_320><loc_227>!</text>
+<text><loc_339><loc_222><loc_364><loc_227>1</text>
+<text><loc_374><loc_222><loc_387><loc_227>!</text>
+<text><loc_406><loc_222><loc_428><loc_227>1.000.000</text>
+<text><loc_113><loc_232><loc_186><loc_237>: 1</text>
+<text><loc_224><loc_232><loc_260><loc_237>: No eveOpe!</text>
+<text><loc_285><loc_232><loc_304><loc_237>1</text>
+<text><loc_314><loc_232><loc_320><loc_237>!</text>
+<text><loc_339><loc_232><loc_364><loc_237>1</text>
+<text><loc_374><loc_232><loc_387><loc_237>!</text>
+<text><loc_406><loc_232><loc_428><loc_237>1.839.9001</text>
+<text><loc_113><loc_242><loc_186><loc_247>: 1</text>
+<text><loc_224><loc_242><loc_260><loc_247>: No eveOpe!</text>
+<text><loc_285><loc_242><loc_304><loc_247>1</text>
+<text><loc_314><loc_242><loc_320><loc_247>!</text>
+<text><loc_339><loc_242><loc_364><loc_247>1.549.8071</text>
+<text><loc_374><loc_242><loc_387><loc_247>!</text>
+<text><loc_406><loc_242><loc_428><loc_247>1.839.9001</text>
+<text><loc_113><loc_252><loc_186><loc_257>: 1</text>
+<text><loc_224><loc_252><loc_260><loc_257>: No eveOpe!</text>
+<text><loc_285><loc_252><loc_304><loc_257>1</text>
+<text><loc_314><loc_252><loc_320><loc_257>!</text>
+<text><loc_339><loc_252><loc_364><loc_257>1</text>
+<text><loc_374><loc_252><loc_387><loc_257>!</text>
+<text><loc_406><loc_252><loc_428><loc_257>1.000.000</text>
+<text><loc_113><loc_262><loc_186><loc_267>: 1</text>
+<text><loc_224><loc_262><loc_260><loc_267>: No eveOpe!</text>
+<text><loc_285><loc_262><loc_304><loc_267>1</text>
+<text><loc_314><loc_262><loc_320><loc_267>!</text>
+<text><loc_339><loc_262><loc_364><loc_267>1</text>
+<text><loc_374><loc_262><loc_387><loc_267>!</text>
+<text><loc_406><loc_262><loc_428><loc_267>1.000.000</text>
+<text><loc_113><loc_272><loc_186><loc_277>: 1</text>
+<text><loc_224><loc_272><loc_260><loc_277>: No eveOpe!</text>
+<text><loc_285><loc_272><loc_304
+ <doctag><picture><loc_5><loc_11><loc_60><loc_61><logo></picture>
+<text><loc_113><loc_43><loc_186><loc_48>: CORIS BANK INTERNATIONAL BJ</text>
+<text><loc_113><loc_53><loc_194><loc_58>: Agece ....... 01001-PRINCIPALE</text>
+<text><loc_113><loc_63><loc_194><loc_68>: Date ....... 9 Janvier 2024</text>
+<text><loc_213><loc_53><loc_228><loc_58>a</text>
+<text><loc_234><loc_53><loc_238><loc_58>12:49</text>
+<text><loc_213><loc_63><loc_228><loc_68>a</text>
+<text><loc_234><loc_63><loc_238><loc_68>12:49</text>
+<text><loc_213><loc_73><loc_228><loc_78>a</text>
+<text><loc_234><loc_73><loc_238><loc_78>12:49</text>
+<text><loc_213><loc_83><loc_228><loc_88>a</text>
+<text><loc_234><loc_83><loc_238><loc_88>0115002411-77</text>
+<text><loc_213><loc_93><loc_228><loc_98>a</text>
+<text><loc_234><loc_93><loc_238><loc_98>0115002411-77</text>
+<text><loc_213><loc_103><loc_228><loc_108>a</text>
+<text><loc_234><loc_103><loc_238><loc_108>0115002411-77</text>
+<text><loc_213><loc_113><loc_228><loc_118>a</text>
+<text><loc_234><loc_113><loc_238><loc_118>No</text>
+<text><loc_213><loc_123><loc_228><loc_128>a</text>
+<text><loc_234><loc_123><loc_238><loc_128>No</text>
+<text><loc_213><loc_133><loc_228><loc_138>a</text>
+<text><loc_234><loc_133><loc_238><loc_138>No</text>
+<text><loc_213><loc_143><loc_228><loc_148>a</text>
+<text><loc_234><loc_143><loc_238><loc_148>0165688112</text>
+<text><loc_213><loc_153><loc_228><loc_158>a</text>
+<text><loc_234><loc_153><loc_238><loc_158>0165688112</text>
+<text><loc_213><loc_163><loc_228><loc_168>a</text>
+<text><loc_234><loc_163><loc_238><loc_168>017021501</text>
+<text><loc_213><loc_173><loc_228><loc_178>a</text>
+<text><loc_234><loc_173><loc_238><loc_178>0175428112</text>
+<text><loc_213><loc_183><loc_228><loc_188>a</text>
+<text><loc_234><loc_183><loc_238><loc_188>016648112</text>
+<text><loc_213><loc_193><loc_228><loc_198>a</text>
+<text><loc_234><loc_193><loc_238><loc_198>017241112</text>
+<text><loc_213><loc_203><loc_228><loc_208>a</text>
+<text><loc_234><loc_203><loc_238><loc_208>017241112</text>
+<text><loc_213><loc_213><loc_228><loc_218>a</text>
+<text><loc_234><loc_213><loc_238><loc_218>017241112</text>
+<text><loc_213><loc_223><loc_228><loc_228>a</text>
+<text><loc_234><loc_223><loc_238><loc_228>016243581</text>
+<text><loc_213><loc_233><loc_228><loc_238>a</text>
+<text><loc_234><loc_233><loc_238><loc_238>016243581</text>
+<text><loc_213><loc_243><loc_228><loc_248>a</text>
+<text><loc_234><loc_243><loc_238><loc_248>01674791</text>
+<text><loc_213><loc_253><loc_228><loc_258>a</text>
+<text><loc_234><loc_253><loc_238><loc_258>017241112</text>
+<text><loc_213><loc_263><loc_228><loc_268>a</text>
+<text><loc_234><loc_263><loc_238><loc_268>017021501</text>
+<text><loc_213><loc_273><loc_228><loc_278>a</text>
+<text><loc_234><loc_273><loc_238><loc_278>017021501</text>
+<text><loc_213><loc_283><loc_228><loc_288>a</text>
+<text><loc_234><loc_283><loc_238><loc_288>017021501</text>
+<text><loc_213><loc_293><loc_228><loc_298>a</text>
+<text><loc_234><loc_293><loc_238><loc_298>017021501</text>
+<text><loc_213><loc_303><loc_228><loc_308>a</text>
+<text><loc_234><loc_303><loc_238><loc_308>017021501</text>
+<text><loc_213><loc_313><loc_228><loc_318>a</text>
+<text><loc_234><loc_313><loc_238><loc_318>017021501</text>
+<text><loc_213><loc_323><loc_228><loc_328>a</text>
+<text><loc_234><loc_323><loc_238><loc_328>017021501</text>
+<text><loc_213><loc_333><loc_228><loc_338>a</text>
+<text><loc_234><loc_333><loc_238><loc_338>017021501</text>
+<text><loc_213><loc_343><loc_228><loc_348>a</text>
+<text><loc_234><loc_343><loc_238><loc_348>017021501</text>
+<text><loc_213><loc_353><loc_228><loc_358>a</text>
+<text><loc_234><loc_353><loc_238><loc_358>017021501</text>
+<text><loc_213><loc_363><loc_228><loc_368>a</text>
+<text><loc_234><loc_363><loc_238><loc_368>017021501</text>
+<text><loc_213><loc_373><loc_228><loc_378>a</text>
+<text><loc_234><loc_373><loc_238><loc_378>017021501</text>
+<text><loc_213><loc_383><loc_228><loc_388>a</text>
+<text><loc_234><loc_383><loc_238><loc_388>017021501</text>
+<text><loc_213><loc_393><loc_228><loc_398>a</text>
+<text><loc_234><loc_393><loc_238><loc_398>017021501</text>
+<text><loc_213><loc_403><loc_228><loc_408>a</text>
+<text><loc_234><loc_403><loc_238><loc_408>017021501</text>
+<text><loc_213><loc_413><loc_228><loc_418>a</text>
+<text><loc_234><loc_413><loc_238><loc_418>017021501</text>
+<text><loc_213><loc_423><loc_228><loc_428>a</text>
+<text><loc_234><loc_423><loc_238><loc_428>017021501</text>
+<text><loc_213><loc_433><loc_228><loc_438>a</text>
+<text><loc_234><loc_433><loc_238><loc_438>017021501</text>
+<text><loc_213><loc_443><loc_228><loc_448>a</text>
+<text><loc_234><loc_443><loc_238><loc_448>017021501</text>
+<text><loc_213><loc_453><loc_228><loc_458>a</text>
+<text><loc_234><loc_453><loc_238><loc_458>017021501</text>
+<text><loc_213><loc_463><loc_228><loc_468>a</text>
+<text><loc_234><loc_463><loc_238><loc_468>017021501</text>
+<text><loc_213><loc_473><loc_228><loc_478>a</text>
+<text><loc_234><loc_473><loc_238><loc_478>017021501</text>
+<text><loc_213><loc_483><loc_228><loc_488>a</text>
+<text><loc_234><loc_483><loc_238><loc_488>017021501</text>
+<text><loc_213><loc_493><loc_228><loc_498>a</text>
+<text><loc_234><loc_493><loc_238><loc_498>017021501</text>
+<text><loc_213><loc_493><loc_228><loc_498>a</text>
+<text><loc_234><loc_493><loc_238><loc_498>017021501</text>
+<text><loc_213><loc_493><loc_228><loc_498>a</text>
+<text><loc_234><loc_493><loc_238><loc_498>017021501</text>
+<text><loc_213><loc_493><loc_228><loc_498>a</text>
+<text><loc_234><loc_493><loc_238><loc_498>017021501</text>
+<text><loc_213><loc_493><loc_228><loc_498>a</text>
+<text><loc_234><loc_493><loc_238><loc_498>017021501</text>
+<text><loc_213><loc_493><loc_228><loc_498>a</text>
+<text><loc_234><loc_493><loc_238><loc_498>017021501</text>
+<text><loc_213><loc_493><loc_228><loc_498>a</text>
+<text><loc_234><loc_493><loc_238><loc_498>017021501</text>
+<text><loc_213><loc_493><loc_228><loc_498>a</text>
+<text><loc_234><loc_493><loc_238><loc_498>017021501</text>
+<text><loc_213><loc_493><loc_228><loc_498>a</text>
+<text><loc_234><loc_493><loc_238><loc_498>017021501</text>
+<text><loc_213><loc_493><loc_228><loc_498>a</text>
+<text><loc_234><loc_493><loc_238><loc_498>017021501</text>
+<text><loc_213><loc_493><loc_228><loc_498>a</text>
+<text><loc_234><loc_493><loc_238><loc_498>017021501</text>
+<text><loc_213><loc_493><loc_228><loc_498>a</text>
+<text><loc_234><loc_493><loc_238><loc_498>017021501</text>
+<text><loc_213><loc_493><loc_228><loc_498>a</text>
+<text><loc_234><loc_493><loc_238><loc_498>017021501</text>
+<text><loc_213><loc_493><loc_228><loc_498>a</text>
+<text><loc_234><loc_493><loc_238><loc_498>017021501</text>
+<text><loc_213><loc_493><loc_228><loc_498>a</text>
+<text><loc_234><loc_493><loc_238><loc_498>017021501</text>
+<text><loc_213><loc_493><loc_228><loc_498>a</text>
+<text><loc_234><loc_493><loc_238><loc_498>017021501</text>
+<text><loc_213><loc_493><loc_228><loc_498>a</text>
+<text><loc_234><loc_493><loc_238><loc_498>017021501</text>
+<text><loc_213><loc_493><loc_228><loc_498>a</text>
+<text><loc_234><loc_493><loc_238><loc_498>017021501</text>
+<text><loc_213><loc_493><loc_228><loc_498>a</text>
+<text><loc_2
+ <doctag><picture><loc_5><loc_11><loc_60><loc_61><logo></picture>
+<text><loc_113><loc_43><loc_186><loc_48>: CORIS BANK INTERNATIONAL BJ</text>
+<text><loc_113><loc_54><loc_186><loc_59>: Agence ……………… 01001-PRINCIPALE</text>
+<text><loc_113><loc_65><loc_186><loc_69>: Date ……………… 9 Janvier 2024</text>
+<text><loc_196><loc_54><loc_230><loc_59>: 12:49</text>
+<text><loc_113><loc_74><loc_186><loc_78>: Age Dept. Chap.</text>
+<text><loc_113><loc_84><loc_186><loc_88>: Compte No ……………… 01001 XOF 25111</text>
+<text><loc_196><loc_84><loc_230><loc_88>: 01150024101-77</text>
+<text><loc_113><loc_94><loc_186><loc_98>: No Client ……………… 011500</text>
+<text><loc_196><loc_94><loc_230><loc_98>: 0115002411-77</text>
+<text><loc_113><loc_104><loc_186><loc_108>: Compte d'alta date value!!Utilisateur! No piece</text>
+<text><loc_236><loc_104><loc_260><loc_108>: 1 No eve ope!</text>
+<text><loc_285><loc_104><loc_304><loc_108>Libelle</text>
+<text><loc_319><loc_104><loc_328><loc_108>:</text>
+<text><loc_335><loc_104><loc_360><loc_108>Debit</text>
+<text><loc_375><loc_104><loc_384><loc_108>:</text>
+<text><loc_391><loc_104><loc_414><loc_108>Credit</text>
+<text><loc_113><loc_114><loc_186><loc_118>: I Date completa d'alte value!!Utilisateur! No piece</text>
+<text><loc_236><loc_114><loc_260><loc_118>: 1 No eve ope!</text>
+<text><loc_285><loc_114><loc_304><loc_118>Libelle</text>
+<text><loc_319><loc_114><loc_328><loc_118>:</text>
+<text><loc_335><loc_114><loc_360><loc_118>Debit</text>
+<text><loc_375><loc_114><loc_384><loc_118>:</text>
+<text><loc_391><loc_114><loc_414><loc_118>Credit</text>
+<text><loc_113><loc_124><loc_186><loc_128>: I Date 106/02/2023 ICSCP</text>
+<text><loc_236><loc_124><loc_260><loc_128>: 10786291</text>
+<text><loc_285><loc_124><loc_304><loc_128>: 116510</text>
+<text><loc_319><loc_124><loc_328><loc_128>:</text>
+<text><loc_335><loc_124><loc_360><loc_128>11.1001</text>
+<text><loc_113><loc_134><loc_186><loc_138>: I Date 106/02/2023 ICSCP</text>
+<text><loc_236><loc_134><loc_260><loc_138>: 10786291</text>
+<text><loc_285><loc_134><loc_304><loc_138>: 116510</text>
+<text><loc_319><loc_134><loc_328><loc_138>:</text>
+<text><loc_335><loc_134><loc_360><loc_138>11.1001</text>
+<text><loc_113><loc_144><loc_186><loc_148>: I Date 106/02/2023 ICSCP</text>
+<text><loc_236><loc_144><loc_260><loc_148>: 10786291</text>
+<text><loc_285><loc_144><loc_304><loc_148>: 116510</text>
+<text><loc_319><loc_144><loc_328><loc_148>:</text>
+<text><loc_335><loc_144><loc_360><loc_148>11.1001</text>
+<text><loc_113><loc_154><loc_186><loc_158>: I Date 106/02/2023 ICSCP</text>
+<text><loc_236><loc_154><loc_260><loc_158>: 10786291</text>
+<text><loc_285><loc_154><loc_304><loc_158>: 116510</text>
+<text><loc_319><loc_154><loc_328><loc_158>:</text>
+<text><loc_335><loc_154><loc_360><loc_158>11.844.5951</text>
+<text><loc_113><loc_164><loc_186><loc_168>: I Date 106/02/2023 ICSCP</text>
+<text><loc_236><loc_164><loc_260><loc_168>: 10786291</text>
+<text><loc_285><loc_164><loc_304><loc_168>: 116510</text>
+<text><loc_319><loc_164><loc_328><loc_168>:</text>
+<text><loc_335><loc_164><loc_360><loc_168>11.844.5951</text>
+<text><loc_113><loc_174><loc_186><loc_178>: I Date 106/02/2023 ICSCP</text>
+<text><loc_236><loc_174><loc_260><loc_178>: 10786291</text>
+<text><loc_285><loc_174><loc_304><loc_178>: 116510</text>
+<text><loc_319><loc_174><loc_328><loc_178>:</text>
+<text><loc_335><loc_174><loc_360><loc_178>11.844.5951</text>
+<text><loc_113><loc_184><loc_186><loc_188>: I Date 106/02/2023 ICSCP</text>
+<text><loc_236><loc_184><loc_260><loc_188>: 10786291</text>
+<text><loc_285><loc_184><loc_304><loc_188>: 116510</text>
+<text><loc_319><loc_184><loc_328><loc_188>:</text>
+<text><loc_335><loc_184><loc_360><loc_188>11.659.448</text>
+<text><loc_113><loc_194><loc_186><loc_198>: I Date 106/02/2023 ICSCP</text>
+<text><loc_236><loc_194><loc_260><loc_198>: 10786291</text>
+<text><loc_285><loc_194><loc_304><loc_198>: 116510</text>
+<text><loc_319><loc_194><loc_328><loc_198>:</text>
+<text><loc_335><loc_194><loc_360><loc_198>11.659.448</text>
+<text><loc_113><loc_204><loc_186><loc_208>: I Date 106/02/2023 ICSCP</text>
+<text><loc_236><loc_204><loc_260><loc_208>: 10786291</text>
+<text><loc_285><loc_204><loc_304><loc_208>: 116510</text>
+<text><loc_319><loc_204><loc_328><loc_208>:</text>
+<text><loc_335><loc_204><loc_360><loc_208>11.659.448</text>
+<text><loc_113><loc_214><loc_186><loc_218>: I Date 106/02/2023 ICSCP</text>
+<text><loc_236><loc_214><loc_260><loc_218>: 10786291</text>
+<text><loc_285><loc_214><loc_304><loc_218>: 116510</text>
+<text><loc_319><loc_214><loc_328><loc_218>:</text>
+<text><loc_335><loc_214><loc_360><loc_218>11.659.448</text>
+<text><loc_113><loc_224><loc_186><loc_228>: I Date 106/02/2023 ICSCP</text>
+<text><loc_236><loc_224><loc_260><loc_228>: 10786291</text>
+<text><loc_285><loc_224><loc_304><loc_228>: 116510</text>
+<text><loc_319><loc_224><loc_328><loc_228>:</text>
+<text><loc_335><loc_224><loc_360><loc_228>11.659.448</text>
+<text><loc_113><loc_234><loc_186><loc_238>: I Date 106/02/2023 ICSCP</text>
+<text><loc_236><loc_234><loc_260><loc_238>: 10786291</text>
+<text><loc_285><loc_234><loc_304><loc_238>: 116510</text>
+<text><loc_319><loc_234><loc_328><loc_238>:</text>
+<text><loc_335><loc_234><loc_360><loc_238>11.659.448</text>
+<text><loc_113><loc_244><loc_186><loc_248>: I Date 106/02/2023 ICSCP</text>
+<text><loc_236><loc_244><loc_260><loc_248>: 10786291</text>
+<text><loc_285><loc_244><loc_304><loc_248>: 116510</text>
+<text><loc_319><loc_244><loc_328><loc_248>:</text>
+<text><loc_335><loc_244><loc_360><loc_248>11.659.448</text>
+<text><loc_113><loc_254><loc_186><loc_258>: I Date 106/02/2023 ICSCP</text>
+<text><loc_236><loc_254><loc_260><loc_258>: 10786291</text>
+<text><loc_285><loc_254><loc_304><loc_258>: 116510</text>
+<text><loc_319><loc_254><loc_328><loc_258>:</text>
+<text><loc_335><loc_254><loc_360><loc_258>11.659.448</text>
+<text><loc_113><loc_264><loc_186><loc_268>: I Date 106/02/2023 ICSCP</text>
+<text><loc_236><loc_264><loc_260><loc_268>: 10786291</text>
+<text><loc_285><loc_264><loc_304><loc_268>: 116510</text>
+<text><loc_319><loc_264><loc_328><loc_268>:</text>
+<text><loc_335><loc_264><loc_360><loc_268>11.659.448</text>
+<text><loc_113><loc_274><loc_186><loc_278>: I Date 106/02/2023 ICSCP</text>
+<text><loc_236><loc_274><loc_260><loc_278>: 10786291</text>
+<text><loc_285><loc_274><loc_304><loc_278>: 116510</text>
+<text><loc_319><loc_274><loc_328><loc_278>:</text>
+<text><loc_335><loc_274><loc_360><loc_278>11.659.448</text>
+<text><loc_113><loc_284><loc_186><loc_288>: I Date 106/02/2023 ICSCP</text>
+<text><loc_236><loc_284><loc_260><loc_288>: 10786291</text>
+<text><loc_285><loc_284><loc_304><loc_288>: 116510</text>
+<text><loc_319><loc_284><loc_328><loc_288>:</text>
+<text><loc_335><loc_284><loc_360><loc_288>11.659.448</text>
+<text><loc_113><loc_294><loc_186><loc_298>: I Date 106/02/2023 ICSCP</text>
+<text><loc_236><loc_294><loc_260><loc_298>: 10786291</text>
+<text><loc_285><loc_294><loc_304><loc_298>: 116510</text>
+<text><loc_319><loc_294><loc_328><loc_298>:</text>
+<text><loc_335><loc_294><loc_360><loc_298>11.659.448</text>
+<text><loc_113><loc_304><loc_18
+ <doctag><picture><loc_5><loc_11><loc_60><loc_61><logo></picture>
+<text><loc_113><loc_43><loc_186><loc_48>CORIS BANK INTERNATIONAL BJ</text>
+<text><loc_113><loc_53><loc_194><loc_58>1 Age ………… 01001-PRINCIPALE</text>
+<text><loc_113><loc_63><loc_194><loc_68>Date ………… 9 Janvier 2024</text>
+<text><loc_216><loc_53><loc_228><loc_58>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_63><loc_228><loc_68>a</text>
+<text><loc_232><loc_63><loc_235><loc_68>12:49</text>
+<text><loc_216><loc_6
+ <doctag><picture><loc_5><loc_11><loc_60><loc_61></picture>
+<text><loc_113><loc_43><loc_186><loc_48>: CORIS BANK INTERNATIONAL BJ</text>
+<text><loc_113><loc_53><loc_186><loc_58>: Agence ……………. 01001-PRINCIPALE</text>
+<text><loc_113><loc_63><loc_186><loc_68>: Date ……………. 9 Janvier 2024</text>
+<text><loc_196><loc_53><loc_230><loc_58>: 12:49</text>
+<text><loc_113><loc_72><loc_186><loc_77>: Age Dev Chap.</text>
+<text><loc_113><loc_82><loc_186><loc_87>: Compte No ………… 01001 XOF 25111</text>
+<text><loc_196><loc_82><loc_230><loc_87>: 0115002411-77</text>
+<text><loc_113><loc_92><loc_186><loc_97>: No Client ……………. 011500</text>
+<text><loc_196><loc_92><loc_230><loc_97>: 0115002411-77</text>
+<text><loc_113><loc_111><loc_186><loc_116>: I dernaça comptaDate valueUrl:utilisateu! No piece</text>
+<text><loc_234><loc_111><loc_260><loc_116>: 1 NOvel eope!</text>
+<text><loc_283><loc_111><loc_304><loc_116>Libelle</text>
+<text><loc_314><loc_111><loc_320><loc_116>:</text>
+<text><loc_330><loc_111><loc_335><loc_116>Debit</text>
+<text><loc_345><loc_111><loc_350><loc_116>:</text>
+<text><loc_360><loc_111><loc_365><loc_116>Credit</text>
+<text><loc_113><loc_120><loc_186><loc_126>: I Date ……………. 1</text>
+<text><loc_196><loc_120><loc_230><loc_126>: 1</text>
+<text><loc_113><loc_130><loc_186><loc_136>: 128/11/2023 128/11/2023 128/11/2023</text>
+<text><loc_196><loc_130><loc_230><loc_136>: 10952081</text>
+<text><loc_113><loc_140><loc_186><loc_146>: 130/12/2023 130/12/2023 130/12/2023</text>
+<text><loc_196><loc_140><loc_230><loc_146>: 13526601</text>
+<text><loc_113><loc_150><loc_186><loc_156>: 130/12/1023 101/12/1023 101/12/1023</text>
+<text><loc_196><loc_150><loc_230><loc_156>: 13526601</text>
+<text><loc_113><loc_160><loc_186><loc_166>: 101/12/2023 101/12/2023 101/12/2023</text>
+<text><loc_196><loc_160><loc_230><loc_166>: 10848961</text>
+<text><loc_113><loc_169><loc_186><loc_175>: 107/12/2023 106/12/2023 106/12/2023</text>
+<text><loc_196><loc_169><loc_230><loc_175>: 10848961</text>
+<text><loc_113><loc_179><loc_186><loc_185>: 108/12/2023 108/12/2023 108/12/2023</text>
+<text><loc_196><loc_179><loc_230><loc_185>: 1085558</text>
+<text><loc_113><loc_189><loc_186><loc_195>: 129/12/2023 129/12/2023 129/12/2023</text>
+<text><loc_196><loc_189><loc_230><loc_195>: 10962611</text>
+<text><loc_113><loc_199><loc_186><loc_205>: 129/12/2023 129/12/2023 129/12/2023</text>
+<text><loc_196><loc_199><loc_230><loc_205>: 10962611</text>
+<text><loc_113><loc_209><loc_186><loc_215>: 129/12/2023 129/12/2023 129/12/2023</text>
+<text><loc_196><loc_209><loc_230><loc_215>: 1363779</text>
+<text><loc_113><loc_219><loc_186><loc_225>: 129/12/2023 129/12/2023 129/12/2023</text>
+<text><loc_196><loc_219><loc_230><loc_225>: 1363779</text>
+<text><loc_113><loc_229><loc_186><loc_235>: 129/12/2023 129/12/2023 129/12/2023</text>
+<text><loc_196><loc_229><loc_230><loc_235>: 1363779</text>
+<text><loc_113><loc_239><loc_186><loc_245>: 129/12/2023 129/12/2023 129/12/2023</text>
+<text><loc_196><loc_239><loc_230><loc_245>: 1363779</text>
+<text><loc_113><loc_249><loc_186><loc_255>: 129/12/2023 129/12/2023 129/12/2023</text>
+<text><loc_196><loc_249><loc_230><loc_255>: 1363779</text>
+<text><loc_113><loc_259><loc_186><loc_265>: 129/12/2023 129/12/2023 129/12/2023</text>
+<text><loc_196><loc_259><loc_230><loc_265>: 1363779</text>
+<text><loc_113><loc_269><loc_186><loc_275>: 129/12/2023 129/12/2023 129/12/2023</text>
+<text><loc_196><loc_269><loc_230><loc_275>: 1363779</text>
+<text><loc_113><loc_279><loc_186><loc_285>: 129/12/2023 129/12/2023 129/12/2023</text>
+<text><loc_196><loc_279><loc_230><loc_285>: 1363779</text>
+<text><loc_113><loc_289><loc_186><loc_295>: 129/12/2023 129/12/2023 129/12/2023</text>
+<text><loc_196><loc_289><loc_230><loc_295>: 10952081</text>
+<text><loc_113><loc_299><loc_186><loc_305>: 128/11/2023 128/11/2023 128/11/2023</text>
+<text><loc_196><loc_299><loc_230><loc_305>: 10952081</text>
+<text><loc_113><loc_309><loc_186><loc_315>: 128/11/2023 128/11/2023 128/11/2023</text>
+<text><loc_196><loc_309><loc_230><loc_315>: 13526601</text>
+<text><loc_113><loc_319><loc_186><loc_325>: 101/12/2023 101/12/2023 101/12/1023</text>
+<text><loc_196><loc_319><loc_230><loc_325>: 13526601</text>
+<text><loc_113><loc_329><loc_186><loc_335>: 101/12/2023 101/12/2023 101/12/1023</text>
+<text><loc_196><loc_329><loc_230><loc_335>: 10848961</text>
+<text><loc_113><loc_339><loc_186><loc_345>: 107/12/2023 107/12/2023 107/12/2023</text>
+<text><loc_196><loc_339><loc_230><loc_345>: 10848961</text>
+<text><loc_113><loc_349><loc_186><loc_355>: 107/12/2023 107/12/2023 107/12/2023</text>
+<text><loc_196><loc_349><loc_230><loc_355>: 10848961</text>
+<text><loc_113><loc_359><loc_186><loc_365>: 108/12/2023 108/12/2023 108/12/2023</text>
+<text><loc_196><loc_359><loc_230><loc_365>: 1093724</text>
+<text><loc_113><loc_369><loc_186><loc_375>: 108/12/2023 108/12/2023 108/12/2023</text>
+<text><loc_196><loc_369><loc_230><loc_375>: 1093724</text>
+<text><loc_113><loc_379><loc_186><loc_385>: 108/12/2023 108/12/2023 108/12/2023</text>
+<text><loc_196><loc_379><loc_230><loc_385>: 1093724</text>
+<text><loc_113><loc_389><loc_186><loc_395>: 108/12/2023 108/12/2023 108/12/2023</text>
+<text><loc_196><loc_389><loc_230><loc_395>: 1093724</text>
+<text><loc_113><loc_399><loc_186><loc_405>: 108/12/2023 108/12/2023 108/12/2023</text>
+<text><loc_196><loc_399><loc_230><loc_405>: 1093724</text>
+<text><loc_113><loc_409><loc_186><loc_415>: 108/12/2023 108/12/2023 108/12/2023</text>
+<text><loc_196><loc_409><loc_230><loc_415>: 1093724</text>
+<text><loc_113><loc_419><loc_186><loc_425>: 108/12/2023 108/12/2023 108/12/2023</text>
+<text><loc_196><loc_419><loc_230><loc_425>: 1093724</text>
+<text><loc_113><loc_429><loc_186><loc_435>: 108/12/2023 108/12/2023 108/12/2023</text>
+<text><loc_196><loc_429><loc_230><loc_435>: 1093724</text>
+<text><loc_113><loc_439><loc_186><loc_445>: 108/12/2023 108/12/2023 108/12/2023</text>
+<text><loc_196><loc_439><loc_230><loc_445>: 1093724</text>
+<text><loc_113><loc_449><loc_186><loc_455>: 108/12/2023 108/12/2023 108/12/2023</text>
+<text><loc_196><loc_449><loc_230><loc_455>: 1093724</text>
+<text><loc_113><loc_459><loc_186><loc_465>: 108/12/2023 108/12/2023 108/12/2023</text>
+<text><loc_196><loc_459><loc_230><loc_465>: 1093724</text>
+<text><loc_113><loc_469><loc_186><loc_475>: 

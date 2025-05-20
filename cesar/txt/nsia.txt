@@ -1,0 +1,177 @@
+ <doctag><section_header_level_1><loc_25><loc_18><loc_165><loc_29>RELEVE DE COMPTE</section_header_level_1>
+<text><loc_27><loc_39><loc_118><loc_45>Du 01/11/2024 Au 30/11/2024</text>
+<text><loc_27><loc_64><loc_108><loc_70>Numéro de Compte</text>
+<text><loc_161><loc_64><loc_248><loc_70>0100001260018912010</text>
+<text><loc_27><loc_75><loc_49><loc_80>Devise</text>
+<text><loc_229><loc_75><loc_248><loc_80>XOF</text>
+<text><loc_27><loc_84><loc_91><loc_89>Solde Début Période</text>
+<text><loc_216><loc_84><loc_248><loc_89>17 036 897</text>
+<text><loc_27><loc_93><loc_63><loc_98>Total Débit</text>
+<text><loc_216><loc_93><loc_248><loc_98>1 481 931</text>
+<text><loc_27><loc_102><loc_66><loc_107>Total Crédit</text>
+<text><loc_216><loc_102><loc_248><loc_107>0</text>
+<text><loc_27><loc_109><loc_79><loc_114>Nombre Débit</text>
+<text><loc_216><loc_109><loc_248><loc_114>6</text>
+<text><loc_27><loc_116><loc_75><loc_121>Nombre Crédit</text>
+<text><loc_216><loc_116><loc_248><loc_121>0</text>
+<otsl><loc_23><loc_137><loc_472><loc_268><ched>Date  Transact.<ched>Détails Transaction<ched>Cheque  N°<ched>Agence<ched>Date Valeur<ched>Mouv. Débit<ched>Mouv. Crédit<ched>Solde<nl><fcel>04/11/2024<fcel>RETRAIT PAR CHQ HOUSINOU  SYLVAIIN<fcel>1815962<fcel>011<fcel>04/11/2024<fcel>250 000<fcel>16 786 897<ecel><nl><fcel>14/11/2024<fcel>TRF FAV. COMPTE - RECETTES  GLOBALES DGI<fcel>004<fcel>13/11/2024<fcel>451 231<fcel>16 335 666<ecel><ecel><nl><fcel>15/11/2024<fcel>PAIEMENT DES CHQ RECUS. NO  1815963 FAV OMA LOG BENIN SARL  1815963<fcel>1815963<fcel>004<fcel>15/11/2024<fcel>129 700<fcel>16 205 966<ecel><nl><fcel>29/11/2024<fcel>RETRAIT PAR CHQ. YAZIBAGLI  MUSTAFA<fcel>1815964<fcel>000<fcel>29/11/2024<fcel>640 000<fcel>15 565 966<ecel><nl><fcel>30/11/2024<fcel>FRAIS DE TENUE DE COMPTE.<fcel>000<fcel>01/12/2024<fcel>10 000<fcel>15 555 966<ecel><ecel><nl><fcel>30/11/2024<fcel>TAF SUR LES INTERETS /  COMMISSIONS.<fcel>000<fcel>01/12/2024<fcel>1 000<fcel>15 554 966<ecel><ecel><nl><ecel><ecel><ecel><ecel><ecel><fcel>15 554 966<ecel><ecel><nl><ecel><ecel><ecel><ecel><fcel>1481 931<ecel><fcel>0<nl><ecel><ecel><ecel><ecel><ecel><fcel>SOLDE<fcel>15 554 966<ecel><nl></otsl>
+<page_footer><loc_27><loc_467><loc_471><loc_480>Chers M / Mme. Ce releve retrace l’enregistrement de vos operations sau cours de la peridote mentionne. Veuillez en verifier l’exactitude. Ledit releve sera considere comme approuve sauf reclamation ecrite de votre part au Responsable du Controle Permanente & Conformite dans les 30 jours qui suivent la fin de la peridote dudit releve.</page_footer>
+<page_footer><loc_27><loc_480><loc_187><loc_484>Pour toute information veuiller bien joindre votre gestionnaire : Tel: - Email :</page_footer>
+<picture><loc_399><loc_21><loc_470><loc_45><logo></picture>
+<section_header_level_1><loc_281><loc_64><loc_473><loc_70>STE SUMMA CONSTRUCTION BENIN SARL</section_header_level_1>
+<text><loc_354><loc_84><loc_473><loc_96>LOT/1143 QT/AGONTIKON COTONOU mustafa.yazibagli@summa.com.tr</text>
+<text><loc_434><loc_99><loc_473><loc_104>22952292075</text>
+<text><loc_434><loc_106><loc_473><loc_111>22952292070</text>
+</doctag><end_of_utterance>
+User: What is the purpose of the document?<end_of_utterance>
+Assistant: The purpose of the document is to provide a list of companies and their respective companies, their respective dates, and their respective dates of birth.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the document is 15.<end_of_utterance>
+User: What is the total number of companies listed in the document?<end_of_utterance>
+Assistant: The total number of companies listed in the

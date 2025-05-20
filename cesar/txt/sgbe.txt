@@ -1,0 +1,155 @@
+ <doctag><picture><loc_59><loc_49><loc_198><loc_65><logo></picture>
+<text><loc_132><loc_82><loc_326><loc_87>EXTRAIT DE COMPTE DU 01/01/2020 AU 29/12/2020</text>
+<text><loc_138><loc_100><loc_207><loc_105>036520420101-51</text>
+<text><loc_266><loc_100><loc_378><loc_105>30 Decembre 2020 a 07:29</text>
+<text><loc_60><loc_117><loc_191><loc_122>01001 COTONOU AGENCE PRINCIPALE</text>
+<text><loc_201><loc_122><loc_368><loc_150>SUMMA TÜRIZ TÜRIMCIİLGİ SUCCUCIŞAL ILOT 1143 L IMMUBLE CABINET SODEXCA QUARTIER AGONTINKO COTONOU</text>
+<text><loc_66><loc_151><loc_137><loc_156>FRANC CFA BCEAO</text>
+<text><loc_66><loc_157><loc_180><loc_162>SUMMA TÜRIZ TÜRİMCIİGİ</text>
+<text><loc_334><loc_157><loc_368><loc_162>Page.: 1</text>
+<text><loc_60><loc_168><loc_368><loc_173>Date ! Libelle operation ! Val ! Debit !</text>
+<text><loc_334><loc_168><loc_368><loc_173>Credit</text>
+<text><loc_60><loc_179><loc_368><loc_184>!Solde au 01/01/2020 ! !</text>
+<text><loc_334><loc_184><loc_368><loc_189>161.136</text>
+<text><loc_60><loc_190><loc_368><loc_195>!14/01VIRT FAV: PAN SEIED904F4B80CB8014/10!</text>
+<text><loc_334><loc_195><loc_368><loc_200>14/01/1</text>
+<text><loc_60><loc_196><loc_368><loc_201>!14/01FRAIS VIRMENT 14/01/20!</text>
+<text><loc_334><loc_201><loc_368><loc_206>13/01/1</text>
+<text><loc_60><loc_206><loc_368><loc_211>!31/01TRAIS FIXE AU 31/01/20!</text>
+<text><loc_334><loc_211><loc_368><loc_216>500!</text>
+<text><loc_60><loc_216><loc_368><loc_221>!31/01COMMISSION DE CPE T AU 31/01/20/31!</text>
+<text><loc_334><loc_221><loc_368><loc_226>71!</text>
+<text><loc_60><loc_226><loc_368><loc_231>!31/01TAXE COM DE CPE T AU 31/01/20/31!</text>
+<text><loc_334><loc_231><loc_368><loc_236>1</text>
+<text><loc_60><loc_226><loc_368><loc_231>!11/02VIRT DE: /01000016011025602011/02!</text>
+<text><loc_334><loc_231><loc_368><loc_236>328.505!</text>
+<text><loc_60><loc_236><loc_368><loc_241>!13/02FRAIS VIRMENT 13/02/13!</text>
+<text><loc_334><loc_241><loc_368><loc_246>5.500!</text>
+<text><loc_60><loc_246><loc_368><loc_251>!28/02FRAIS FIXE AU 29/02/20!</text>
+<text><loc_334><loc_251><loc_368><loc_256>25.000!</text>
+<text><loc_60><loc_256><loc_368><loc_261>!28/02TRAIS FIXE AU 29/02/20!</text>
+<text><loc_334><loc_261><loc_368><loc_266>41!</text>
+<text><loc_60><loc_256><loc_368><loc_261>!28/02COMMISSION DE CPE T AU 29/02/20!</text>
+<text><loc_334><loc_261><loc_368><loc_266>41!</text>
+<text><loc_60><loc_266><loc_368><loc_271>!03/01VIRT DE: /01000016011025602010/03!</text>
+<text><loc_334><loc_261><loc_368><loc_266>5.500.000!</text>
+<text><loc_60><loc_271><loc_368><loc_276>!10/03FRAIS VIRMENT 10/03/13!</text>
+<text><loc_334><loc_276><loc_368><loc_281>10.500!</text>
+<text><loc_60><loc_276><loc_368><loc_281>!10/03FRAIS VIRMENT 10/03/13!</text>
+<text><loc_334><loc_276><loc_368><loc_281>10.500!</text>
+<text><loc_60><loc_281><loc_368><loc_286>!13/01FRAIS FIXE AU 31/03/20!</text>
+<text><loc_334><loc_286><loc_368><loc_291>662!</text>
+<text><loc_60><loc_286><loc_368><loc_291>!31/01TRAIS FIXE AU 31/03/20!</text>
+<text><loc_334><loc_286><loc_368><loc_291>13/01</text>
+<text><loc_60><loc_291><loc_368><loc_296>!31/01COMMISSION DE CPE T AU 31/03/20!</text>
+<text><loc_334><loc_296><loc_368><loc_301>500!</text>
+<text><loc_60><loc_296><loc_368><loc_301>!31/01TRAIS FIXE AU 31/03/20!</text>
+<text><loc_334><loc_296><loc_368><loc_301>500!</text>
+<text><loc_60><loc_301><loc_368><loc_306>!31/03TAXE COM. DE CPE T AU 31/03/20!</text>
+<text><loc_334><loc_306><loc_368><loc_311>127.800!</text>
+<text><loc_334><loc_311><loc_368><loc_316>100.000!</text>
+<text><loc_60><loc_306><loc_368><loc_311>!06/04VERMENTSE NECATI YALDIRIM/APR 06/04!</text>
+<text><loc_60><loc_311><loc_368><loc_316>!10/04VIRT FAV: PANIER58F16DE5965021/04!</text>
+<text><loc_334><loc_316><loc_368><loc_321>5.500!</text>
+<text><loc_60><loc_316><loc_368><loc_321>!10/04VIRT FAV: PANIER58F16DE5965021/04!</text>
+<text><loc_334><loc_316><loc_368><loc_321>10.500!</text>
+<text><loc_60><loc_321><loc_368><loc_326>!10/04FRAIS FIXE AU 30/04/20!</text>
+<text><loc_334><loc_326><loc_368><loc_331>30.000!</text>
+<text><loc_60><loc_326><loc_368><loc_331>!10/04FRAIS FIXE AU 30/04/20!</text>
+<text><loc_334><loc_326><loc_368><loc_331>30.000!</text>
+<text><loc_60><loc_331><loc_368><loc_336>!30/04TACOM FIXE AU 30/04/20!</text>
+<text><loc_334><loc_336><loc_368><loc_341>17!</text>
+<text><loc_60><loc_336><loc_368><loc_341>!30/04TACOM FIXE AU 30/04/20!</text>
+<text><loc_334><loc_336><loc_368><loc_341>17!</text>
+<text><loc_60><loc_341><loc_368><loc_346>!30/04TACOM. DE CPE T AU 30/04/20!</text>
+<text><loc_334><loc_346><loc_368><loc_351>21!</text>
+<text><loc_60><loc_346><loc_368><loc_351>!30/04TACOM. DE PAN FAB950DBF867F0011/05!</text>
+<text><loc_334><loc_346><loc_368><loc_351>143.400!</text>
+<text><loc_60><loc_351><loc_368><loc_356>!29/05TRAIS FIXE AU 31/05/20!</text>
+<text><loc_334><loc_356><loc_368><loc_361>5.000!</text>
+<text><loc_60><loc_356><loc_368><loc_361>!29/05TRAIS FIXE AU 31/05/20!</text>
+<text><loc_334><loc_356><loc_368><loc_361>135.000!</text>
+<text><loc_60><loc_361><loc_368><loc_366>!29/05TRAIS. DE CPE T AU 31/05/20!</text>
+<text><loc_334><loc_366><loc_368><loc_371>21!</text>
+<text><loc_60><loc_366><loc_368><loc_371>!29/05TRAIS. DE CPE T AU 31/05/20!</text>
+<text><loc_60><loc_371><loc_368><loc_376>!29/05TRAIS. DE CPE T AU 31/05/20!</text>
+<text><loc_334><loc_376><loc_368><loc_381>158.400!</text>
+<text><loc_60><loc_376><loc_368><loc_381>!30/06TRAIS FIXE AU 30/06/20!</text>
+<text><loc_334><loc_376><loc_368><loc_381>130.000!</text>
+<text><loc_60><loc_381><loc_368><loc_386>!30/06TRAIS. DE CPE T AU 30/06/20!</text>
+<text><loc_334><loc_386><loc_368><loc_391>500!</text>
+<text><loc_60><loc_386><loc_368><loc_391>!30/06TRAIS. DE CPE T AU 30/06/20!</text>
+<text><loc_334><loc_386><loc_368><loc_391>130.000!</text>
+<text><loc_60><loc_391><loc_368><loc_396>!30/06TRAIS. DE CPE T AU 30/06/20!</text>
+<text><loc_334><loc_396><loc_368><loc_401>20!</text>
+<text><loc_60><loc_396><loc_368><loc_401>!30/06TRAIS. DE CPE T AU 30/06/20!</text>
+<text><loc_334><loc_396><loc_368><loc_401>21!</text>
+<text><loc_60><loc_396><loc_368><loc_401>!30/06TRAIS. DE CPE T AU 30/06/20!</text>
+<text><loc_334><loc_396><loc_368><loc_401>21!</text>
+<text><loc_60><loc_396><loc_368><loc_401>!30/06TRAIS. DE CPE T AU 30/06/20!</text>
+<text><loc_334><loc_396><loc_368><loc_401>21!</text>
+<text><loc_60><loc_396><loc_368><loc_401>!30/06TRAIS. DE CPE T AU 30/06/20!</text>
+<text><loc_334><loc_396><loc_368><loc_401>21!</text>
+<text><loc_60><loc_396><loc_368><loc_401>!30/06TRAIS. DE CPE T AU 30/06/20!</text>
+<text><loc_334><loc_396><loc_368><loc_401>21!</text>
+<text><loc_60><loc_396><loc_368><loc_401>!30/06TRAIS. DE CPE T AU 30/06/20!</text>
+<text><loc_334><loc_396><loc_368><loc_401>21!</text>
+<text><loc_60><loc_396><loc_368><loc_401>!30/06TRAIS. DE CPE T AU 30/06/20!</text>
+<text
+ <doctag><text><loc_60><loc_42><loc_246><loc_47>31/08:COMMISSION DE CPTE AU 31/08/20!31/08!</text>
+<text><loc_60><loc_48><loc_322><loc_53>30/08:TAXE COMM. DE CPTE AU 31/08/20!31/08!</text>
+<text><loc_60><loc_54><loc_322><loc_59>30/09:FRAIS FIXE AU 30/09/20 !30/09!</text>
+<text><loc_60><loc_60><loc_322><loc_65>30/09:TAXE FRAIS FIXE AU 30/09/20 !30/09!</text>
+<text><loc_60><loc_66><loc_322><loc_71>12/01:VIRT FAV: PAINTER 5F83F4ABC8!12/01! 77.400!</text>
+<text><loc_60><loc_72><loc_322><loc_77>30/10:FRAIS FIXE AU 31/10/20 !31/10!</text>
+<text><loc_60><loc_78><loc_322><loc_83>30/10:TAXE FRAIS FIXE AU 31/10/20 !31/10!</text>
+<text><loc_60><loc_84><loc_322><loc_89>30/10:COMMISSION DE CPTE AU 31/10/20!31/10!</text>
+<text><loc_60><loc_90><loc_322><loc_95>30/10:TAXE COMM. DE CPTE AU 31/10/20!31/10!</text>
+<text><loc_60><loc_96><loc_322><loc_101>10/11:VIRT FAV: PAINTER 5F8AADAB86FE!10! 66.400!</text>
+<text><loc_60><loc_102><loc_322><loc_107>10/11:VERMSEMENT APPRO/ EDREM ALPER Y!10!11!</text>
+<text><loc_60><loc_108><loc_322><loc_113>30/11:FRAIS FIXE AU 30/11/20 !30/11!</text>
+<text><loc_60><loc_114><loc_322><loc_119>30/11:TAXE FRAIS FIXE AU 30/11/20 !30/11!</text>
+<text><loc_60><loc_120><loc_322><loc_125>30/11:COMMISSION DE CPTE AU 30/11/20!30/11!</text>
+<text><loc_60><loc_126><loc_322><loc_131>30/11:TAXE COMM. DE CPTE AU 30/11/20!30/11!</text>
+<text><loc_60><loc_132><loc_322><loc_137>09/12:VIRT FAV: PAINTER5F80A779F921CE!09/12!</text>
+<text><loc_60><loc_138><loc_322><loc_143>! ! ! ! ! ! ! ! ! ! ! ! ! ! !</text>
+<text><loc_60><loc_144><loc_322><loc_149>! ! ! ! ! ! ! ! ! ! ! ! ! !</text>
+<text><loc_60><loc_150><loc_322><loc_155>! ! ! ! ! ! ! ! ! ! ! ! ! !</text>
+<text><loc_60><loc_156><loc_322><loc_161>! ! ! ! ! ! ! ! ! ! ! ! ! !</text>
+<text><loc_60><loc_162><loc_322><loc_167>! ! ! ! ! ! ! ! ! ! ! ! ! !</text>
+<text><loc_60><loc_168><loc_322><loc_173>! ! ! ! ! ! ! ! ! ! ! ! ! !</text>
+<text><loc_60><loc_174><loc_322><loc_179>! ! ! ! ! ! ! ! ! ! ! ! ! !</text>
+<text><loc_60><loc_180><loc_322><loc_185>! ! ! ! ! ! ! ! ! ! ! ! ! !</text>
+<text><loc_60><loc_186><loc_322><loc_191>! ! ! ! ! ! ! ! ! ! ! ! ! !</text>
+<text><loc_60><loc_192><loc_322><loc_197>! ! ! ! ! ! ! ! ! ! ! ! ! !</text>
+<text><loc_60><loc_198><loc_322><loc_203>! ! ! ! ! ! ! ! ! ! ! ! ! !</text>
+<text><loc_60><loc_204><loc_322><loc_209>! ! ! ! ! ! ! ! ! ! ! ! ! !</text>
+<text><loc_60><loc_210><loc_322><loc_215>! ! ! ! ! ! ! ! ! ! ! ! ! !</text>
+<text><loc_60><loc_216><loc_322><loc_221>10/11:VIRT FAV: PAINTER5AADAB86FE!10! 66.400!</text>
+<text><loc_60><loc_222><loc_322><loc_227>10/11:VERMSEMENT APPRO/ EDREM ALPER Y!10!11!</text>
+<text><loc_60><loc_228><loc_322><loc_233>30/11:FAIS FIXE AU 30/11/20 !30/11!</text>
+<text><loc_60><loc_234><loc_322><loc_239>30/11:TAXE FRAIS FIXE AU 30/11/20 !30/11!</text>
+<text><loc_60><loc_240><loc_322><loc_245>30/11:COMMISSION DE CPTE AU 30/11/20!30/11!</text>
+<text><loc_60><loc_246><loc_322><loc_251>30/11:TAXE COMM. DE CPTE AU 30/11/20!30/11!</text>
+<text><loc_60><loc_252><loc_322><loc_257>09/12:VIRT FAV: PAINTER5F80A779F921CE!09/12!</text>
+<text><loc_60><loc_258><loc_322><loc_263>! ! ! ! ! ! ! ! ! ! ! ! ! !</text>
+<text><loc_60><loc_264><loc_322><loc_269>! ! ! ! ! ! ! ! ! ! ! ! ! !</text>
+<text><loc_60><loc_270><loc_322><loc_275>! ! ! ! ! ! ! ! ! ! ! ! ! !</text>
+<text><loc_60><loc_276><loc_322><loc_281>! ! ! ! ! ! ! ! ! ! ! ! ! !</text>
+<text><loc_60><loc_282><loc_322><loc_287>! ! ! ! ! ! ! ! ! ! ! ! ! !</text>
+<text><loc_60><loc_288><loc_322><loc_293>! ! ! ! ! ! ! ! ! ! ! ! ! !</text>
+<text><loc_60><loc_294><loc_322><loc_299>! ! ! ! ! ! ! ! ! ! ! ! ! !</text>
+<text><loc_60><loc_300><loc_322><loc_305>! ! ! ! ! ! ! ! ! ! ! ! ! !</text>
+<text><loc_60><loc_306><loc_322><loc_311>! ! ! ! ! ! ! ! ! ! ! ! ! !</text>
+<text><loc_60><loc_312><loc_322><loc_317>! ! ! ! ! ! ! ! ! ! ! ! ! !</text>
+<text><loc_60><loc_318><loc_322><loc_323>! ! ! ! ! ! ! ! ! ! ! ! ! !</text>
+<text><loc_60><loc_324><loc_322><loc_329>! ! ! ! ! ! ! ! ! ! ! ! ! !</text>
+<text><loc_60><loc_330><loc_322><loc_335>! ! ! ! ! ! ! ! ! ! ! ! ! !</text>
+<text><loc_60><loc_336><loc_322><loc_341>! ! ! ! ! ! ! ! ! ! ! ! ! !</text>
+<text><loc_60><loc_342><loc_322><loc_347>Total general mouvement 6.606.665 6.450.000</text>
+<text><loc_60><loc_348><loc_322><loc_353>Solde au 29/12/2020 Solde au 29/12/2020</text>
+<text><loc_365><loc_100><loc_394><loc_105>150.000</text>
+</doctag><end_of_utterance>
+User: </doctag><end_of_utterance>
+User: <loc_60><loc_42><loc_322><loc_47>31/08:COMMISSION DE CPTE AU 31/08/20!31/08! 8! 31/08!TAXE COMM. DE CPTE AU 31/08/20!31/08! 1! 31/08!<end_of_utterance>
+User: <loc_60><loc_48><loc_322><loc_53>30/09:FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5.000! 1! 30/09!TAXE FRAIS FIXE AU 30/09/20 !30/09! 5
