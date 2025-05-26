@@ -1,0 +1,184 @@
+{
+  "texts": [
+    {
+      "page": 1,
+      "content": "RELEVE DE COMPTE"
+    },
+    {
+      "page": 1,
+      "content": "Du 01/11/2024 Au 30/11/2024"
+    },
+    {
+      "page": 1,
+      "content": "Numéro de Compte"
+    },
+    {
+      "page": 1,
+      "content": "0100001260018912010"
+    },
+    {
+      "page": 1,
+      "content": "STE SUMMA CONSTRUCTION BENIN SARL"
+    },
+    {
+      "page": 1,
+      "content": "Devise"
+    },
+    {
+      "page": 1,
+      "content": "XOF"
+    },
+    {
+      "page": 1,
+      "content": "Solde Début Période"
+    },
+    {
+      "page": 1,
+      "content": "17 036 897"
+    },
+    {
+      "page": 1,
+      "content": "LOT/1143 QT/AGONTINKON COTONOU"
+    },
+    {
+      "page": 1,
+      "content": "Total Débit"
+    },
+    {
+      "page": 1,
+      "content": "1 481 931"
+    },
+    {
+      "page": 1,
+      "content": "mustafa.yazibagli@summa.com.tr"
+    },
+    {
+      "page": 1,
+      "content": "Total Crédit"
+    },
+    {
+      "page": 1,
+      "content": "0"
+    },
+    {
+      "page": 1,
+      "content": "22952292075"
+    },
+    {
+      "page": 1,
+      "content": "Nombre Débit"
+    },
+    {
+      "page": 1,
+      "content": "6"
+    },
+    {
+      "page": 1,
+      "content": "22952292070"
+    },
+    {
+      "page": 1,
+      "content": "Nombre Crédit"
+    },
+    {
+      "page": 1,
+      "content": "0"
+    },
+    {
+      "page": 1,
+      "content": "Chers M / Mme, Ce releve retrace l'enregistrement de vos operations au cours de la periode mentionnee. Veuillez en verifier l'exactitude. Ledit releve sera considere comme approuve sauf re au Responsable du Controle Permanent & Conformite dans les 30 jours qui suivent la fin de la periode dudit releve."
+    },
+    {
+      "page": 1,
+      "content": "Pour toute information veuiller bien joindre votre gestionnaire : - Tel: - Email: -"
+    },
+    {
+      "page": 1,
+      "content": "BEN/BANM/674DFF66286AE / Page 1"
+    }
+  ],
+  "tables": [
+    [
+      {
+        "Date Transact.": "04/11/2024",
+        "Détails Transaction": "RETRAIT PAR CHQ. HOUNSINOU SYLVAIN",
+        "Cheque N°": "1815962",
+        "Agence": "011",
+        "Date Valeur": "04/11/2024",
+        "Mouv. Débit": "250 000",
+        "Mouv. Crédit": "",
+        "Solde": "16 786 897"
+      },
+      {
+        "Date Transact.": "14/11/2024",
+        "Détails Transaction": "TRF FAV. COMPTE - RECETTES GLOBALES DGI",
+        "Cheque N°": "",
+        "Agence": "004",
+        "Date Valeur": "13/11/2024",
+        "Mouv. Débit": "451 231",
+        "Mouv. Crédit": "",
+        "Solde": "16 335 666"
+      },
+      {
+        "Date Transact.": "15/11/2024",
+        "Détails Transaction": "PAIEMENT DES CHQ RECUS. NO 1815963 FAV OMA LOG BENIN SARL 1815963",
+        "Cheque N°": "1815963",
+        "Agence": "004",
+        "Date Valeur": "15/11/2024",
+        "Mouv. Débit": "129 700",
+        "Mouv. Crédit": "",
+        "Solde": "16 205 966"
+      },
+      {
+        "Date Transact.": "29/11/2024",
+        "Détails Transaction": "RETRAIT PAR CHQ. YAZIBAGLI MUSTAFA",
+        "Cheque N°": "1815964",
+        "Agence": "000",
+        "Date Valeur": "29/11/2024",
+        "Mouv. Débit": "640 000",
+        "Mouv. Crédit": "",
+        "Solde": "15 565 966"
+      },
+      {
+        "Date Transact.": "30/11/2024",
+        "Détails Transaction": "FRAIS DE TENUE DE COMPTE.",
+        "Cheque N°": "",
+        "Agence": "000",
+        "Date Valeur": "01/12/2024",
+        "Mouv. Débit": "10 000",
+        "Mouv. Crédit": "",
+        "Solde": "15 555 966"
+      },
+      {
+        "Date Transact.": "30/11/2024",
+        "Détails Transaction": "TAF SUR LES INTERETS / COMMISSIONS.",
+        "Cheque N°": "",
+        "Agence": "000",
+        "Date Valeur": "01/12/2024",
+        "Mouv. Débit": "1 000",
+        "Mouv. Crédit": "",
+        "Solde": "15 554 966"
+      },
+      {
+        "Date Transact.": "TOTAL DEBIT/CREDIT",
+        "Détails Transaction": "TOTAL DEBIT/CREDIT",
+        "Cheque N°": "TOTAL DEBIT/CREDIT",
+        "Agence": "TOTAL DEBIT/CREDIT",
+        "Date Valeur": "TOTAL DEBIT/CREDIT",
+        "Mouv. Débit": "1 481 931",
+        "Mouv. Crédit": "0",
+        "Solde": ""
+      },
+      {
+        "Date Transact.": "",
+        "Détails Transaction": "",
+        "Cheque N°": "",
+        "Agence": "",
+        "Date Valeur": "",
+        "Mouv. Débit": "",
+        "Mouv. Crédit": "SOLDE",
+        "Solde": "15 554 966"
+      }
+    ]
+  ]
+}
