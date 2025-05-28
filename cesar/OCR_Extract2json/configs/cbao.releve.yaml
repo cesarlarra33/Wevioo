@@ -1,0 +1,152 @@
+document_type: relevé_bancaire
+banque: CBAO
+format: texte+tesseract
+
+crop_tables: false
+preprocess_pdf: false
+preprocess_tables: false
+
+ocr:
+  pdf:
+    psm: 3
+    oem: 3
+  tables:
+    psm: 3
+    oem: 3
+
+structure:
+  champs_simples:
+
+    date_emission:
+      anchor: "le"
+      max_x: 600
+      max_y: 500
+      direction: right
+      regex: "\\d{2}/\\d{2}/\\d{4}"
+
+    nom_client:
+      anchor: "le"
+      direction: right
+      regex: "[A-Z\\s]+"
+      concat: true
+      tolerance_y: 5
+      min_x: 1200
+      max_x: 2300
+      min_y: 450
+      max_y: 520
+
+    numero_de_compte:
+      anchor: "Compte"
+      direction: right
+      regex: "\\d+(?:-\\d+)?"
+      min_y: 650
+      max_y: 900
+      min_x: 450
+      max_x: 900
+
+    rib:
+      anchor: "RIB"
+      direction: line_right
+      regex: "[A-Z0-9]+"
+      concat: true 
+      min_y: 650
+      max_y: 900
+      min_x: 450
+      max_x: 1000
+
+    gestionnaire:
+      anchor: "Gestionnaire"
+      direction: right_xy
+      regex: "[A-Z\\s]+"
+      concat: true
+      min_y: 650
+      max_y: 900
+      min_x: 450
+      max_x: 1000
+
+    periode_debut:
+      anchor: "du"
+      direction: right
+      regex: "\\d{2}/\\d{2}/\\d{4}"
+      min_y: 650
+      max_y: 900
+      min_x: 450
+      max_x: 900
+
+    periode_fin:
+      anchor: "au"
+      direction: right
+      regex: "\\d{2}/\\d{2}/\\d{4}"
+      min_y: 650
+      max_y: 900
+      min_x: 450
+      max_x: 900
+
+    solde_debut_periode:
+      anchor_sequence: ["Solde", "au"]
+      direction: line_right
+      min_y: 1100
+      max_y: 1200
+      min_x: 2000
+      max_x: 2500
+      regex: "^\\d{1,3}(?: \\d{3})*$"
+      concat: true
+      tolerance_y: 5
+
+    solde_fin_periode:
+      anchor_sequence: ["Solde", "au", ":"]
+      direction: line_right
+      min_y: 2100
+      max_y: 2200
+      min_x: 2000
+      max_x: 2500
+      regex: "^\\d{1,3}(?: \\d{3})*$"
+      concat: true
+      tolerance_y: 5
+
+  transactions:
+    source: "document"
+    start_line_regex: "\\d{2}/\\d{2}/\\d{2}"
+    start_line_x_max: 400          # pour limiter les faux positifs
+    start_line_x_min: 215          # (à ajouter dans ton code si tu veux affiner)
+    start_line_y_min: 300          # position verticale minimale pour une ligne de transaction
+    start_line_y_max: 2400         # position maximale
+    y_tolerance_above: 30
+    y_tolerance_below: 40
+
+    columns:
+      date_transaction:
+        x_min: 220
+        x_max: 315
+        regex: "\\d{2}/\\d{2}/\\d{2}"
+
+      libelle_operation:
+        x_min: 550
+        x_max: 1200
+        concat: true
+
+      date_valeur:
+        x_min: 1370
+        x_max: 1550
+        regex: "\\d{2}/\\d{2}/\\d{2}"
+
+      debit:
+        x_min: 1820
+        x_max: 2000
+        regex: \d{1,4}
+
+      credit:
+        x_min: 2230
+        x_max: 2500
+        regex: "^\\d{1,3}(?: \\d{3})*$"
+
+
+normalisation:
+  montant:
+    supprimer_espaces: true
+    convertir_en_float: true
+  date:
+    format_source: "%d/%m/%Y"
+    format_cible: "%Y-%m-%d"
+  numero_de_compte:
+    convertir_en_float: false

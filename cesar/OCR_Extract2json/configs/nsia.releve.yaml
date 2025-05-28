@@ -2,6 +2,19 @@ document_type: relevé_bancaire
 banque: NSIA
 format: texte+tesseract
 
+crop_tables: true
+preprocess_pdf: false
+preprocess_tables: false
+
+ocr:
+  pdf:
+    psm: 3
+    oem: 3
+  tables:
+    psm: 12
+    oem: 1
+
+
 structure:
   champs_simples:
 
@@ -92,38 +105,43 @@ structure:
       tolerance_y: 3
 
   transactions:
-    start_line_regex: "\\d{2}/\\d{2}/\\d{4}"  # détecte les lignes qui commencent par une date
-    group_by_y_tolerance: 3
+    source: "table"
+    filter_contains:
+      - "Date"
+    start_line_regex: "\\d{2}/\\d{2}/\\d{4}"
+    start_line_x_max: 300
+    y_tolerance_above: 45
+    y_tolerance_below: 50
     columns:
       date_transaction:
         x_min: 0
-        x_max: 150
+        x_max: 140
         regex: "\\d{2}/\\d{2}/\\d{4}"
       detail_transaction:
-        x_min: 151
-        x_max: 950
+        x_min: 141
+        x_max: 850
       cheque_num:
-        x_min: 951
-        x_max: 1100
+        x_min: 890
+        x_max: 1050
       agence:
-        x_min: 1101
-        x_max: 1250
+        x_min: 1060
+        x_max: 1100
       date_valeur:
-        x_min: 1251
-        x_max: 1400
+        x_min: 1160
+        x_max: 1320
         regex: "\\d{2}/\\d{2}/\\d{4}"
-      debit:
-        x_min: 1401
+      mouv_debit:
+        x_min: 1430
         x_max: 1600
-        regex: "^\\d{1,3}( \\d{3})*$"
-      credit:
-        x_min: 1601
-        x_max: 1800
-        regex: "^\\d{1,3}( \\d{3})*$"
+        regex: "^\\d{1,3}(?: \\d{3})*(?:,\\d{2})?$"
+      mouv_credit:
+        x_min: 1690
+        x_max: 1930
+        regex: "^\\d{1,3}(?: \\d{3})*(?:,\\d{2})?$"
       solde:
-        x_min: 1801
-        x_max: 2100
-        regex: "^\\d{1,3}( \\d{3})*$"
+        x_min: 1931
+        x_max: 2200
+        regex: "^\\d{1,3}(?: \\d{3})*(?:,\\d{2})?$"
 
 
 normalisation:

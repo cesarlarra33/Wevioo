@@ -6,13 +6,35 @@ import cv2
 import numpy as np
 from PIL import Image
 
-def visualize_ocr_to_pdf(json_path, pdf_path, output_dir="data/ocr_visualization"):
+def visualize_ocr_to_pdf(json_path, pdf_path=None, output_dir="data/ocr_visualization", image_dir=None):
+
+
+    
+    
+    if image_dir:
+        image_paths = sorted([
+            os.path.join(image_dir, f) for f in os.listdir(image_dir)
+            if f.lower().endswith('.png')
+        ])
+        pages = [Image.open(p) for p in image_paths]
+    elif pdf_path:
+        pages = convert_from_path(pdf_path, dpi=300)
+    else:
+        raise ValueError("❌ Vous devez fournir soit --image-dir, soit pdf_path.")
+
+    
     with open(json_path, 'r', encoding='utf-8', errors='ignore') as f:
         ocr_data = json.load(f)
 
-    pages = convert_from_path(pdf_path, dpi=300)
+    
     os.makedirs(output_dir, exist_ok=True)
-    base_filename = os.path.splitext(os.path.basename(pdf_path))[0]
+    if pdf_path:
+        base_filename = os.path.splitext(os.path.basename(pdf_path))[0]
+    elif image_dir:
+        # Essaye de deviner un nom basé sur le JSON OCR (ex: nsia.json → nsia)
+        base_filename = os.path.splitext(os.path.basename(json_path))[0]
+    else:
+        base_filename = "output"
     annotated_images = []
 
     for page_idx, page in enumerate(pages):
@@ -52,12 +74,29 @@ def visualize_ocr_to_pdf(json_path, pdf_path, output_dir="data/ocr_visualization
     pdf_output_path = os.path.join(output_dir, f"{base_filename}_annotated.pdf")
     annotated_images[0].save(pdf_output_path, save_all=True, append_images=annotated_images[1:])
     print(f"✅ PDF annoté enregistré → {pdf_output_path}")
+    
+    # Nettoyage du dossier temporaire si utilisé
+    if image_dir == "data/tmp_preprocessed":
+        import shutil
+        try:
+            shutil.rmtree(image_dir)
+            print(f"🧹 Dossier temporaire supprimé : {image_dir}")
+        except Exception as e:
+            print(f"⚠️ Impossible de supprimer {image_dir} : {e}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Génère un PDF avec les annotations OCR.")
     parser.add_argument("json_path", help="Chemin vers le JSON OCR structuré")
-    parser.add_argument("pdf_path", help="Chemin vers le fichier PDF d'origine")
+    parser.add_argument("pdf_path", nargs="?", default=None, help="Chemin vers le fichier PDF d'origine (optionnel si --image-dir est utilisé)")
     parser.add_argument("--output-dir", default="data/ocr_visualization", help="Répertoire de sortie pour le PDF annoté")
+    parser.add_argument("--image-dir", help="Répertoire contenant les images prétraitées")
+    
 
     args = parser.parse_args()
-    visualize_ocr_to_pdf(args.json_path, args.pdf_path, args.output_dir)
+    visualize_ocr_to_pdf(
+        json_path=args.json_path,
+        pdf_path=args.pdf_path,
+        output_dir=args.output_dir,
+        image_dir=args.image_dir
+        )
+

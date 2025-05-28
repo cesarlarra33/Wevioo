@@ -1,0 +1,130 @@
+document_type: relevé_bancaire
+banque: Coris
+format: texte+tesseract
+
+crop_tables: false
+preprocess_pdf: false
+preprocess_tables: false
+
+ocr:
+  pdf:
+    psm: 6
+    oem: 1
+  tables:
+    psm: 6
+    oem: 1
+
+structure:
+  champs_simples:
+
+    periode_debut:
+      anchor_sequence: ["HISTORIQUE", "DES", "MOUVEMENTS", "DU"]
+      direction: right_xy
+      regex: "\\d{2}/\\d{2}/\\d{4}"
+      min_y: 245
+      max_y: 260
+      min_x: 1450
+      max_x: 2000
+      tolerance_y: 20
+
+    periode_fin:
+      anchor: "AU"
+      direction: right_xy
+      regex: "\\d{2}/\\d{2}/\\d{4}"
+      min_y: 245
+      max_y: 260
+      min_x: 1450
+      max_x: 2350
+      tolerance_y: 20
+
+    identifiant_agence:
+      anchor: "AGENCE"
+      direction: line_right
+      regex: "\\d{5}-[A-Z]+"
+      min_y: 280
+      max_y: 300
+      min_x: 800
+      max_x: 1300
+      tolerance_y: 10
+
+    date_emission:
+      anchor: "DATE"
+      direction: line_right
+      regex: "^(\\d{1,2}|[A-Za-zéèêîâàçùûôëïüÉÈÊÎÂÀÇÙÛÔËÏÜ]+|\\d{4})$"
+      concat: true
+      min_y: 315
+      max_y: 330
+      min_x: 800
+      max_x: 1450
+
+    devise:
+      anchor: "Dev"
+      direction: below
+      regex: "[A-Z]{3}"
+      min_x: 1100
+      max_x: 1300
+      min_y: 427
+      max_y: 475
+      tolerance_x: 10
+      tolerance_y: 20
+
+    numero_de_compte:
+      anchor: "Compte"
+      direction: below
+      regex: "\\d{5,}-\\d{2}"
+      min_x: 1400
+      max_x: 1600
+      min_y: 427
+      max_y: 475
+      tolerance_x: 10
+      tolerance_y: 20
+
+    nom_client:
+      anchor: "Nom"
+      direction: below
+      regex: "[A-Z\\s]+"
+      concat: true
+      min_x: 1477
+      max_x: 2100
+      min_y: 427
+      max_y: 475
+      tolerance_x: 30
+      tolerance_y: 20
+
+  transactions:
+    source: "document"
+    mode: "with_separator"
+    separator: "!"
+    use_line_shape_heuristic: true
+    line_shape_regex: "!(\\d{2}/\\d{2}/\\d{4}) !(\\d{2}/\\d{2}/\\d{4}) ![A-Z]{4} ![A-Z0-9]{7,12} !\\d{6} ![A-Z0-9' /]{5,} !(\\d{1,3}(\\.\\d{3})*)? ! !(\\d{1,3}(\\.\\d{3})*)? !"
+
+    start_line_regex: "\\d{2}/\\d{2}/\\d{4}"
+    start_line_x_min: 800
+    start_line_x_max: 810
+    start_line_y_min: 300
+    start_line_y_max: 2400
+
+    columns_order:
+      - date_compta
+      - date_valeur
+      - utilisateur
+      - numero_piece
+      - numero_evenement
+      - operation
+      - libelle
+      - debit
+      - credit
+
+    columns_regex:
+      date_compta: '\d{2}/\d{2}/\d{4}'
+      date_valeur: '\d{2}/\d{2}/\d{4}'
+      utilisateur: '[A-Z]{4}'
+      numero_piece:  "[!1Il\\s]?((?:[A-Z]{2}|[A-Z]{3}|[A-Z]{4})(?:[0-9OQ]{5}|[0-9OQ]{6}|[0-9OQ]{7}|[0-9OQ]{9}))(?=[!1Il\\s]|$)"
+      numero_evenement: "(?<=[!1Il])\\d{6}(?=[!1Il])"
+      operation: '\d{3}'
+      libelle: "(?<=!)\\s?.+?\\s?(?=!)"
+      debit:  (?<=[!1Il])\s*(\d{1,3}(?:\.\d{3})*(?:,\d{2})?)?\s*(?=[!1Il])
+      credit: (?<=[!1Il])\s*(\d{1,3}(?:\.\d{3})*(?:,\d{2})?)?\s*(?=[!1Il])
+
+
+

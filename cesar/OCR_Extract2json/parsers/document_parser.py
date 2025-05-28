@@ -49,22 +49,31 @@ def extract_field(words, field_name, field_conf, normalisation):
     min_x = field_conf.get('min_x')
     min_y = field_conf.get('min_y')
     max_y = field_conf.get('max_y')
-    tol_x = field_conf.get('tolerance_x', 5)  # met des tolérances par défaut si non définies dans les règles
+    tol_x = field_conf.get('tolerance_x', 5)
     tol_y = field_conf.get('tolerance_y', 10)
 
     print(f"\n🔍 Extraction du champ : {field_name}")
 
     def match_and_collect(w):
         if min_x is not None and w['x'] < min_x:
+            print(f"❌ {w['text']} rejeté (x trop petit : {w['x']} < {min_x})")
             return False
         if max_x is not None and w['x'] > max_x:
+            print(f"❌ {w['text']} rejeté (x trop grand : {w['x']} > {max_x})")
             return False
         if min_y is not None and w['y'] < min_y:
+            print(f"❌ {w['text']} rejeté (y trop petit : {w['y']} < {min_y})")
             return False
         if max_y is not None and w['y'] > max_y:
+            print(f"❌ {w['text']} rejeté (y trop grand : {w['y']} > {max_y})")
             return False
-        return re.search(regex, w['text'])
 
+        if re.search(regex, w['text']):
+            return True
+        else:
+            print(f"❌ {w['text']} rejeté (ne matche pas la regex : {regex})")
+            return False
+    
     def find_anchor_word():
         if anchor_sequence:
             print(f"🔗 Recherche de l'ancre multiple : {anchor_sequence}")
@@ -94,52 +103,91 @@ def extract_field(words, field_name, field_conf, normalisation):
         anchor_y = anchor_word['y']
         anchor_page = anchor_word['page']
 
-        if direction == 'right_xy': # meme x aligné horizontalement, donc cherche à droite du x avec une tolérance en y
+        if direction == 'right_xy':
+            print("📐 Recherche en direction: right_xy")
+            candidates = [
+                w for w in words
+                if w['page'] == anchor_page and
+                   w['x'] > anchor_x + tol_x and
+                   abs(w['y'] - anchor_y) < tol_y
+            ]
+            print(f"🔎 {len(candidates)} mots candidats trouvés (avant regex): {[w['text'] for w in candidates]}")
+
             matched_words = []
-            for w in words:
-                if w['page'] == anchor_page and w['x'] > anchor_x + tol_x and abs(w['y'] - anchor_y) < tol_y:
-                    print(f"✅ Candidat potentiel : {w['text']} ({w['x']}, {w['y']})")
-                    if match_and_collect(w):
-                        print(f"✔️ Match final : {w['text']}")
-                        matched_words.append(w['text'])
+            for w in candidates:
+                if match_and_collect(w):
+                    print(f"✔️ Match accepté : {w['text']} (x={w['x']}, y={w['y']})")
+                    matched_words.append(w['text'])
+
             if matched_words:
                 value = " ".join(matched_words)
                 print(f"➡️ Valeur extraite : {value}")
                 return value
 
-        elif direction == 'line_right':  # à droite sur la même ligne ocr, attention ne pas utiliser si l'ocr a mal capté les lignes
+        elif direction == 'line_right':
+            print("📐 Recherche en direction: line_right")
             anchor_line = anchor_word['line_num']
-            right_words = [
+            candidates = [
                 w for w in words
                 if w['page'] == anchor_page and
                    w['line_num'] == anchor_line and
-                   w['x'] > anchor_x and
-                   match_and_collect(w)
+                   w['x'] > anchor_x
             ]
-            texts = [w['text'] for w in right_words]
-            if texts:
-                value = " ".join(texts)
-                print(f"➡️ Valeur extraite : {value}")
-                return value
+            print(f"🔎 {len(candidates)} mots candidats trouvés (avant regex): {[w['text'] for w in candidates]}")
 
-        elif direction == 'nearby_xy': # proche en valeur absolue en x et y suivant les tolérances définies
-            matched_words = [
-                w['text'] for w in words
-                if w['page'] == anchor_page and
-                   abs(w['x'] - anchor_x) <= tol_x and
-                   abs(w['y'] - anchor_y) <= tol_y and
-                   match_and_collect(w)
-            ]
+            matched_words = [w['text'] for w in candidates if match_and_collect(w)]
+
             if matched_words:
                 value = " ".join(matched_words)
                 print(f"➡️ Valeur extraite : {value}")
                 return value
 
-        # fallback
+        elif direction == 'nearby_xy':
+            print("📐 Recherche en direction: nearby_xy")
+            candidates = [
+                w for w in words
+                if w['page'] == anchor_page and
+                   abs(w['x'] - anchor_x) <= tol_x and
+                   abs(w['y'] - anchor_y) <= tol_y
+            ]
+            print(f"🔎 {len(candidates)} mots candidats trouvés (avant regex): {[w['text'] for w in candidates]}")
+
+            matched_words = [w['text'] for w in candidates if match_and_collect(w)]
+
+            if matched_words:
+                value = " ".join(matched_words)
+                print(f"➡️ Valeur extraite : {value}")
+                return value
+        
+        elif direction == 'below':
+            print("📐 Recherche en direction: below")
+            candidates = [
+                w for w in words
+                if w['page'] == anchor_page and
+                abs(w['x'] - anchor_x) <= tol_x and
+                w['y'] > anchor_y and
+                w['y'] <= anchor_y + tol_y
+            ]
+            print(f"🔎 {len(candidates)} mots candidats trouvés (en dessous): {[w['text'] for w in candidates]}")
+
+            matched_words = [w['text'] for w in candidates if match_and_collect(w)]
+
+            if matched_words:
+                value = " ".join(matched_words)
+                print(f"➡️ Valeur extraite : {value}")
+                return value
+
+
+        # Fallback
+        print("🔁 Méthode fallback utilisée (séquence brute)")
         search_range = words[words.index(anchor_word):words.index(anchor_word) + 50]
+        print(f"🔎 Mots testés dans le fallback : {[w['text'] for w in search_range]}")
+
         if concat:
             texts = []
             for w in search_range:
+                if w is anchor_word:
+                    continue
                 if concat_until and concat_until.lower() in w['text'].lower():
                     break
                 if match_and_collect(w):
@@ -170,58 +218,249 @@ def extract_field(words, field_name, field_conf, normalisation):
     print("❌ Aucune valeur extraite")
     return None
 
+def extract_tokens_by_column_regex(line_text, columns_order, columns_regex, separator="!"):
+    print("\n🔍 Ligne originale reçue :", repr(line_text))
+    tokens = []
+    remaining = line_text
+
+    for idx, col_name in enumerate(columns_order):
+        pattern = columns_regex.get(col_name)
+
+        # 🔁 Si pas de regex définie pour cette colonne → on split le reste
+        if not pattern:
+            print(f"\n✂️ Aucune regex pour colonne '{col_name}' → split brut par '{separator}'")
+            rest_parts = [p.strip() for p in remaining.strip().split(separator) if p.strip()]
+            expected_rest = len(columns_order) - len(tokens)
+
+            if len(rest_parts) < expected_rest:
+                print(f"❌ Trop peu de champs restants après split brut ({len(rest_parts)} vs {expected_rest})")
+                return None
+
+            tokens.extend(rest_parts[:expected_rest])
+            print(f"✅ Tokens finaux après split brut : {tokens}")
+            return tokens
+
+        print(f"\n🔎 Recherche pour colonne [{idx}] '{col_name}' avec regex: {pattern}")
+        found = False
+
+        for match in re.finditer(pattern, remaining):
+            start, end = match.span()
+            if match.lastindex and match.lastindex >= 1:
+                matched_text = match.group(1)
+            else:
+                matched_text = match.group()
+            
+            
+            # ✅ Si le caractère juste avant le match est suspect (ex: '1', 'I', 'l'), on ignore ce caractère
+            if start > 0 and remaining[start - 1] in "1Il":
+                print(f"⚠️ Correction OCR probable (caractère suspect avant match) → on garde : '{matched_text}' (index {start})")
+                tokens.append(matched_text)
+                remaining = remaining[end:].strip()
+                found = True
+                break
+
+            # ✅ Match normal
+            print(f"✅ Trouvé: '{matched_text}'")
+            tokens.append(matched_text)
+            remaining = remaining[end:].strip()
+            found = True
+            break
+
+        if not found:
+            print(f"❌ Aucune correspondance pour la colonne '{col_name}' → ligne rejetée")
+            return {"status": "error", "reason": f"Échec sur colonne '{col_name}'", "line": line_text}
+
+
+        print(f"✂️ Texte restant: {repr(remaining)}")
+
+    print("\n✅ Tous les tokens extraits avec succès :", tokens)
+    return {"status": "success", "tokens": tokens}
+
+def extract_transactions_with_separator(words, transaction_conf, normalisation):
+    print("\n📄 Début extraction des transactions (mode with_separator)")
+
+    separator = transaction_conf.get("separator", "!")
+    columns_order = transaction_conf.get("columns_order", [])
+    columns_regex = transaction_conf.get("columns_regex", {})
+    x_min = transaction_conf.get("start_line_x_min")
+    x_max = transaction_conf.get("start_line_x_max")
+    y_min = transaction_conf.get("start_line_y_min")
+    y_max = transaction_conf.get("start_line_y_max")
+    y_tolerance = transaction_conf.get("y_tolerance", 5)
+    start_line_regex = re.compile(transaction_conf.get("start_line_regex"))
+
+    sorted_words = sorted(words, key=lambda w: (w["page"], w["y"], w["x"]))
+    transactions = []
+    visited_lines = set()
+    lignes_exclues = []
+    for word in sorted_words:
+        if x_min is not None and word["x"] < x_min:
+            continue
+        if x_max is not None and word["x"] > x_max:
+            continue
+        if y_min is not None and word["y"] < y_min:
+            continue
+        if y_max is not None and word["y"] > y_max:
+            continue
+        if not start_line_regex.search(word["text"]):
+            continue
+
+        page = word["page"]
+        anchor_y = word["y"]
+        line_key = (page, anchor_y)
+        if line_key in visited_lines:
+            continue
+        visited_lines.add(line_key)
+
+        y_band_min = anchor_y - y_tolerance
+        y_band_max = anchor_y + y_tolerance
+        line_words = [
+            w for w in sorted_words
+            if w["page"] == page and y_band_min <= w["y"] <= y_band_max
+        ]
+
+        line_words_sorted = sorted(line_words, key=lambda w: w["x"])
+        line_text = " ".join(w["text"] for w in line_words_sorted)
+
+        print(f"\n📞 Ligne détectée brute (p{page} y={anchor_y}) : {line_text}")
+
+        # 👉 Appel à ta fonction existante
+        result = extract_tokens_by_column_regex(line_text, columns_order, columns_regex, separator)
+        if result["status"] != "success":
+            print(f"⚠️ Ligne ignorée : {result['reason']}")
+            lignes_exclues.append({
+                "page": page,
+                "y": anchor_y,
+                "texte": line_text,
+                "raison": result["reason"]
+            })
+            continue
+
+        tokens = result["tokens"]
+        if len(tokens) != len(columns_order):
+            print(f"⚠️ Ligne ignorée : nombre de champs incorrect ({len(tokens)} vs {len(columns_order)})")
+            lignes_exclues.append({
+                "page": page,
+                "y": anchor_y,
+                "texte": line_text,
+                "raison": "Nombre de champs incorrect"
+            })
+            continue
+
+        transaction = {col_name: tokens[i] for i, col_name in enumerate(columns_order)}
+        print(f"✅ Transaction extraite : {transaction}")
+        transactions.append(transaction)
+
+    print(f"\n✅ Total transactions extraites (with_separator): {len(transactions)}")
+    print(f"❌ Total lignes exclues : {len(lignes_exclues)}")
+    return {
+        "transactions": transactions,
+        "lignes_exclues": lignes_exclues
+    }
+
 def extract_transactions(words, transaction_conf, normalisation):
-    tolerance_y = transaction_conf.get('group_by_y_tolerance', 3)
+    print("\n📄 Début extraction des transactions")
+    
+    if transaction_conf.get("mode") == "with_separator":
+        return extract_transactions_with_separator(words, transaction_conf, normalisation)
+
     columns = transaction_conf['columns']
     start_line_regex = re.compile(transaction_conf['start_line_regex'])
+    start_line_x_max = transaction_conf.get('start_line_x_max', None)
+    start_line_x_min = transaction_conf.get('start_line_x_min', None)
+    start_line_y_min = transaction_conf.get('start_line_y_min', None)
+    start_line_y_max = transaction_conf.get('start_line_y_max', None)
+    y_tol_above = transaction_conf.get('y_tolerance_above', 5)
+    y_tol_below = transaction_conf.get('y_tolerance_below', 10)
 
-    # Grouper les mots par ligne (approximation sur y)
-    lines = []
-    current_line = []
+    print(f"🔍 Regex de départ : {transaction_conf['start_line_regex']}")
+    print(f"🔍 Nombre total de mots dans le document : {len(words)}")
+    
     sorted_words = sorted(words, key=lambda w: (w['page'], w['y'], w['x']))
-    last_y = None
-
-    for word in sorted_words:
-        y = word['y']
-        if last_y is None or abs(y - last_y) <= tolerance_y:
-            current_line.append(word)
-        else:
-            lines.append(current_line)
-            current_line = [word]
-        last_y = y
-    if current_line:
-        lines.append(current_line)
-
-    # Traitement des lignes
     transactions = []
+    anchor_y = None
     current_transaction = None
-    for line in lines:
-        line_text = " ".join([w['text'] for w in line])
-        if start_line_regex.search(line_text):
-            # Nouvelle transaction
-            current_transaction = {col: "" for col in columns}
-            transactions.append(current_transaction)
 
-        if current_transaction is not None:
-            for word in line:
-                for col_name, col_conf in columns.items():
-                    if col_conf['x_min'] <= word['x'] <= col_conf['x_max']:
-                        if 'regex' in col_conf and not re.search(col_conf['regex'], word['text']):
-                            continue
-                        current_transaction[col_name] += " " + word['text']
-                        break
+    for i, word in enumerate(sorted_words):
+        text = word['text']
+        is_start_line_candidate = (
+            start_line_regex.search(text) and
+            (start_line_x_max is None or word['x'] <= start_line_x_max) and
+            (start_line_x_min is None or word['x'] >= start_line_x_min) and
+            (start_line_y_min is None or word['y'] >= start_line_y_min) and
+            (start_line_y_max is None or word['y'] <= start_line_y_max)
+        )
+
+        if not is_start_line_candidate:
+            continue
+
+        # Nouvelle transaction détectée
+        anchor_y = word['y']
+        current_transaction = {col: "" for col in columns}
+        transactions.append(current_transaction)
+        print(f"\n🧾 Nouvelle transaction détectée : {text} (y = {anchor_y})")
+
+        # Récupérer tous les mots autour de cette ancre dans la fenêtre verticale
+        y_min = anchor_y - y_tol_above
+        y_max = anchor_y + y_tol_below
+
+        # On récupère les mots dans la bande verticale définie
+        line_words = [
+            w for w in sorted_words
+            if y_min <= w['y'] <= y_max
+        ]
+
+        # Et on les trie de gauche à droite
+        line_words = sorted(line_words, key=lambda w: w['x'])
+
+        for w in line_words:
+            for col_name, col_conf in columns.items():
+                if (
+                    col_conf['x_min'] <= w['x'] <= col_conf['x_max']
+                    and ('y_min' not in col_conf or w['y'] >= col_conf['y_min'])
+                    and ('y_max' not in col_conf or w['y'] <= col_conf['y_max'])
+                ):
+                    if 'regex' in col_conf and not re.search(col_conf['regex'], w['text']):
+                        continue
+                    current_transaction[col_name] += " " + w['text']
+                    print(f"  ➕ {w['text']} → {col_name}")
+                    break  # dès qu'il match une colonne, on ne le teste plus
 
     # Nettoyage des champs
     for tx in transactions:
         for k, v in tx.items():
             tx[k] = v.strip()
 
-    return transactions
+    print(f"\n✅ Total transactions extraites : {len(transactions)}")
+    return {
+    "transactions": transactions,
+    "lignes_exclues": []  # 👈 rien à exclure ici car pas de validation par regex
+    }
 
+def find_matching_table_json(ocr_dir, filter_words, base_prefix):
+    """Retourne le JSON OCR d'un tableau contenant tous les mots clés, limité au bon préfixe"""
+    for fname in os.listdir(ocr_dir):
+        if not fname.endswith(".json"):
+            continue
+        if "_p" in fname and "_tab" in fname and fname.startswith(base_prefix):
+            path = os.path.join(ocr_dir, fname)
+            data = load_ocr_json(path)
 
+            all_text = " ".join(
+                w['text']
+                for page in data
+                for block in page.get('blocks', [])
+                for line in block.get('lines', [])
+                for w in line.get('words', [])
+            ).lower()
 
+            if all(word.lower() in all_text for word in filter_words):
+                print(f"📌 Fichier table retenu : {fname}")
+                return data
+    print("⚠️ Aucun tableau OCR ne contient tous les mots filtrés")
+    return None
 
-def parse_document(ocr_json, yaml_config):
+def parse_document(ocr_json, yaml_config, ocr_json_path):
     output = {}
 
     all_words = []
@@ -237,14 +476,33 @@ def parse_document(ocr_json, yaml_config):
     for field_name, field_conf in champs_simples.items():
         output[field_name] = extract_field(all_words, field_name, field_conf, normalisation)
 
-    
     transactions_conf = structure.get('transactions')
     if transactions_conf:
-        output['transactions'] = extract_transactions(all_words, transactions_conf, normalisation)
+        source = transactions_conf.get('source', 'document')
+        if source == 'table':
+            filter_words = transactions_conf.get('filter_contains', [])
+            base_prefix = os.path.splitext(os.path.basename(ocr_json_path))[0]
+            ocr_table_data = find_matching_table_json("data/ocr", filter_words, base_prefix)
+            if ocr_table_data:
+                table_words = []
+                for page in ocr_table_data:
+                    for block in page.get('blocks', []):
+                        for line in block.get('lines', []):
+                            table_words.extend(line.get('words', []))
+                transactions_result = extract_transactions(table_words, transactions_conf, normalisation)
+                output['transactions'] = transactions_result.get("transactions", [])
+                output['lignes_exclues'] = transactions_result.get("lignes_exclues", [])
+            else:
+                output['transactions'] = []
+        else:
+            transactions_result = extract_transactions(all_words, transactions_conf, normalisation)
+            output['transactions'] = transactions_result.get("transactions", [])
+            output['lignes_exclues'] = transactions_result.get("lignes_exclues", [])
     else:
         output['transactions'] = []
 
     return output
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Parser structuré de relevé bancaire OCR selon un YAML")
@@ -257,7 +515,8 @@ if __name__ == "__main__":
     ocr_data = load_ocr_json(args.ocr_json)
     config = load_yaml(args.yaml_config)
 
-    result = parse_document(ocr_data, config)
+    result = parse_document(ocr_data, config, args.ocr_json)
+
 
     os.makedirs(os.path.dirname(args.output), exist_ok=True)
     with open(args.output, 'w', encoding='utf-8') as f:
