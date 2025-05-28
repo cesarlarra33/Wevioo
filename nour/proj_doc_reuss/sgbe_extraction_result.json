@@ -1,0 +1,511 @@
+{
+  "banque": "Société Générale",
+  "informations_compte": {
+    "periode": "Du 01/01/2020 Au 29/12/2020",
+    "numero_compte": "036520420101",
+    "agence": "AGENCE PRINCIPALE",
+    "devise": "FRANC CFA BCEAO",
+    "date_edition": "30 Decembre  2020 à 07:29",
+    "titulaire": "EXTRAIT DE COMPTE DU",
+    "adresse": null
+  },
+  "transactions": [
+    {
+      "Date": "14/01",
+      "Libelle operation": "VIRT FAV: PAN 5E1D90F44B08CB00",
+      "Val": "14/01",
+      "Debit": "48.35",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "14/01",
+      "Libelle operation": "FRAIS/VIRMENT",
+      "Val": "14/01",
+      "Debit": "5.5",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "31/01",
+      "Libelle operation": "FRAIS FIXE AU 31/01/20",
+      "Val": "31/01",
+      "Debit": "5.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "31/01",
+      "Libelle operation": "TAXE FRAIS FIXE AU 31/01/20",
+      "Val": "31/01",
+      "Debit": "500.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "31/01",
+      "Libelle operation": "COMMISSION DE CPTE AU 31/01/20",
+      "Val": "31/01",
+      "Debit": "7.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "31/01",
+      "Libelle operation": "TAXE COMM. DE CPTE AU 31/01/20",
+      "Val": "31/01",
+      "Debit": "1.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "11/02",
+      "Libelle operation": "VIRT DE:  /0100001260110256020",
+      "Val": "11/02",
+      "Debit": "400.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "13/02",
+      "Libelle operation": "VIRT FAV: PAN 5E440DFBF73A1000",
+      "Val": "13/02",
+      "Debit": "328.505",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "13/02",
+      "Libelle operation": "FRAIS/VIRMENT",
+      "Val": "13/02",
+      "Debit": "5.5",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "28/02",
+      "Libelle operation": "FRAIS FIXE AU 29/02/20",
+      "Val": "29/02",
+      "Debit": "5.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "28/02",
+      "Libelle operation": "TAXE FRAIS FIXE AU 29/02/20",
+      "Val": "29/02",
+      "Debit": "500.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "28/02",
+      "Libelle operation": "COMMISSION DE CPTE AU 29/02/20",
+      "Val": "29/02",
+      "Debit": "42.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "28/02",
+      "Libelle operation": "TAXE COMM. DE CPTE AU 29/02/20",
+      "Val": "29/02",
+      "Debit": "4.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "09/03",
+      "Libelle operation": "VIRT DE:  /0100001260110256020",
+      "Val": "09/03",
+      "Debit": null,
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "10/03",
+      "Libelle operation": "VIRT FAV: PANIER5E6751B9E69052",
+      "Val": "10/03",
+      "Debit": null,
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "10/03",
+      "Libelle operation": "FRAIS/VIRMENT",
+      "Val": "10/03",
+      "Debit": "5.5",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "31/03",
+      "Libelle operation": "FRAIS FIXE AU 31/03/20",
+      "Val": "31/03",
+      "Debit": "5.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "31/03",
+      "Libelle operation": "COMMISSION DE CPTE AU 31/03/20",
+      "Val": "31/03",
+      "Debit": "662.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "31/03",
+      "Libelle operation": "TAXE FRAIS FIXE AU 31/03/20",
+      "Val": "31/03",
+      "Debit": "500.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "31/03",
+      "Libelle operation": "TAXE COMM. DE CPTE AU 31/03/20",
+      "Val": "31/03",
+      "Debit": "66.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "06/04",
+      "Libelle operation": "VERSEMENT NECATI YILDIRIM/APPR",
+      "Val": "06/04",
+      "Debit": null,
+      "Credit": "200.0",
+      "solde": null
+    },
+    {
+      "Date": "10/04",
+      "Libelle operation": "VIRT FAV: PANIER5E8F16D5E69052",
+      "Val": "10/04",
+      "Debit": "127.8",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "10/04",
+      "Libelle operation": "FRAIS/VIRMENT",
+      "Val": "10/04",
+      "Debit": "5.5",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "30/04",
+      "Libelle operation": "FRAIS FIXE AU 30/04/20",
+      "Val": "30/04",
+      "Debit": "5.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "30/04",
+      "Libelle operation": "TAXE FRAIS FIXE AU 30/04/20",
+      "Val": "30/04",
+      "Debit": "500.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "30/04",
+      "Libelle operation": "COMMISSION DE CPTE AU 30/04/20",
+      "Val": "30/04",
+      "Debit": "17.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "30/04",
+      "Libelle operation": "TAXE COMM. DE CPTE AU 30/04/20",
+      "Val": "30/04",
+      "Debit": "2.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "11/05",
+      "Libelle operation": "VIRT FAV: PAN 5EB910FDB856F700",
+      "Val": "11/05",
+      "Debit": "143.4",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "29/05",
+      "Libelle operation": "FRAIS FIXE AU 31/05/20",
+      "Val": "31/05",
+      "Debit": "5.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "29/05",
+      "Libelle operation": "TAXE FRAIS FIXE AU 31/05/20",
+      "Val": "31/05",
+      "Debit": "500.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "29/05",
+      "Libelle operation": "COMMISSION DE CPTE AU 31/05/20",
+      "Val": "31/05",
+      "Debit": "18.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "29/05",
+      "Libelle operation": "TAXE COMM. DE CPTE AU 31/05/20",
+      "Val": "31/05",
+      "Debit": "2.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "09/06",
+      "Libelle operation": "VIRT FAV: PAN 5EDF51E6BD8A1000",
+      "Val": "09/06",
+      "Debit": "158.4",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "30/06",
+      "Libelle operation": "FRAIS FIXE AU 30/06/20",
+      "Val": "30/06",
+      "Debit": "5.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "30/06",
+      "Libelle operation": "TAXE FRAIS FIXE AU 30/06/20",
+      "Val": "30/06",
+      "Debit": "500.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "30/06",
+      "Libelle operation": "COMMISSION DE CPTE AU 30/06/20",
+      "Val": "30/06",
+      "Debit": "20.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "30/06",
+      "Libelle operation": "TAXE COMM. DE CPTE AU 30/06/20",
+      "Val": "30/06",
+      "Debit": "2.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "06/07",
+      "Libelle operation": "VERSEMENT APPRO/ MECATI YILDRI",
+      "Val": "06/07",
+      "Debit": null,
+      "Credit": "200.0",
+      "solde": null
+    },
+    {
+      "Date": "13/07",
+      "Libelle operation": "VIRT FAV: PANIER 5F087F7AB856F",
+      "Val": "13/07",
+      "Debit": "90.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "30/07",
+      "Libelle operation": "FRAIS FIXE AU 31/07/20",
+      "Val": "31/07",
+      "Debit": "5.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "30/07",
+      "Libelle operation": "TAXE FRAIS FIXE AU 31/07/20",
+      "Val": "31/07",
+      "Debit": "500.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "30/07",
+      "Libelle operation": "COMMISSION DE CPTE AU 31/07/20",
+      "Val": "31/07",
+      "Debit": "11.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "30/07",
+      "Libelle operation": "TAXE COMM. DE CPTE AU 31/07/20",
+      "Val": "31/07",
+      "Debit": "1.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "11/08",
+      "Libelle operation": "VIRT FAV: PAN 5F3177CF37AE6300",
+      "Val": "11/08",
+      "Debit": "66.4",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "31/08",
+      "Libelle operation": "FRAIS FIXE AU 31/08/20",
+      "Val": "31/08",
+      "Debit": "5.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "31/08",
+      "Libelle operation": "TAXE FRAIS FIXE AU 31/08/20",
+      "Val": "31/08",
+      "Debit": "500.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "31/08",
+      "Libelle operation": "COMMISSION DE CPTE AU 31/08/20",
+      "Val": "31/08",
+      "Debit": "8.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "31/08",
+      "Libelle operation": "TAXE COMM. DE CPTE AU 31/08/20",
+      "Val": "31/08",
+      "Debit": "1.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "30/09",
+      "Libelle operation": "FRAIS FIXE AU 30/09/20",
+      "Val": "30/09",
+      "Debit": "5.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "30/09",
+      "Libelle operation": "TAXE FRAIS FIXE AU 30/09/20",
+      "Val": "30/09",
+      "Debit": "500.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "12/10",
+      "Libelle operation": "VIRT FAV: PANIER 5F83F4AFBC8EA",
+      "Val": "12/10",
+      "Debit": "77.4",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "30/10",
+      "Libelle operation": "FRAIS FIXE AU 31/10/20",
+      "Val": "31/10",
+      "Debit": "5.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "30/10",
+      "Libelle operation": "TAXE FRAIS FIXE AU 31/10/20",
+      "Val": "31/10",
+      "Debit": "500.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "30/10",
+      "Libelle operation": "COMMISSION DE CPTE AU 31/10/20",
+      "Val": "31/10",
+      "Debit": "10.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "30/10",
+      "Libelle operation": "TAXE COMM. DE CPTE AU 31/10/20",
+      "Val": "31/10",
+      "Debit": "1.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "10/11",
+      "Libelle operation": "VIRT FAV: PANIER 5FAA80DAB86FE",
+      "Val": "10/11",
+      "Debit": "66.4",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "10/11",
+      "Libelle operation": "VERSEMENT APPRO/ ERDEM ALPER Y",
+      "Val": "10/11",
+      "Debit": null,
+      "Credit": "150.0",
+      "solde": null
+    },
+    {
+      "Date": "30/11",
+      "Libelle operation": "FRAIS FIXE AU 30/11/20",
+      "Val": "30/11",
+      "Debit": "5.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "30/11",
+      "Libelle operation": "TAXE FRAIS FIXE AU 30/11/20",
+      "Val": "30/11",
+      "Debit": "500.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "30/11",
+      "Libelle operation": "COMMISSION DE CPTE AU 30/11/20",
+      "Val": "30/11",
+      "Debit": "8.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "30/11",
+      "Libelle operation": "TAXE COMM. DE CPTE AU 30/11/20",
+      "Val": "30/11",
+      "Debit": "1.0",
+      "Credit": null,
+      "solde": null
+    },
+    {
+      "Date": "09/12",
+      "Libelle operation": "VIRT FAV: PANIER5FD0A779F921CE",
+      "Val": "09/12",
+      "Debit": "128.9",
+      "Credit": null,
+      "solde": null
+    }
+  ],
+  "texte_brut": "EXTRAIT DE COMPTE DU 01/01/2020  AU 29/12/2020\n036520420101-51              30 Decembre  2020 a  07:29\n01001 COTONOU AGENCE PRINCIPALE\nSUMMA TURIZM YATIRIMCILIGI SUCCURSAL ILOT 1143 L IMMEUBLE CABINET SODEXCA QUARTIER AGONTINKON COTONOU COTONOU\nFRANC CFA BCEAO\nSUMMA TURIZM YATIRIMCIUGI                                     Page.: 1\nDate !      Libelle operation       ! Val !      Debit      !     Credit\n!Solde au 01/01/2020           !     !                 !          161.136\n!                    ..."
+}

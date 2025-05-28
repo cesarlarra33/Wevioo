@@ -1,0 +1,126 @@
+{
+  "texts": [
+    "Cotonou, le :",
+    "02/05/2023",
+    "Compte",
+    "PØriode",
+    "01/03/2022 Du",
+    "36000127601-72",
+    "RIB",
+    "BJ177 00001 36000127601 72",
+    "Gestionnaire",
+    "JEAN FRANCOIS MEHOU LOKO",
+    "31/05/2022 Au",
+    "RELEVE DE COMPTE",
+    "SODEXCA SARL",
+    "LOT 1892 YENAWA",
+    "03 BP 2277",
+    "COTONOU",
+    "Page : 1",
+    "RELEVE DE COMPTE",
+    "Succursale de CBAO Groupe Attijariwafa bank",
+    "www.cbao.sn E-mail : info@cbao.bj RCCM: RB/COT/13B10549 IFU : 3201301208214 SociØtØ Anonyme au Capital Social de 11 450 000 000 de francs C.F.A - SWIFT : CBAOBJBJ Espace DINA, Boulevard Saint Michel Cotonou - BP : 01 BP 6441 Cotonou Tel. : (+229) 21 36 59 02 - Fax : (+229) 64"
+  ],
+  "tables": [
+    [
+      {
+        "Date Operation": "01/03/22",
+        "Solde au 01/03/2022.Libelle Operation": "AGIOS DU 31/01/22 AU 28/02/22",
+        "Date Valeur": "28/02/22",
+        "Debit": "5 776",
+        "3 197 998.Credit": ""
+      },
+      {
+        "Date Operation": "18/03/22",
+        "Solde au 01/03/2022.Libelle Operation": "FRS VRMT AUTRES BQ SAL MARS 22",
+        "Date Valeur": "18/03/22",
+        "Debit": "5 500",
+        "3 197 998.Credit": ""
+      },
+      {
+        "Date Operation": "18/03/22",
+        "Solde au 01/03/2022.Libelle Operation": "VIRT MULTIPLE CPTE A DEBITER",
+        "Date Valeur": "17/03/22",
+        "Debit": "2 003 764",
+        "3 197 998.Credit": ""
+      },
+      {
+        "Date Operation": "01/04/22",
+        "Solde au 01/03/2022.Libelle Operation": "AGIOS DU 28/02/22 AU 31/03/22",
+        "Date Valeur": "31/03/22",
+        "Debit": "5 776",
+        "3 197 998.Credit": ""
+      },
+      {
+        "Date Operation": "26/04/22",
+        "Solde au 01/03/2022.Libelle Operation": "VIREMENT O/ SODEXCA SARL",
+        "Date Valeur": "26/04/22",
+        "Debit": "",
+        "3 197 998.Credit": "3 000 000"
+      },
+      {
+        "Date Operation": "26/04/22",
+        "Solde au 01/03/2022.Libelle Operation": "VIRT MULTIPLE CPTE A DEBITER",
+        "Date Valeur": "25/04/22",
+        "Debit": "2 003 764",
+        "3 197 998.Credit": ""
+      },
+      {
+        "Date Operation": "03/05/22",
+        "Solde au 01/03/2022.Libelle Operation": "AGIOS DU 31/03/22 AU 30/04/22",
+        "Date Valeur": "30/04/22",
+        "Debit": "6 153",
+        "3 197 998.Credit": ""
+      },
+      {
+        "Date Operation": "09/05/22",
+        "Solde au 01/03/2022.Libelle Operation": "FRS VRMT AUTR BQ DU 26/04/2022",
+        "Date Valeur": "09/05/22",
+        "Debit": "5 500",
+        "3 197 998.Credit": ""
+      },
+      {
+        "Date Operation": "19/05/22",
+        "Solde au 01/03/2022.Libelle Operation": "VIRT MULTIPLE CPTE A DEBITER",
+        "Date Valeur": "18/05/22",
+        "Debit": "2 003 764",
+        "3 197 998.Credit": ""
+      },
+      {
+        "Date Operation": "19/05/22",
+        "Solde au 01/03/2022.Libelle Operation": "FRS VRMT SALAIRE MAI 2022",
+        "Date Valeur": "19/05/22",
+        "Debit": "5 500",
+        "3 197 998.Credit": ""
+      },
+      {
+        "Date Operation": "27/05/22",
+        "Solde au 01/03/2022.Libelle Operation": "VRMENT RECU SODEXCA",
+        "Date Valeur": "25/05/22",
+        "Debit": "",
+        "3 197 998.Credit": "6 000 000"
+      },
+      {
+        "Date Operation": "",
+        "Solde au 01/03/2022.Libelle Operation": "Total des Mouvements de la Page",
+        "Date Valeur": "",
+        "Debit": "6 045 497",
+        "3 197 998.Credit": "9 000 000"
+      },
+      {
+        "Date Operation": "",
+        "Solde au 01/03/2022.Libelle Operation": "Total General",
+        "Date Valeur": "",
+        "Debit": "6 045 497",
+        "3 197 998.Credit": "9 000 000"
+      },
+      {
+        "Date Operation": "",
+        "Solde au 01/03/2022.Libelle Operation": "Solde au :",
+        "Date Valeur": "",
+        "Debit": "",
+        "3 197 998.Credit": "6 152 501"
+      }
+    ]
+  ]
+}
