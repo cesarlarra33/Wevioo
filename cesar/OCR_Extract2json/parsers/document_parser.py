@@ -53,6 +53,29 @@ def extract_field(words, field_name, field_conf, normalisation):
     tol_y = field_conf.get('tolerance_y', 10)
 
     print(f"\n🔍 Extraction du champ : {field_name}")
+    
+    if not anchor_text and not anchor_sequence:
+        print(f"🔎 Pas d’ancre définie → recherche directe dans la zone min_x:{min_x}, max_x:{max_x}, min_y:{min_y}, max_y:{max_y}")
+        
+        # Tous les mots dans la zone, sans filtrer par regex
+        all_candidates_in_zone = [
+            w for w in words
+            if (min_x is None or w['x'] >= min_x) and (max_x is None or w['x'] <= max_x)
+            and (min_y is None or w['y'] >= min_y) and (max_y is None or w['y'] <= max_y)
+        ]
+        print(f"🟡 Tous les mots candidats dans la zone : {[w['text'] for w in all_candidates_in_zone]}")
+        
+        # Maintenant on applique la regex
+        regex_matched_candidates = [w for w in all_candidates_in_zone if re.search(regex, w['text'])]
+        print(f"🟢 Mots qui matchent la regex : {[w['text'] for w in regex_matched_candidates]}")
+        
+        if regex_matched_candidates:
+            value = " ".join(w['text'] for w in regex_matched_candidates)
+            print(f"✅ Valeur extraite (sans ancre) : {value}")
+            return normalize_value(field_name, value, normalisation)
+        else:
+            print("❌ Aucune valeur trouvée dans la zone après filtrage regex")
+        return None
 
     def match_and_collect(w):
         if min_x is not None and w['x'] < min_x:
@@ -245,6 +268,8 @@ def extract_tokens_by_column_regex(line_text, columns_order, columns_regex, sepa
 
         for match in re.finditer(pattern, remaining):
             start, end = match.span()
+            if match.lastgroup == "val":
+                matched_text = match.group("val")
             if match.lastindex and match.lastindex >= 1:
                 matched_text = match.group(1)
             else:
@@ -252,7 +277,7 @@ def extract_tokens_by_column_regex(line_text, columns_order, columns_regex, sepa
             
             
             # ✅ Si le caractère juste avant le match est suspect (ex: '1', 'I', 'l'), on ignore ce caractère
-            if start > 0 and remaining[start - 1] in "1Il":
+            if start > 0 and remaining[start - 1] in "1Il!":
                 print(f"⚠️ Correction OCR probable (caractère suspect avant match) → on garde : '{matched_text}' (index {start})")
                 tokens.append(matched_text)
                 remaining = remaining[end:].strip()

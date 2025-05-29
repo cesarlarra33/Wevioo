@@ -1,0 +1,115 @@
+document_type: relevé_bancaire
+banque: SGBE
+format: texte+tesseract
+
+crop_tables: false
+preprocess_pdf: false
+preprocess_tables: false
+
+ocr:
+  pdf:
+    psm: 6
+    oem: 1
+  tables:
+    psm: 6
+    oem: 1
+
+structure:
+  champs_simples:
+
+    periode_debut:
+      anchor: "DU"
+      direction: right_xy
+      regex: "\\d{2}/\\d{2}/\\d{4}"
+      min_y: 550
+      max_y: 600
+      min_x: 650
+      max_x: 1300
+      tolerance_y: 10
+
+    periode_fin:
+      anchor: "AU"
+      direction: right_xy
+      regex: "\\d{2}/\\d{2}/\\d{4}"
+      min_y: 550
+      max_y: 600
+      min_x: 650
+      max_x: 1450
+      tolerance_y: 10
+
+    numero_de_compte:
+      regex: "\\d{9,}-\\d{2}"
+      direction: nearby_xy
+      min_y: 680
+      max_y: 730
+      min_x: 650
+      max_x: 800
+      tolerance_y: 30
+      tolerance_x: 50
+
+    date_emission:
+      regex: "^(\\d{1,2}|\\d{4}|(?:[A-Z][a-zéèêîâàçùûôëïüÉÈÊÎÂÀÇÙÛÔËÏÜ]+))$"
+      direction: nearby_xy
+      min_y: 680
+      max_y: 730
+      min_x: 1300
+      max_x: 1800
+      tolerance_y: 30
+
+    devise:
+      regex: "^[A-Z]{2,}$"
+      direction: nearby_xy
+      min_y: 1050
+      max_y: 1080
+      min_x: 330
+      max_x: 570
+      tolerance_y: 20
+
+    solde_debut_periode:
+      regex: "\\d{1,3}(\\.\\d{3})*(,,\\d{2})?"
+      direction: nearby_xy
+      min_y: 1250
+      max_y: 1280
+      min_x: 1300
+      max_x: 1900
+      tolerance_y: 30
+
+    nom_client:
+      regex: "[A-Z\\s]{5,}"
+      concat: true
+      direction: nearby_xy
+      min_y: 850
+      max_y: 880
+      min_x: 1050
+      max_x: 1700
+      tolerance_y: 30
+
+  transactions:
+    source: "document"
+    mode: "with_separator"
+    separator: "!"
+    use_line_shape_heuristic: true
+    line_shape_regex: "!(\\d{2}/\\d{2})![^!]+!(\\d{2}/\\d{2})!\\s*(\\d{1,3}(\\.\\d{3})*,\\d{2})?\\s*!\\s*(\\d{1,3}(\\.\\d{3})*,\\d{2})?\\s*!"
+
+    start_line_regex: "\\d{2}/\\d{2}"
+    start_line_x_min: 280
+    start_line_x_max: 310
+    start_line_y_min: 300
+    start_line_y_max: 2400
+    y_tolerance: 5
+
+    columns_order:
+      - date_transaction
+      - libelle
+      - date_valeur
+      - debit
+      - credit
+      
+
+    columns_regex:
+      date_transaction: "\\d{2}/\\d{2}"
+      libelle: "[!1Il]?(.+?)(?=[!1Il]\\d{2}/\\d{2})"
+      date_valeur: "[!1Il]?(?P<val>\\d{2}/\\d{2})"
+      debit: (?<=[!])\s*(\d{1,3}(?:\.\d{3})*(?:,\d{2})?)?\s*(?=[!])
+      credit: (?<=[!])\s*(\d{1,3}(?:\.\d{3})*(?:,\d{2})?)?\s*$
+
