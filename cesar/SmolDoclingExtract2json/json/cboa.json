@@ -1,0 +1,276 @@
+{
+  "metadata": [
+    {
+      "key": "SODEXCA SARL",
+      "value": ""
+    },
+    {
+      "key": "LOT 1892 YENAWA",
+      "value": ""
+    },
+    {
+      "key": "03 BP 2277",
+      "value": ""
+    },
+    {
+      "key": "Compte",
+      "value": ""
+    },
+    {
+      "key": "RIB",
+      "value": ""
+    },
+    {
+      "key": "Gestionnaire",
+      "value": ""
+    },
+    {
+      "key": "Periode",
+      "value": "Du 01/03/2022 Au 31/05/2022"
+    },
+    {
+      "key": "RELEVE DE COMPTE",
+      "value": ""
+    },
+    {
+      "key": "Solde au",
+      "value": "01/03/2022"
+    },
+    {
+      "key": "Date Operation",
+      "value": "Libelle Operation Date Valeur"
+    },
+    {
+      "key": "01/03/22",
+      "value": "AGIOS DU 31/01/22 AU 28/02/22 28/02/22"
+    },
+    {
+      "key": "18/03/22",
+      "value": "FRS VMRT AUTRES BQ SAL MARS 22 18/03/22"
+    },
+    {
+      "key": "18/03/22",
+      "value": "VIRT MULTIPLE CPTE A DEBITER 17/03/22"
+    },
+    {
+      "key": "01/04/22",
+      "value": "AGIOS DU 28/02/22 AU 31/03/22 31/03/22"
+    },
+    {
+      "key": "26/04/22",
+      "value": "VIRTEM O/ SODEXCA SARL 26/04/22"
+    },
+    {
+      "key": "26/04/22",
+      "value": "VIRT MULTIPLE CPTE A DEBITER 25/04/22"
+    },
+    {
+      "key": "03/05/22",
+      "value": "AGIOS DU 31/03/22 AU 30/04/22 30/04/22"
+    },
+    {
+      "key": "09/05/22",
+      "value": "FRS VMRT AUTR BQ DU 26/04/22 09/05/22"
+    },
+    {
+      "key": "19/05/22",
+      "value": "VIRT MULTIPLE CPTE A DEBITER 18/05/22"
+    },
+    {
+      "key": "19/05/22",
+      "value": "FRS VMRT SALAIRE MAI 2022 19/05/22"
+    },
+    {
+      "key": "27/05/22",
+      "value": "VIRMENT RECU SODEXCA 25/05/22"
+    },
+    {
+      "key": "Total des Mouvements de la Page 6 045 497",
+      "value": ""
+    },
+    {
+      "key": "Total General",
+      "value": "6 045 497"
+    },
+    {
+      "key": "Solde au :",
+      "value": "31/05/2022"
+    },
+    {
+      "key": "Succursale de CBAO Groupe Attijarifa bank",
+      "value": "Société Anonyme au Capital Social de 11 450 000 00 de francs C.F.A - SWIFT : CBAOBJBJ Société Anonyme au Capital Social de 11 450 000 00 de francs C.F.A - SWIFT : CBAOBJBJ Espace DINA, Boulevard Saint Michel Cotonou - BP : 01 BP 6441 Cotonou Succursale de CBAO Groupe Attijarifa bank Société Anonyme au Capital Social de 11 450 000 00 de francs C.F.A - SWIFT : CBAOBJBJ Succursale de CBAO Groupe Attijarifa bank Société Anonyme au Capital Social de 11 450 000 00 de francs C.F.A - SWIFT : CBAOBJBJ Succursale de CBAO Groupe Attijarifa bank Société Anonyme au Capital Social de 11 450 000 00 de francs C.F.A - SWIFT : CBAOBJBJ"
+    },
+    {
+      "key": "Espace DINA, Boulevard Saint Michel Cotonou - BP : 01 BP 6441 Cotonou",
+      "value": "Espace DINA, Boulevard Saint Michel Cotonou - BP : 01 BP 6441 Cotonou RCCM: RB/COT/13B10549 IFU : 3201301208214 Espace DINA, Boulevard Saint Michel Cotonou - BP : 01 BP 6441 Cotonou Espace DINA, Boulevard Saint Michel Cotonou - BP : 01 BP 6441 Cotonou"
+    },
+    {
+      "key": "RCCM: RB/COT/13B10549 IFU : 3201301208214",
+      "value": "RCCM: RB/COT/13B10549 IFU : 3201301208214 www.cbao.sn - Tel. : (+229) 21 36 59 02 - Fax : (+229) 64 RCCM: RB/COT/13B10549 IFU : 3201301208214 RCCM: RB/COT/13B10549 IFU : 3201301208214"
+    },
+    {
+      "key": "www.cbao.sn - Tel. : (+229) 21 36 59 02 - Fax : (+229) 64",
+      "value": "www.cbao.sn - Tel. : (+229) 21 36 59 02 - Fax : (+229) 64 www.cbao.sn - Tel. : (+229) 21 36 59 02 - Fax : (+229) 64 www.cbao.sn - Tel. : (+229) 21 36 59 02 - Fax : (+229) 64 E-mail E-mail E-mail E-mail E-mail : info @ cbao.j : info @ cbao.j : info @ cbao.j : info @ cbao.j : info @ cbao.j"
+    }
+  ],
+  "sections": [],
+  "footers": [],
+  "logos": [],
+  "transactions": [
+    {
+      "col1": "SODEXCA SARL",
+      "col2": "LOT 1892 YENAWA",
+      "col3": "03 BP 2277",
+      "col4": "Compte",
+      "col5": "RIB",
+      "col6": "Gestionnaire",
+      "col7": "Periode",
+      "col8": "Du 01/03/2022",
+      "col9": "Au"
+    },
+    {
+      "col1": "31/05/2022",
+      "col2": "RELEVE DE COMPTE",
+      "col3": "Solde au"
+    },
+    {
+      "col1": "01/03/2022",
+      "col2": "Date Operation",
+      "col3": "Libelle Operation",
+      "col4": "Date Valeur"
+    },
+    {
+      "col1": "01/03/22",
+      "col2": "AGIOS DU 31/01/22 AU 28/02/22"
+    },
+    {
+      "col1": "28/02/22"
+    },
+    {
+      "col1": "18/03/22",
+      "col2": "FRS VMRT AUTRES BQ SAL MARS 22"
+    },
+    {
+      "col1": "18/03/22"
+    },
+    {
+      "col1": "18/03/22",
+      "col2": "VIRT MULTIPLE CPTE A DEBITER"
+    },
+    {
+      "col1": "17/03/22"
+    },
+    {
+      "col1": "01/04/22",
+      "col2": "AGIOS DU 28/02/22 AU 31/03/22"
+    },
+    {
+      "col1": "31/03/22"
+    },
+    {
+      "col1": "26/04/22",
+      "col2": "VIRTEM O/ SODEXCA SARL"
+    },
+    {
+      "col1": "26/04/22"
+    },
+    {
+      "col1": "26/04/22",
+      "col2": "VIRT MULTIPLE CPTE A DEBITER"
+    },
+    {
+      "col1": "25/04/22"
+    },
+    {
+      "col1": "03/05/22",
+      "col2": "AGIOS DU 31/03/22 AU 30/04/22"
+    },
+    {
+      "col1": "30/04/22"
+    },
+    {
+      "col1": "09/05/22",
+      "col2": "FRS VMRT AUTR BQ DU 26/04/22"
+    },
+    {
+      "col1": "09/05/22"
+    },
+    {
+      "col1": "19/05/22",
+      "col2": "VIRT MULTIPLE CPTE A DEBITER"
+    },
+    {
+      "col1": "18/05/22"
+    },
+    {
+      "col1": "19/05/22",
+      "col2": "FRS VMRT SALAIRE MAI 2022"
+    },
+    {
+      "col1": "19/05/22"
+    },
+    {
+      "col1": "27/05/22",
+      "col2": "VIRMENT RECU SODEXCA"
+    },
+    {
+      "col1": "25/05/22",
+      "col2": "Total des Mouvements de la Page 6 045 497",
+      "col3": "Total General",
+      "col4": "6 045 497",
+      "col5": "Solde au :"
+    },
+    {
+      "col1": "31/05/2022",
+      "col2": "Succursale de CBAO Groupe Attijarifa bank",
+      "col3": "Société Anonyme au Capital Social de 11 450 000 00 de francs C.F.A - SWIFT : CBAOBJBJ",
+      "col4": "Succursale de CBAO Groupe Attijarifa bank",
+      "col5": "Succursale de CBAO Groupe Attijarifa bank",
+      "col6": "Succursale de CBAO Groupe Attijarifa bank",
+      "col7": "Société Anonyme au Capital Social de 11 450 000 00 de francs C.F.A - SWIFT : CBAOBJBJ",
+      "col8": "Espace DINA, Boulevard Saint Michel Cotonou - BP : 01 BP 6441 Cotonou",
+      "col9": "Société Anonyme au Capital Social de 11 450 000 00 de francs C.F.A - SWIFT : CBAOBJBJ",
+      "col10": "Société Anonyme au Capital Social de 11 450 000 00 de francs C.F.A - SWIFT : CBAOBJBJ",
+      "col11": "Société Anonyme au Capital Social de 11 450 000 00 de francs C.F.A - SWIFT : CBAOBJBJ",
+      "col12": "Espace DINA, Boulevard Saint Michel Cotonou - BP : 01 BP 6441 Cotonou",
+      "col13": "Espace DINA, Boulevard Saint Michel Cotonou - BP : 01 BP 6441 Cotonou",
+      "col14": "RCCM: RB/COT/13B10549 IFU : 3201301208214",
+      "col15": "Espace DINA, Boulevard Saint Michel Cotonou - BP : 01 BP 6441 Cotonou",
+      "col16": "Espace DINA, Boulevard Saint Michel Cotonou - BP : 01 BP 6441 Cotonou",
+      "col17": "RCCM: RB/COT/13B10549 IFU : 3201301208214",
+      "col18": "RCCM: RB/COT/13B10549 IFU : 3201301208214",
+      "col19": "www.cbao.sn - Tel. : (+229) 21 36 59 02 - Fax : (+229) 64",
+      "col20": "RCCM: RB/COT/13B10549 IFU : 3201301208214",
+      "col21": "RCCM: RB/COT/13B10549 IFU : 3201301208214",
+      "col22": "www.cbao.sn - Tel. : (+229) 21 36 59 02 - Fax : (+229) 64",
+      "col23": "www.cbao.sn - Tel. : (+229) 21 36 59 02 - Fax : (+229) 64",
+      "col24": "www.cbao.sn - Tel. : (+229) 21 36 59 02 - Fax : (+229) 64",
+      "col25": "www.cbao.sn - Tel. : (+229) 21 36 59 02 - Fax : (+229) 64",
+      "col26": "E-mail",
+      "col27": "E-mail",
+      "col28": "E-mail",
+      "col29": "E-mail",
+      "col30": "E-mail",
+      "col31": ":",
+      "col32": "info",
+      "col33": "@",
+      "col34": "cbao.j",
+      "col35": ":",
+      "col36": "info",
+      "col37": "@",
+      "col38": "cbao.j",
+      "col39": ":",
+      "col40": "info",
+      "col41": "@",
+      "col42": "cbao.j",
+      "col43": ":",
+      "col44": "info",
+      "col45": "@",
+      "col46": "cbao.j",
+      "col47": ":",
+      "col48": "info",
+      "col49": "@",
+      "col50": "cbao.j"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+écris moi un fichier markdown d'avancement du projet, 
+
+tu dis que pendant la semaine du lundi 19/05, j'ai passé du temps à faire des recherches et installer plein de bibliothèques j'ai essayé de d'extraire les données des pdf avec SmolDoc, tu dis ce qu'est Smoldoc (un llm image to text) qui renvoie ce qu'il a trouvé dans le document sous forme de doctags (dis ce qu'est un doctag) et comment c'est relié à docling, il faut ensuite parser ces doctags pour extraire les données qui nous intéressent sur les documents bancaires et les factures, difficultés rencontrées, Smoldoc peine à bien lire et à ne pas "halluciner" sur les pdf qui lui sont donnés et il est très sensible à la qualité du Scan donc ce n'est pas très efficace je change d'approche. 
+
+et semaine du 26/05 : 
+
+sur les conseils de Mehdi un ingénieur dans l'open space, je me suis occupé à utiliser tesseract pour lire toutes les informations des pdf, je m'occupe d'abord des relevés de compte avant les facturessauf que chaque pdf à ses spécificités en terme d'infos importantes à extraire et de mise en page, donc il faut utiliser des règles de parsing différentes pour chaque type de fichier (tous les relevés provenant d'un même banque peuvent se parser avec les mêmes règles) 
+principe de fonctionnement : tesseract rempli un json "brut" avec tout le texte qu'il extrait d'un pdf, et des précisions (coordonnées des mots, taille, numéro de ligne, numéro de bloc de texte). 
+Je peux faire varier la manière dont les mots et caractères sont regroupés en jouant sur les êtres paramètres oem et psm de tesseract. Ensuite en fonction du fichier de règles de parsing le parser exrtrait du json brut seulement les données interressantes (champs simples : Numéro de compte, Nom du client, Solde du compte, date de la période etc..), Ainsi que les transactions effectuées sur le compte (avec date transaction, Libellé, Débit, Crédit).  (script de lecture ocr : ocr_reader.py, script de parsing document_parser.py)
+
+Difficultés rencontrées : 
+-sur certain pdf comme nsia.pdf, certaines lignes du tableau sont mal lues par ocr, j'ai donc fais un script qui permet d'extraire séparément les tableaux de transaction pour leur faire passer une ocr séparément du reste du pdf avec des paramètres tesseract différents, je peux préciser dans mes règles de parsing s'il est, nécéssaire ou non d'extraire les tableaux, ainsi que les paramêtres tesseract optimaux à utiliser (le script s'appelle table_cropper.py) 
+
+- Sur d'autres pdf scannés, comme RELEVE_UBA.pdf, la lecture ocr est très laborieuse si le pdf a été scanné "penché", ou pour le texte qui se trouve dans des zones grisées, par manque de contraste n'est pas lisible, donc j'ai fait un script preprocess_image.py, qui permet de redresser le pdf si besoin, d'ajouter du contraste pour faire ressortir le texte, et aussi de de faire disparaitre les zones grisées (ou colorées) pour n'avoir que du texte parfaitement lisible noir sur blanc. (je spécifie aussi dans les regles si un preprocessing est nécessaire)
+
+
+Pour résumé: 
+et j'ai un script maitre extract_data.py qui prend en argument le pdf et les règles de parsing qui lui correspondent, et qui extrait séparément les tables si besoin, preprocess le pdf si besoin, puis donne ces éléments à ocr_reader.py qui remplit un json brut, qui est ensuite parsé par document_parser.py et un json structuré ne contenant que les infos 

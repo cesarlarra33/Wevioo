@@ -1,0 +1,105 @@
+ <loc_36><loc_70><loc_133><loc_75>Cotonou, le : 02/05/2023</text>
+<text><loc_270><loc_70><loc_342><loc_75>SODEXCA SARL</text>
+<text><loc_270><loc_80><loc_349><loc_85>LOT 1892 YENAWA</text>
+<text><loc_270><loc_91><loc_315><loc_96>03 BP 2277</text>
+<text><loc_36><loc_102><loc_64><loc_107>Compte</text>
+<text><loc_36><loc_110><loc_51><loc_115>RIB</text>
+<text><loc_36><loc_118><loc_77><loc_123>Gestionnaire</text>
+<text><loc_36><loc_125><loc_63><loc_130>Periode</text>
+<text><loc_95><loc_125><loc_128><loc_130>Du 01/03/2022</text>
+<text><loc_158><loc_125><loc_170><loc_130>Au</text>
+<text><loc_180><loc_125><loc_218><loc_130>31/05/2022</text>
+<text><loc_36><loc_153><loc_124><loc_159>RELEVE DE COMPTE</text>
+<text><loc_115><loc_167><loc_137><loc_172>Solde au</text>
+<text><loc_162><loc_167><loc_199><loc_172>01/03/2022</text>
+<text><loc_36><loc_180><loc_95><loc_185>Date Operation</text>
+<text><loc_115><loc_180><loc_174><loc_185>Libelle Operation</text>
+<text><loc_270><loc_180><loc_319><loc_185>Date Valeur</text>
+<text><loc_36><loc_190><loc_64><loc_195>01/03/22</text>
+<text><loc_115><loc_190><loc_214><loc_195>AGIOS DU 31/01/22 AU 28/02/22</text>
+<text><loc_270><loc_190><loc_302><loc_195>28/02/22</text>
+<text><loc_36><loc_198><loc_64><loc_203>18/03/22</text>
+<text><loc_115><loc_198><loc_233><loc_203>FRS VMRT AUTRES BQ SAL MARS 22</text>
+<text><loc_270><loc_198><loc_302><loc_203>18/03/22</text>
+<text><loc_36><loc_206><loc_64><loc_211>18/03/22</text>
+<text><loc_115><loc_206><loc_223><loc_211>VIRT MULTIPLE CPTE A DEBITER</text>
+<text><loc_270><loc_206><loc_302><loc_211>17/03/22</text>
+<text><loc_36><loc_214><loc_64><loc_219>01/04/22</text>
+<text><loc_115><loc_214><loc_233><loc_219>AGIOS DU 28/02/22 AU 31/03/22</text>
+<text><loc_270><loc_214><loc_302><loc_219>31/03/22</text>
+<text><loc_36><loc_222><loc_64><loc_227>26/04/22</text>
+<text><loc_115><loc_222><loc_214><loc_227>VIRTEM O/ SODEXCA SARL</text>
+<text><loc_270><loc_222><loc_302><loc_227>26/04/22</text>
+<text><loc_36><loc_230><loc_64><loc_235>26/04/22</text>
+<text><loc_115><loc_230><loc_233><loc_235>VIRT MULTIPLE CPTE A DEBITER</text>
+<text><loc_270><loc_230><loc_302><loc_235>25/04/22</text>
+<text><loc_36><loc_238><loc_64><loc_243>03/05/22</text>
+<text><loc_115><loc_238><loc_214><loc_243>AGIOS DU 31/03/22 AU 30/04/22</text>
+<text><loc_270><loc_238><loc_302><loc_243>30/04/22</text>
+<text><loc_36><loc_246><loc_64><loc_251>09/05/22</text>
+<text><loc_115><loc_246><loc_233><loc_251>FRS VMRT AUTR BQ DU 26/04/22</text>
+<text><loc_270><loc_246><loc_302><loc_251>09/05/22</text>
+<text><loc_36><loc_254><loc_64><loc_259>19/05/22</text>
+<text><loc_115><loc_254><loc_223><loc_259>VIRT MULTIPLE CPTE A DEBITER</text>
+<text><loc_270><loc_254><loc_302><loc_259>18/05/22</text>
+<text><loc_36><loc_262><loc_64><loc_267>19/05/22</text>
+<text><loc_115><loc_262><loc_214><loc_267>FRS VMRT SALAIRE MAI 2022</text>
+<text><loc_270><loc_262><loc_302><loc_267>19/05/22</text>
+<text><loc_36><loc_269><loc_64><loc_274>27/05/22</text>
+<text><loc_115><loc_269><loc_200><loc_274>VIRMENT RECU SODEXCA</text>
+<text><loc_270><loc_269><loc_302><loc_274>25/05/22</text>
+<text><loc_36><loc_281><loc_490><loc_286>Total des Mouvements de la Page 6 045 497</text>
+<text><loc_115><loc_293><loc_161><loc_298>Total General</text>
+<text><loc_270><loc_293><loc_399><loc_298>6 045 497</text>
+<text><loc_115><loc_304><loc_147><loc_309>Solde au :</text>
+<text><loc_195><loc_304><loc_237><loc_309>31/05/2022</text>
+<text><loc_36><loc_456><loc_184><loc_460>Succursale de CBAO Groupe Attijarifa bank</text>
+<text><loc_36><loc_461><loc_312><loc_466>Société Anonyme au Capital Social de 11 450 000 00 de francs C.F.A - SWIFT : CBAOBJBJ</text>
+<text><loc_36><loc_467><loc_256><loc_471>Espace DINA, Boulevard Saint Michel Cotonou - BP : 01 BP 6441 Cotonou</text>
+<text><loc_36><loc_473><loc_187><loc_478>RCCM: RB/COT/13B10549 IFU : 3201301208214</text>
+<text><loc_36><loc_479><loc_187><loc_483>www.cbao.sn - Tel. : (+229) 21 36 59 02 - Fax : (+229) 64</text>
+<text><loc_244><loc_481><loc_256><loc_485>E-mail</text>
+<text><loc_256><loc_481><loc_256><loc_485>:</text>
+<text><loc_256><loc_481><loc_256><loc_485>info</text>
+<text><loc_256><loc_481><loc_256><loc_485>@</text>
+<text><loc_256><loc_481><loc_256><loc_485>cbao.j</text>
+<text><loc_36><loc_467><loc_302><loc_471>Espace DINA, Boulevard Saint Michel Cotonou - BP : 01 BP 6441 Cotonou</text>
+<text><loc_36><loc_473><loc_187><loc_478>RCCM: RB/COT/13B10549 IFU : 3201301208214</text>
+<text><loc_36><loc_479><loc_187><loc_483>www.cbao.sn - Tel. : (+229) 21 36 59 02 - Fax : (+229) 64</text>
+<text><loc_244><loc_481><loc_256><loc_485>E-mail</text>
+<text><loc_256><loc_481><loc_256><loc_485>:</text>
+<text><loc_256><loc_481><loc_256><loc_485>info</text>
+<text><loc_256><loc_481><loc_256><loc_485>@</text>
+<text><loc_256><loc_481><loc_256><loc_485>cbao.j</text>
+<text><loc_36><loc_456><loc_184><loc_460>Société Anonyme au Capital Social de 11 450 000 00 de francs C.F.A - SWIFT : CBAOBJBJ</text>
+<text><loc_36><loc_461><loc_256><loc_466>Espace DINA, Boulevard Saint Michel Cotonou - BP : 01 BP 6441 Cotonou</text>
+<text><loc_36><loc_467><loc_187><loc_471>RCCM: RB/COT/13B10549 IFU : 3201301208214</text>
+<text><loc_36><loc_473><loc_187><loc_478>www.cbao.sn - Tel. : (+229) 21 36 59 02 - Fax : (+229) 64</text>
+<text><loc_244><loc_481><loc_256><loc_485>E-mail</text>
+<text><loc_256><loc_481><loc_256><loc_485>:</text>
+<text><loc_256><loc_481><loc_256><loc_485>info</text>
+<text><loc_256><loc_481><loc_256><loc_485>@</text>
+<text><loc_256><loc_481><loc_256><loc_485>cbao.j</text>
+<text><loc_36><loc_456><loc_184><loc_460>Succursale de CBAO Groupe Attijarifa bank</text>
+<text><loc_36><loc_461><loc_312><loc_466>Société Anonyme au Capital Social de 11 450 000 00 de francs C.F.A - SWIFT : CBAOBJBJ</text>
+<text><loc_36><loc_467><loc_256><loc_471>Espace DINA, Boulevard Saint Michel Cotonou - BP : 01 BP 6441 Cotonou</text>
+<text><loc_36><loc_473><loc_187><loc_478>RCCM: RB/COT/13B10549 IFU : 3201301208214</text>
+<text><loc_36><loc_479><loc_187><loc_483>www.cbao.sn - Tel. : (+229) 21 36 59 02 - Fax : (+229) 64</text>
+<text><loc_244><loc_481><loc_256><loc_485>E-mail</text>
+<text><loc_256><loc_481><loc_256><loc_485>:</text>
+<text><loc_256><loc_481><loc_256><loc_485>info</text>
+<text><loc_256><loc_481><loc_256><loc_485>@</text>
+<text><loc_256><loc_481><loc_256><loc_485>cbao.j</text>
+<text><loc_36><loc_456><loc_184><loc_460>Succursale de CBAO Groupe Attijarifa bank</text>
+<text><loc_36><loc_461><loc_312><loc_466>Société Anonyme au Capital Social de 11 450 000 00 de francs C.F.A - SWIFT : CBAOBJBJ</text>
+<text><loc_36><loc_467><loc_256><loc_471>Espace DINA, Boulevard Saint Michel Cotonou - BP : 01 BP 6441 Cotonou</text>
+<text><loc_36><loc_473><loc_187><loc_478>RCCM: RB/COT/13B10549 IFU : 3201301208214</text>
+<text><loc_36><loc_479><loc_187><loc_483>www.cbao.sn - Tel. : (+229) 21 36 59 02 - Fax : (+229) 64</text>
+<text><loc_244><loc_481><loc_256><loc_485>E-mail</text>
+<text><loc_256><loc_481><loc_256><loc_485>:</text>
+<text><loc_256><loc_481><loc_256><loc_485>info</text>
+<text><loc_256><loc_481><loc_256><loc_485>@</text>
+<text><loc_256><loc_481><loc_256><loc_485>cbao.j</text>
+<text><loc_36><loc_456><loc_184><loc_460>Succursale de CBAO Groupe Attijarifa bank</text>
+<text><loc_36><loc_461><loc_312><loc_466>Société Anonyme au Capital Social de 11 450 000 00 de francs C.F.A - SWIFT : CBAOBJBJ</text>
+<text><loc_36><loc_467><loc_256><loc_471>E
