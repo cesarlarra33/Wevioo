@@ -4,22 +4,12 @@ from pdf2image import convert_from_path
 from pytesseract import image_to_osd, Output
 from PIL import Image
 import os
-
-'''
-Ce script fait un preprocessing pour améliorer la qualité du PDF :
-- augmente le contraste localement (CLAHE)
-- réduit le bruit léger (flou gaussien)
-- blanchit les zones grisées du fond (si localement trop de pixels similaires)
-- binarise (noir/blanc sans gris)
-- redresse le texte (deskew)
-'''
+import json
 
 def deskew(image):
     try:
         osd = image_to_osd(image, output_type=Output.DICT)
         angle = float(osd.get("rotate", 0))
-
-        # Appliquer deskew seulement si angle modéré (5 à 20 degrés)
         if abs(angle) < 5 or abs(angle) > 20:
             print(f"[ℹ️] Rotation ignorée (angle détecté : {angle}°)")
             return image
@@ -30,12 +20,11 @@ def deskew(image):
         rotated = cv2.warpAffine(image, rot_mat, (w, h), flags=cv2.INTER_LINEAR)
         print(f"[↪] Rotation appliquée : {-angle}°")
         return rotated
-
     except Exception as e:
         print(f"[!] Deskew failed: {e}")
     return image
 
-def remove_uniform_background_by_similarity(gray, taille_voisinage=15, tol=10, pourcentage_similaire=0.85):
+def remove_uniform_background_by_similarity(gray, taille_voisinage, tol, pourcentage_similaire):
     h, w = gray.shape
     result = gray.copy()
 
@@ -54,46 +43,49 @@ def remove_uniform_background_by_similarity(gray, taille_voisinage=15, tol=10, p
 
     return result.astype(np.uint8)
 
-def preprocess_page(pil_img, mode_doux=False):
+def preprocess_page(pil_img, params=None):
+    if params is None:
+        params = {}
+
     img = np.array(pil_img)
     gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
-    blurred = cv2.GaussianBlur(gray, (3, 3), 0)
 
-    # 🧼 Nettoyage des zones de fond uniforme avant le CLAHE
-    cleaned = remove_uniform_background_by_similarity(
-        blurred,
-        taille_voisinage=8,
-        tol=25,
-        pourcentage_similaire=0.35
-    )
+    # Blur
+    if params.get("blur", {}).get("enabled", True):
+        ksize = params.get("blur", {}).get("kernel_size", 3)
+        gray = cv2.GaussianBlur(gray, (ksize, ksize), 0)
 
-    # 🌪️ Contraste local
-    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+    # Background cleaning
+    bg_params = params.get("background_cleaning", {})
+    taille_voisinage = bg_params.get("taille_voisinage", 10)
+    tol = bg_params.get("tol", 25)
+    pourcentage_similaire = bg_params.get("pourcentage_similaire", 0.35)
+    cleaned = remove_uniform_background_by_similarity(gray, taille_voisinage, tol, pourcentage_similaire)
+
+    # CLAHE
+    clahe_params = params.get("clahe", {})
+    clip_limit = clahe_params.get("clip_limit", 2.0)
+    tile_grid = clahe_params.get("tile_grid_size", 8)
+    clahe = cv2.createCLAHE(clipLimit=clip_limit, tileGridSize=(tile_grid, tile_grid))
     enhanced = clahe.apply(cleaned)
 
-    # 🌚 Binarisation
-    """ if mode_doux:
-        thresh = cv2.adaptiveThreshold(
-            enhanced, 255,
-            cv2.ADAPTIVE_THRESH_MEAN_C,
-            cv2.THRESH_BINARY,
-            25, 10
-        )
-    else:
-        thresh = cv2.adaptiveThreshold(
+    # Binarisation
+    binar_params = params.get("binarization", {})
+    if binar_params.get("enabled", False):
+        enhanced = cv2.adaptiveThreshold(
             enhanced, 255,
             cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
             cv2.THRESH_BINARY,
-            11, 2
-        ) """
+            binar_params.get("block_size", 11),
+            binar_params.get("C", 2)
+        )
 
-    # ➡️ Deskew (redressement)
     result = deskew(enhanced)
     return Image.fromarray(result)
 
-def preprocess_pdf(pdf_path, dpi=300, save_images=True, debug=False, mode_doux=True):
+def preprocess_pdf(pdf_path, save_images=True, debug=False, mode_doux=True, params=None):
     print(f"🔧 Prétraitement du PDF : {pdf_path}")
-    raw_pages = convert_from_path(pdf_path, dpi=dpi)
+    raw_pages = convert_from_path(pdf_path, dpi=300)
     processed_pages = []
 
     if save_images:
@@ -101,7 +93,7 @@ def preprocess_pdf(pdf_path, dpi=300, save_images=True, debug=False, mode_doux=T
         os.makedirs(out_dir, exist_ok=True)
 
     for i, pil_img in enumerate(raw_pages):
-        processed = preprocess_page(pil_img, mode_doux=mode_doux)
+        processed = preprocess_page(pil_img, params=params)
         processed_pages.append(processed)
 
         if save_images:
