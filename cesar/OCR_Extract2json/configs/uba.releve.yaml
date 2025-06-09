@@ -1,0 +1,154 @@
+document_type: relevé_bancaire
+banque: UBA
+format: texte+tesseract
+
+crop_tables: false
+preprocess_pdf: false
+preprocess_tables: false
+
+ocr:
+  pdf:
+    psm: 12
+    oem: 1
+  tables:
+    psm: 12
+    oem: 1
+
+structure:
+  champs_simples:
+
+    nom_client:
+      anchor: "Bonjour"
+      direction: right_xy
+      min_x: 350
+      max_x: 800
+      min_y: 800
+      max_y: 900
+      concat: true
+      tolerance_y: 10
+
+    numero_de_compte:
+      anchor_sequence: ["N°", "de", "Compte"]
+      direction: below
+      min_x: 450
+      max_x: 1100
+      min_y: 1150
+      max_y: 1430
+      regex: "\\b[0-9xX]{1,}[a-zA-Z0-9xX]{3,}\\b"
+      concat: true
+      tolerance_y: 15
+
+    type_de_compte:
+      anchor_sequence: ["Type", "de", "compte"]
+      direction: line_right
+      min_x: 1000
+      max_x: 2300
+      min_y: 1000
+      max_y: 1100
+      concat: true
+
+    monnaie:
+      anchor: "Monnaie"
+      direction: line_right
+      min_x: 1000
+      max_x: 2300
+      min_y: 1100
+      max_y: 1200
+      regex: "[A-Z]{3}"
+
+    solde_ouverture:
+      anchor_sequence: ["Solde", "à", "l'ouverture"]
+      direction: line_right
+      min_x: 1000
+      max_x: 2300
+      min_y: 1200
+      max_y: 1300
+      regex: "[\\d\\s.,]+"
+      concat: true
+
+    total_debit:
+      anchor_sequence: ["Total", "des", "débits"]
+      direction: line_right
+      min_x: 1000
+      max_x: 2300
+      min_y: 1300
+      max_y: 1400
+      regex: "[\\d\\s.,]+"
+      concat: true
+
+    total_credit:
+      anchor_sequence: ["Total", "des", "crédit"]
+      direction: line_right
+      min_x: 1000
+      max_x: 2300
+      min_y: 1400
+      max_y: 1500
+      regex: "[\\d\\s.,]+"
+      concat: true
+
+    solde_cloture:
+      anchor_sequence: ["Solde", "à", "la", "fermeture"]
+      direction: line_right
+      min_x: 1000
+      max_x: 2300
+      min_y: 1500
+      max_y: 1600
+      regex: "[\\d\\s.,]+"
+      concat: true
+
+  transactions:
+    source: "document"
+    mode: "column"
+    start_line_regex: "^.{1,2}-.{3}-.{1,4}"
+    start_line_y_min: 350
+    y_tolerance_above: 40
+    y_tolerance_below: 50
+    use_line_shape_heuristic: true
+
+
+    columns:
+      date_transaction:
+        x_min: 350
+        x_max: 420
+        regex: ".{5,20}"  # dates OCR très variées, permissives
+
+      date_valeur:
+        x_min: 530
+        x_max: 700
+        regex: ".{5,20}"
+
+      libelle:
+        x_min: 750
+        x_max: 1200
+        concat: true
+        y_tolerance: 30
+
+      numero_cheque:
+        x_min: 1200
+        x_max: 1300
+        regex: "\\w{3,20}?"
+
+      debit:
+        x_min: 1500
+        x_max: 1700
+        regex: "[\\d\\s.,]+"
+
+      credit:
+        x_min: 1800
+        x_max: 1900
+        regex: "[\\d\\s.,]+"
+
+      solde:
+        x_min: 2050
+        x_max: 2300
+        regex: "[\\d\\s.,]+"
+
+normalisation:
+  montant:
+    supprimer_espaces: true
+    convertir_en_float: true
+  date:
+    format_source: "%d-%b-%Y"
+    format_cible: "%Y-%m-%d"
+  numero_de_compte:
+    convertir_en_float: false

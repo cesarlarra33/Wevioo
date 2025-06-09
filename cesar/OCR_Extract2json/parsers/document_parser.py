@@ -393,7 +393,7 @@ def extract_transactions(words, transaction_conf, normalisation):
     start_line_regex = re.compile(transaction_conf['start_line_regex'])
     start_line_x_max = transaction_conf.get('start_line_x_max', None)
     start_line_x_min = transaction_conf.get('start_line_x_min', None)
-    start_line_y_min = transaction_conf.get('start_line_y_min', None)
+    start_line_y_min_raw = transaction_conf.get('start_line_y_min', None)  # <- changé
     start_line_y_max = transaction_conf.get('start_line_y_max', None)
     y_tol_above = transaction_conf.get('y_tolerance_above', 5)
     y_tol_below = transaction_conf.get('y_tolerance_below', 10)
@@ -405,8 +405,22 @@ def extract_transactions(words, transaction_conf, normalisation):
     transactions = []
     anchor_y = None
     current_transaction = None
+    
+    last_anchor_y = None
+    last_anchor_page = None
 
     for i, word in enumerate(sorted_words):
+        # Empêche de détecter deux transactions sur la même ligne OCR
+        if last_anchor_y is not None and abs(word['y'] - last_anchor_y) < 5 and word['page'] == last_anchor_page:
+            continue
+
+        # Gestion de start_line_y_min par page
+        page = word['page']
+        if isinstance(start_line_y_min_raw, dict):
+            start_line_y_min = start_line_y_min_raw.get(page, start_line_y_min_raw.get("default"))
+        else:
+            start_line_y_min = start_line_y_min_raw
+
         text = word['text']
         is_start_line_candidate = (
             start_line_regex.search(text) and
@@ -425,6 +439,9 @@ def extract_transactions(words, transaction_conf, normalisation):
         transactions.append(current_transaction)
         print(f"\n🧾 Nouvelle transaction détectée : {text} (y = {anchor_y})")
 
+        last_anchor_y = word['y']
+        last_anchor_page = word['page']
+        
         # Récupérer tous les mots autour de cette ancre dans la fenêtre verticale
         y_min = anchor_y - y_tol_above
         y_max = anchor_y + y_tol_below
@@ -432,7 +449,7 @@ def extract_transactions(words, transaction_conf, normalisation):
         # On récupère les mots dans la bande verticale définie
         line_words = [
             w for w in sorted_words
-            if y_min <= w['y'] <= y_max
+            if w['page'] == page and y_min <= w['y'] <= y_max
         ]
 
         # Et on les trie de gauche à droite
@@ -449,7 +466,7 @@ def extract_transactions(words, transaction_conf, normalisation):
                         continue
                     current_transaction[col_name] += " " + w['text']
                     print(f"  ➕ {w['text']} → {col_name}")
-                    break  # dès qu'il match une colonne, on ne le teste plus
+                    break
 
     # Nettoyage des champs
     for tx in transactions:
@@ -458,9 +475,10 @@ def extract_transactions(words, transaction_conf, normalisation):
 
     print(f"\n✅ Total transactions extraites : {len(transactions)}")
     return {
-    "transactions": transactions,
-    "lignes_exclues": []  # 👈 rien à exclure ici car pas de validation par regex
+        "transactions": transactions,
+        "lignes_exclues": []
     }
+
 
 def find_matching_table_json(ocr_dir, filter_words, base_prefix):
     """Retourne le JSON OCR d'un tableau contenant tous les mots clés, limité au bon préfixe"""
