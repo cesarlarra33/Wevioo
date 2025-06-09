@@ -11,20 +11,33 @@ document_type: relevé_bancaire
 banque: NOM_BANQUE
 format: texte+tesseract
 
-crop_tables: false                # Active/désactive la découpe automatique des tableaux
-preprocess_pdf: false            # Applique ou non le prétraitement OCR sur le PDF principal
-preprocess_tables: false         # Applique ou non le prétraitement OCR sur les tableaux extraits
+crop_tables: false            # Découpe les tableaux avant l'OCR
+preprocess_pdf: false         # Prétraitement appliqué au PDF complet
+preprocess_tables: false      # Prétraitement appliqué aux tableaux
+preprocessing_params:         # (optionnel) réglages fins du prétraitement
+  blur:
+    enabled: true
+    kernel_size: 3
+  background_cleaning:
+    taille_voisinage: 10
+    tol: 25
+    pourcentage_similaire: 0.35
+  clahe:
+    clip_limit: 2.0
+    tile_grid_size: 8
+  binarization:
+    enabled: false
+    block_size: 11
+    C: 2
 
 ocr:
   pdf:
-    psm: 3                        # Page Segmentation Mode pour le PDF
-    oem: 3                        # OCR Engine Mode pour le PDF
+    psm: 3                    # Page Segmentation Mode de Tesseract
+    oem: 3                    # OCR Engine Mode
   tables:
-    psm: 12                       # PSM pour les tableaux (souvent utile pour lignes denses)
-    oem: 1                        # OEM pour les tableaux
+    psm: 12                   # Paramètres propres aux tableaux
+    oem: 1
 ```
-
----
 
 ## 🧹 Champs simples
 
@@ -32,19 +45,19 @@ ocr:
 structure:
   champs_simples:
     nom_du_champ:
-      anchor: "Texte"                     # Mot-clé déclencheur (ancre simple)
-      anchor_sequence: ["Mot1", "Mot2"]   # Ancre multiple (séquence de mots)
-      direction: right                    # Méthode de recherche (voir tableau ci-dessous)
-      regex: "\\d+"                       # Expression régulière pour extraire la valeur
-      offset: 1                           # Décalage d'index depuis l’ancre
-      concat: true                        # Concatène les mots correspondants
-      concat_until: "FIN"                # Concatène jusqu'à ce mot
-      min_x: 0                            # Position minimale X de recherche
-      max_x: 2000                         # Position maximale X de recherche
-      min_y: 0                            # Position minimale Y de recherche
-      max_y: 2500                         # Position maximale Y de recherche
-      tolerance_x: 10                     # Tolérance autour de l’ancre en X
-      tolerance_y: 15                     # Tolérance autour de l’ancre en Y
+      anchor: "Texte"                # mot clé ancre
+      anchor_sequence: ["Mot1","Mot2"]
+      direction: right
+      regex: "\\d+"
+      offset: 1
+      concat: true
+      concat_until: "FIN"
+      min_x: 0
+      max_x: 2000
+      min_y: 0
+      max_y: 2500
+      tolerance_x: 10
+      tolerance_y: 15
 ```
 
 > ⚠️ **Remarque importante** : les clés `x_min` / `x_max` sont utilisées uniquement dans les colonnes de tableaux pour les transactions. Dans les `champs_simples`, on utilise `min_x` / `max_x`. Il n'y a pas de distinction dans le code entre ces clés, c'est uniquement une convention contextuelle. Assurez-vous de rester cohérent selon le type de champ.
@@ -59,45 +72,65 @@ structure:
 | `line_right` | Mots à droite sur **la même ligne OCR**            |
 | `right_xy`   | Mots à droite **(x > ancre)** avec tolérance sur Y |
 | `nearby_xy`  | Mots proches de l’ancre (tolérance sur X et Y)     |
-
+| `below`      | Mots situés juste en dessous de l’ancre            |
 ---
 
-## 📄 Transactions
+Deux modes sont possibles : **par colonnes** ou **with_separator**.
+
+### Mode colonnes (par défaut)
 
 ```yaml
-  transactions:
-    source: "table"                      # ou "document"
-    filter_contains: ["Date", "Libellé"]# Mots clés pour identifier le tableau à utiliser
-    start_line_regex: "\\d{2}/\\d{2}/\\d{4}"  # Ligne de début de transaction
-    start_line_x_max: 300
-    y_tolerance_above: 30
-    y_tolerance_below: 40
+transactions:
+  source: "table"                # ou "document"
+  filter_contains: ["Date", "Libellé"]
+  start_line_regex: "\\d{2}/\\d{2}/\\d{4}"
+  start_line_x_min: 200
+  start_line_x_max: 300
+  start_line_y_min: 300
+  start_line_y_max: 2400
+  y_tolerance_above: 30
+  y_tolerance_below: 40
 
-    columns:
-      date_transaction:
-        x_min: 0
-        x_max: 150
-        regex: "\\d{2}/\\d{2}/\\d{4}"
+  columns:
+    date_transaction:
+      x_min: 0
+      x_max: 150
+      regex: "\\d{2}/\\d{2}/\\d{4}"
+    detail_transaction:
+      x_min: 151
+      x_max: 900
+      concat: true
+```
 
-      detail_transaction:
-        x_min: 151
-        x_max: 900
-        concat: true
+### Mode `with_separator`
 
-      date_valeur:
-        x_min: 901
-        x_max: 1100
-        regex: "\\d{2}/\\d{2}/\\d{4}"
+```yaml
+transactions:
+  source: "document"
+  mode: "with_separator"
+  separator: "!"
+  use_line_shape_heuristic: true
+  line_shape_regex: "!(\\d{2}/\\d{2})![^!]+!(\\d{2}/\\d{2})!..."
+  start_line_regex: "\\d{2}/\\d{2}"
+  start_line_x_min: 280
+  start_line_x_max: 310
+  start_line_y_min: 300
+  start_line_y_max: 2400
+  y_tolerance: 5
 
-      mouv_debit:
-        x_min: 1101
-        x_max: 1300
-        regex: "^\\d+(?: \\d{3})*(?:,\\d{2})?$"
+  columns_order:
+    - date_transaction
+    - libelle
+    - date_valeur
+    - debit
+    - credit
 
-      mouv_credit:
-        x_min: 1301
-        x_max: 1500
-        regex: "^\\d+(?: \\d{3})*(?:,\\d{2})?$"
+  columns_regex:
+    date_transaction: "\\d{2}/\\d{2}"
+    libelle: "[!1Il]?(.+?)(?=[!1Il]\\d{2}/\\d{2})"
+    date_valeur: "[!1Il]?(?P<val>\\d{2}/\\d{2})"
+    debit: (?<=[!])\\s*(\\d{1,3}(?:\\.\\d{3})*(?:,\\d{2})?)?\\s*(?=[!])
+    credit: (?<=[!])\\s*(\\d{1,3}(?:\\.\\d{3})*(?:,\\d{2})?)?\\s*$    #permet d'eviter les erreurs ocr quand un l, i ou 1 à été lu à la place d'un ! 
 ```
 
 ---
