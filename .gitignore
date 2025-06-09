@@ -1,0 +1,16 @@
+# exclut les fichiers bizarre apple 
+*.DS_Store
+
+Bank_statement/
+
+cesar/OCR_Extract2json/data/*
+
+*/consignes.md
+
+cesar/OCR_Extract2json/ocr_env/
+
+*logs.txt 
+
+cesar/OCR_Extract2json/test_preprocess_config.json
+
+nour/Untitled6.ipynb
