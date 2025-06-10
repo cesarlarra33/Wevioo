@@ -1,3 +1,4 @@
+# manuel 
 from docling.document_converter import DocumentConverter
 import json
 import pandas as pd
@@ -19,11 +20,18 @@ BANK_CONFIGS = {
     },
 
     "sgbe": {
-        "name": "Societe general benin",
+        "name": "Societe general benin ",
+        "table_separator": "!",
+        "text_filters": [],
+        "table_processing": "separator_split"      
+    } , 
+    "coris": {
+        "name": "Coris banque",
         "table_separator": "!",
         "text_filters": [],
         "table_processing": "separator_split"      
     }
+
 }
 
 def choose_bank():
@@ -92,6 +100,7 @@ def extract_tables_by_bank(result, bank_config):
     return extracted_tables
 
 def main():
+    import json  # Assure que json est importé dans la fonction
     # Choix de la banque
     bank_code = choose_bank()
     bank_config = BANK_CONFIGS[bank_code]
@@ -119,7 +128,73 @@ def main():
     if "texts" in results_body:
         texts = results_body["texts"]
         extracted_data["texts"] = extract_texts_by_bank(texts, bank_config)
+
+        # Traitement spécifique pour la banque "Societe general benin"
+        if bank_code == "sgbe":
+            header_line = "Date !      Libelle operation       ! Val !      Debit      !     Credit"
+            
+            start_index = None
+            
+            for i, line in enumerate(extracted_data["texts"]):
+                if header_line in line:
+                    start_index = i
+                    break
+
+            if start_index is not None:
+                entete = extracted_data["texts"][:start_index]
+                raw_table = extracted_data["texts"][start_index+1:]  # on saute la ligne-titre
+            else:
+                entete = extracted_data["texts"]
+                raw_table = []
+
+            # Transformation du tableau brut en objets structurés
+            tableau = []
+            for line in raw_table:
+                parts = [part.strip() for part in line.replace(' ! ', '!')
+                                      .replace('! ', '!')
+                                      .replace(' !', '!')
+                                      .split('!')]
+             
     
+                # Vérification du format (au moins date et libellé)
+                if len(parts) >= 2:
+                    transaction = {
+                        "Date": parts[0],
+                        "Libellé": parts[1],
+                        "Date_val": parts[2] if len(parts) > 2 else "",
+                        "Débit": parts[3] if len(parts) > 3 else "",
+                        "Crédit": parts[4] if len(parts) > 4 else ""
+                    }
+                    tableau.append(transaction)
+
+            parts1=re.split(r'\s{2,}', raw_table[-2] ) 
+            transaction_1={
+
+                "Type" : parts1[0] , "Debit" : parts1[1] , "Credit" : parts1[1] }
+            
+            parts2=re.split(r'\s{2,}', raw_table[-1] ) 
+            transaction_2={
+
+                "Type" : parts2[0] ,  "Credit" : parts2[1] }
+
+
+                    
+            sgbe_output = {
+                "entete": entete,
+                "tableau": tableau , 
+                "Totaux" : [transaction_1, transaction_2]
+            }
+
+            with open("sgbe.json", "w", encoding="utf-8") as f:
+                json.dump(sgbe_output, f, indent=2, ensure_ascii=False)
+
+            print("Fichier structuré 'output_sgbe.json' généré.")
+        
+        
+
+
+
+
     # Extraction des tableaux selon la banque
     extracted_data["tables"] = extract_tables_by_bank(result, bank_config)
     
@@ -127,9 +202,8 @@ def main():
     print(f"\n=== Résultats pour {bank_config['name']} ===")
     print(json.dumps(extracted_data, indent=2, ensure_ascii=False))
 
-
-    # Écriture dans un fichier JSON
-    with open(f"{bank_config['name']}_sans_pages.json", "w", encoding="utf-8") as f:
+    # Écriture dans un fichier JSON général
+    with open(f"{bank_config['name']}.json", "w", encoding="utf-8") as f:
         json.dump(extracted_data, f, indent=2, ensure_ascii=False)
     
     return extracted_data
@@ -137,3 +211,5 @@ def main():
 # Exécution du programme principal
 if __name__ == "__main__":
     result = main()
+
+
