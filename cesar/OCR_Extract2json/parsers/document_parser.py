@@ -50,7 +50,7 @@ def extract_field(words, field_name, field_conf, normalisation):
     min_y = field_conf.get('min_y')
     max_y = field_conf.get('max_y')
     tol_x = field_conf.get('tolerance_x', 5)
-    tol_y = field_conf.get('tolerance_y', 10)
+    tol_y = field_conf.get('tolerance_y', 50)
 
     print(f"\n🔍 Extraction du champ : {field_name}")
     
@@ -187,11 +187,23 @@ def extract_field(words, field_name, field_conf, normalisation):
             candidates = [
                 w for w in words
                 if w['page'] == anchor_page and
-                abs(w['x'] - anchor_x) <= tol_x and
                 w['y'] > anchor_y and
-                w['y'] <= anchor_y + tol_y
+                w['y'] <= anchor_y + tol_y and
+                (min_x is None or w['x'] >= min_x) and
+                (max_x is None or w['x'] <= max_x)
             ]
             print(f"🔎 {len(candidates)} mots candidats trouvés (en dessous): {[w['text'] for w in candidates]}")
+            
+                # 🔍 Log des mots proches en x mais rejetés par y
+            debug_rejected_y = [
+                w for w in words
+                if w['page'] == anchor_page and
+                abs(w['x'] - anchor_x) <= tol_x and
+                not (w['y'] > anchor_y and w['y'] <= anchor_y + tol_y)
+            ]
+            for w in debug_rejected_y:
+                print(f"❌ {w['text']} rejeté (y={w['y']}, anchor_y={anchor_y}, tol_y={tol_y})")
+
 
             matched_words = [w['text'] for w in candidates if match_and_collect(w)]
 
