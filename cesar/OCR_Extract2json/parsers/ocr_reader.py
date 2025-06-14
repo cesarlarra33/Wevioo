@@ -129,6 +129,7 @@ if __name__ == "__main__":
     )
 
     try:
+        print(f"[OCR_READER]: Launching Tesseract with psm={args.psm}, oem={args.oem} and preprocess={preprocessing_params}")
         script_dir = os.path.dirname(__file__)
         visualize_script = os.path.join(script_dir, "../scripts", "visualize_ocr.py")
         command = ["python3", visualize_script, output_json_path]

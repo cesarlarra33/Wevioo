@@ -1,0 +1,216 @@
+document_type: relevé_bancaire
+banque: BIIC
+format: texte+tesseract
+
+crop_tables: false
+preprocess_pdf: true
+preprocess_tables: false
+
+ocr:
+  pdf:
+    psm: 6
+    oem: 3
+  tables:
+    psm: 12
+    oem: 1
+
+structure:
+  champs_simples:
+
+    titulaire_du_compte:
+      anchor_sequence: ["TITULAIRE", "DU", "COMPTE"]
+      direction: below
+      min_x: 150
+      max_x: 430
+      min_y: 610
+      max_y: 670
+      concat: true
+
+    debut_periode:
+      anchor: "DU"
+      direction: line_right
+      offset: 1
+      min_x: 1300
+      max_x: 1350
+      min_y: 440
+      max_y: 450
+      regex: \b(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/([0-9]{4})\b
+
+    fin_periode:
+      anchor: "DU"
+      direction: line_right
+      offset: 3
+      min_x: 1300
+      max_x: 1350
+      min_y: 440
+      max_y: 450
+      regex: \b(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/([0-9]{4})\b
+
+    devise:
+      anchor: "au"
+      direction: nearby_xy
+      min_x: 1300
+      max_x: 1700
+      min_y: 380
+      max_y: 450
+      tolerance_x: 250
+      tolerance_y: 100
+      concat: true
+      regex: \b[a-zA-Z]{3,}\b
+
+
+    domiciliation:
+      anchor: "DOMICILIATION"
+      direction: below
+      min_x: 162
+      max_x: 320
+      min_y: 730
+      max_y: 850
+      tolerance_y: 200
+
+    code_banque:
+      anchor_sequence: ["Code", "Banque"]
+      direction: below
+      min_x: 150
+      max_x: 280
+      min_y: 850
+      max_y: 980
+      tolerance_y: 100
+      offset: 1
+
+    agence:
+      anchor: "Agence"
+      direction: below
+      min_x: 430
+      max_x: 480
+      min_y: 870
+      max_y: 980
+      tolerance_y: 100
+
+    numero_de_compte:
+      anchor: "Compte"
+      direction: below
+      min_x: 630
+      max_x: 900
+      min_y: 870
+      max_y: 980
+      tolerance_y: 100
+      tolerance_x: 100
+
+    cle_rib:
+      anchor_sequence: ["Clé", "RIB"]
+      direction: below
+      min_x: 900
+      max_x: 1000
+      min_y: 870
+      max_y: 980
+      tolerance_y: 100
+      tolerance_x: 100
+
+    iban:
+      anchor_sequence: ["Code", "IBAN"]
+      direction: line_right
+      min_x: 150
+      max_x: 1200
+      min_y: 1020
+      max_y: 1040
+      concat: true
+      offset: 1
+
+    code_swift:
+      anchor_sequence: ["Code", "SWIFT"]
+      direction: line_right
+      min_x: 150
+      max_x: 1200
+      min_y: 1060
+      max_y: 1100
+      concat: true
+      offset: 1
+
+    date_emission:
+      anchor_sequence: ["Edité", "le"]
+      direction: line_right
+      min_x: 2020
+      max_x: 2200
+      min_y: 1250
+      max_y: 1270
+      regex: \b(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/([0-9]{4})\b
+
+    solde_debut_periode: 
+      anchor_sequence: ["Solde", "précédent"]
+      min_y: 1300
+      max_y: 1500
+      min_x: 730
+      max_x: 2300
+      direction: line_right
+      offset: 1
+      concat: true
+
+    solde_fin_periode: 
+      anchor_sequence: ["Solde", "au"]
+      min_y: 2100
+      max_y: 2200
+      min_x: 400
+      max_x: 2400
+      direction: line_right
+      offset: 2
+      concat: true
+
+  transactions:
+    source: "document"
+    mode: "column"
+    start_line_regex: \b(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/([0-9]{4})\b
+    start_line_y_min:
+      1: 1480
+      default: 200   
+    start_line_x_min: 180
+    start_line_x_max: 300
+    y_tolerance_above: 20
+    y_tolerance_below: 20
+    use_line_shape_heuristic: true
+
+
+    columns:
+      date_transaction:
+        x_min: 180
+        x_max: 300
+        regex: \b(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/([0-9]{4})\b
+
+      libelle:
+        x_min: 380
+        x_max: 1100
+        concat: true
+        y_tolerance: 50
+      
+      date_valeur:
+        x_min: 1150
+        x_max: 1300
+        regex: \b(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/([0-9]{4})\b
+
+      debit:
+        x_min: 1300
+        x_max: 1700
+        regex: "[\\d\\s.,]+"
+        concat: true
+
+      credit:
+        x_min: 1720
+        x_max: 2000
+        regex: "[\\d\\s.,]+"
+        concat: true
+
+      solde:
+        x_min: 2050
+        x_max: 2400
+        regex: "[\\d\\s.,]+"
+        concat: true
+
+normalisation:
+  montant:
+    supprimer_espaces: true
+    convertir_en_float: true
+  date:
+    format_source: "%d/%m/%Y"
+    format_cible: "%Y-%m-%d"
+  numero_de_compte:
+    convertir_en_float: false

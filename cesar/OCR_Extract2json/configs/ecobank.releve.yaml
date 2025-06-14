@@ -1,0 +1,197 @@
+document_type: relevé_bancaire
+banque: ECOBANK
+format: texte+tesseract
+
+crop_tables: false
+preprocess_pdf: true
+preprocess_tables: false
+
+preprocessing_params:
+  blur:
+    enabled: true
+    kernel_size: 5
+  background_cleaning:
+    taille_voisinage: 12
+    tol: 23
+    pourcentage_similaire: 0.48
+  clahe:
+    clip_limit: 2.0
+    tile_grid_size: 8
+  binarization:
+    enabled: true
+    block_size: 11
+    C: 2
+
+ocr:
+  pdf:
+    psm: 6
+    oem: 3
+
+structure:
+  champs_simples:
+
+    titulaire_du_compte:
+      direction: nearby_xy
+      min_x: 1200
+      max_x: 1500
+      min_y: 700
+      max_y: 850
+      concat: true
+      page: 1
+
+    numero_de_compte:
+      direction: nearby_xy
+      min_x: 500
+      max_x: 1500
+      min_y: 600
+      max_y: 700
+      regex: \b\d{12}\b
+      page: 1
+
+    debut_periode:
+      direction: nearby_xy
+      min_x: 500
+      max_x: 800
+      min_y: 1300
+      max_y: 1400
+      concat: true
+      regex: \b\d{2}-[A-Z]{3}-\d{4}\b
+      page: 1
+
+    fin_periode:
+      anchor: "AU"
+      direction: line_right
+      offset: 1
+      min_x: 500
+      max_x: 1500
+      min_y: 1300
+      max_y: 1400
+      regex: \b\d{2}-[A-Z]{3}-\d{4}\b
+      page: 1
+
+    devise:
+      direction: nearby_xy
+      min_x: 500
+      max_x: 1500
+      min_y: 700
+      max_y: 800
+      regex: \b[A-Z]{3}\b
+      page: 1
+
+    solde_debut_periode: 
+      direction: nearby_xy
+      min_x: 500
+      max_x: 1500
+      min_y: 800
+      max_y: 900
+      concat: true
+      page: 1
+      regex: "[-\\$]?\\s*(\\d{1,4}(?:\\s\\d{1,4})*)"
+      page: 1
+
+    solde_fin_periode: 
+      direction: nearby_xy
+      min_x: 500
+      max_x: 1500
+      min_y: 900
+      max_y: 1000
+      concat: true
+      regex: "[-\\$]?\\s*(\\d{1,4}(?:\\s\\d{1,4})*)"
+      page: 1
+
+    effets_en_instance: 
+      direction: nearby_xy
+      min_x: 500
+      max_x: 1140
+      min_y: 1050
+      max_y: 1100
+      concat: true
+      regex: "[-\\$]?\\s*(\\d{1,4}(?:\\s\\d{1,4})*)"
+      page: 1
+
+    total_debit: 
+      direction: nearby_xy
+      min_x: 500
+      max_x: 1500
+      min_y: 1100
+      max_y: 1200
+      concat: true
+      regex: "[-\\$]?\\s*(\\d{1,4}(?:\\s\\d{1,4})*)"
+      page: 1
+
+    total_credit: 
+      direction: nearby_xy
+      min_x: 500
+      max_x: 1500
+      min_y: 1200
+      max_y: 1300
+      concat: true
+      regex: "[-\\$]?\\s*(\\d{1,4}(?:\\s\\d{1,4})*)"
+      page: 1
+
+  transactions:
+    source: "document"
+    mode: "column"
+    start_line_regex: ".{5,20}"
+    start_line_y_min:
+      1: 1600
+      default: 400
+    start_line_x_min: 80
+    start_line_x_max: 300
+    y_tolerance_above: 100
+    y_tolerance_below: 100
+    use_line_shape_heuristic: true
+
+
+    columns:
+      date_transaction:
+        x_min: 80
+        x_max: 300
+        regex: ".{5,20}"
+        concat: true
+
+      description:
+        x_min: 350
+        x_max: 900
+        concat: true
+        y_tolerance: 50
+
+      intrument_code: 
+        x_min: 1000
+        x_max: 1280
+        concat: true
+      
+      date_valeur:
+        x_min: 1250
+        x_max: 1500
+        regex: ".{5,20}"
+        concat: true
+
+      debit:
+        x_min: 1600
+        x_max: 1800
+        regex: "[\\d\\s.,]+"
+        concat: true
+
+      credit:
+        x_min: 1830
+        x_max: 2000
+        regex: "[\\d\\s.,]+"
+        concat: true
+
+      solde:
+        x_min: 2050
+        x_max: 2400
+        regex: "[\\d\\s.,]+"
+        concat: true
+    
+
+normalisation:
+  montant:
+    supprimer_espaces: true
+    convertir_en_float: true
+  date:
+    format_source: "%d/%m/%Y"
+    format_cible: "%Y-%m-%d"
+  numero_de_compte:
+    convertir_en_float: false

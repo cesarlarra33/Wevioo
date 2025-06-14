@@ -51,6 +51,10 @@ def extract_field(words, field_name, field_conf, normalisation):
     max_y = field_conf.get('max_y')
     tol_x = field_conf.get('tolerance_x', 5)
     tol_y = field_conf.get('tolerance_y', 50)
+    page_constraint = field_conf.get('page')  # Nouveau
+
+    if page_constraint is not None:
+        words = [w for w in words if w['page'] == page_constraint]
 
     print(f"\n🔍 Extraction du champ : {field_name}")
     
