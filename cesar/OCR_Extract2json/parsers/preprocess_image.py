@@ -6,23 +6,62 @@ from PIL import Image
 import os
 import json
 
-def deskew(image):
+def deskew(image, config=None):
+    import tempfile
+    import subprocess
+    import re
+    import os
+
+    confidence_threshold = 3.0
+    if isinstance(config, dict):
+        confidence_threshold = config.get("confidence_threshold", 3.0)
+
     try:
-        osd = image_to_osd(image, output_type=Output.DICT)
-        angle = float(osd.get("rotate", 0))
-        if abs(angle) < 5 or abs(angle) > 20:
-            print(f"[ℹ️] Rotation ignorée (angle détecté : {angle}°)")
+        # 📁 Tempfile image
+        os.makedirs("data/tmp_osd", exist_ok=True)
+        tmp_img_path = os.path.join("data/tmp_osd", "deskew_input.png")
+        pil_img = Image.fromarray(image)
+        pil_img.save(tmp_img_path, dpi=(300, 300))
+
+        # 🧠 Tesseract OSD via CLI
+        result = subprocess.run(
+            ["tesseract", tmp_img_path, "stdout", "--psm", "0", "-l", "osd"],
+            capture_output=True,
+            text=True
+        )
+
+        if result.returncode != 0:
+            raise RuntimeError(f"Tesseract OSD CLI error: {result.stderr}")
+
+        osd_output = result.stdout
+        angle_match = re.search(r"Rotate: (\d+)", osd_output)
+        conf_match = re.search(r"Orientation confidence: ([0-9.]+)", osd_output)
+
+        if not angle_match or not conf_match:
+            raise ValueError("OSD output parsing failed.")
+
+        angle = float(angle_match.group(1))
+        confidence = float(conf_match.group(1))
+
+        if confidence < confidence_threshold:
+            print(f"[⚠️] Confiance trop faible pour corriger l'inclinaison : {confidence:.2f}")
+            return image
+
+        if angle == 0:
+            print(f"[ℹ️] Aucune rotation nécessaire (angle détecté : 0°)")
             return image
 
         (h, w) = image.shape[:2]
         center = (w // 2, h // 2)
         rot_mat = cv2.getRotationMatrix2D(center, -angle, 1.0)
         rotated = cv2.warpAffine(image, rot_mat, (w, h), flags=cv2.INTER_LINEAR)
-        print(f"[↪] Rotation appliquée : {-angle}°")
+        print(f"[↪] Rotation appliquée : {-angle}° (confiance : {confidence:.2f})")
         return rotated
+
     except Exception as e:
-        print(f"[!] Deskew failed: {e}")
-    return image
+        print(f"[❌] Deskew failed: {e}")
+        return image
+
 
 def remove_uniform_background_by_similarity(gray, taille_voisinage, tol, pourcentage_similaire):
     h, w = gray.shape

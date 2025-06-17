@@ -1,0 +1,132 @@
+document_type: relevé_bancaire
+banque: TRESOR
+format: texte+tesseract
+
+crop_tables: true
+preprocess_pdf: false
+preprocess_tables: true
+
+preprocessing_params:
+  deskew: 
+    enabled: true
+    confidence_threshold: 2
+  blur:
+    enabled: true
+    kernel_size: 3
+  background_cleaning:
+    enabled: true
+    taille_voisinage: 6
+    tol: 15
+    pourcentage_similaire: 0.35
+  clahe:
+    enabled: false
+  binarization:
+    enabled: true
+    block_size: 5
+    C: 2
+
+ocr:
+  pdf:
+    psm: 12
+    oem: 3
+  tables: 
+    psm: 1
+    oem: 3
+
+structure:
+  champs_simples:
+
+    titulaire_du_compte:
+      direction: nearby_xy
+      min_x: 1100
+      max_x: 2200
+      min_y: 600
+      max_y: 850
+      tolerance_y: 10
+      tolerance: 10
+      concat: true
+      page: 1
+
+    numero_de_compte:
+      direction: nearby_xy
+      min_x: 387
+      max_x: 700
+      min_y: 600
+      max_y: 630
+      page: 1
+
+    debut_periode:
+      direction: nearby_xy
+      min_x: 380
+      max_x: 400
+      min_y: 650
+      max_y: 700
+      regex: \b\d{2}/\d{2}/\d{4}\b  # Ex: 01/01/2020
+
+    fin_periode:
+      direction: nearby_xy
+      min_x: 650
+      max_x: 750
+      min_y: 650
+      max_y: 700
+      regex: \d{2}/\d{2}/\d{4}
+      page: 1
+    
+  transactions:
+    source: "table"
+    filter_contains_any:
+    - "CHQ"
+    - "Solde"
+    start_line_regex: \b\d{1,2}[/-]\d{1,2}[/-]\d{2,4}\b
+    start_line_y_min:
+      default: 100
+    start_line_x_min: 30
+    start_line_x_max: 150
+    y_tolerance_above: 20
+    y_tolerance_below: 12
+    use_line_shape_heuristic: true
+    columns:
+      date_operation:
+        x_min: 0
+        x_max: 150
+        regex:  \b\d{1,2}[/-]\d{1,2}[/-]\d{2,4}\b
+        concat: true
+      reference:
+        x_min: 200
+        x_max: 820
+        concat: true
+      beneficiaire: 
+        x_min: 830
+        x_max: 1320
+        concat: true
+      date_paiement: 
+        x_min: 1320
+        x_max: 1500
+        regex: \b\d{1,2}[/-]\d{1,2}[/-]\d{2,4}\b
+        concat: true
+      debit:
+        x_min: 1530
+        x_max: 1800
+        concat: true
+        regex: "[\\d\\s.,]+"
+      credit:
+        x_min: 1900
+        x_max: 2050
+        concat: true
+        regex: "[\\d\\s.,]+"
+
+      
+
+
+
+  
+
+normalisation:
+  montant:
+    supprimer_espaces: true
+    convertir_en_float: true
+  date:
+    format_source: "%d/%m/%Y"
+    format_cible: "%Y-%m-%d"
+  numero_de_compte:
+    convertir_en_float: false

@@ -494,30 +494,57 @@ def extract_transactions(words, transaction_conf, normalisation):
         "transactions": transactions,
         "lignes_exclues": []
     }
+    
+def natural_sort_key(s):
+    # Découpe en séquences de chiffres et de lettres pour tri naturel
+    return [int(text) if text.isdigit() else text.lower() for text in re.split(r'(\d+)', s)]
 
 
-def find_matching_table_json(ocr_dir, filter_words, base_prefix):
-    """Retourne le JSON OCR d'un tableau contenant tous les mots clés, limité au bon préfixe"""
+def find_matching_tables_sorted(ocr_dir, base_prefix, filter_all=None, filter_any=None):
+    """
+    Retourne la liste triée de tuples (filename, data) des tableaux OCR 
+    contenant tous les mots de filter_all et/ou au moins un mot de filter_any.
+    """
+    matched = []
+
     for fname in os.listdir(ocr_dir):
         if not fname.endswith(".json"):
             continue
-        if "_p" in fname and "_tab" in fname and fname.startswith(base_prefix):
-            path = os.path.join(ocr_dir, fname)
-            data = load_ocr_json(path)
+        if "_p" not in fname or "_tab" not in fname:
+            continue
+        if not fname.startswith(base_prefix):
+            continue
 
-            all_text = " ".join(
-                w['text']
-                for page in data
-                for block in page.get('blocks', [])
-                for line in block.get('lines', [])
-                for w in line.get('words', [])
-            ).lower()
+        path = os.path.join(ocr_dir, fname)
+        data = load_ocr_json(path)
 
-            if all(word.lower() in all_text for word in filter_words):
-                print(f"📌 Fichier table retenu : {fname}")
-                return data
-    print("⚠️ Aucun tableau OCR ne contient tous les mots filtrés")
-    return None
+        full_text = " ".join(
+            w['text']
+            for page in data
+            for block in page.get('blocks', [])
+            for line in block.get('lines', [])
+            for w in line.get('words', [])
+        ).lower()
+
+        if filter_all and not all(word.lower() in full_text for word in filter_all):
+            continue
+        if filter_any and not any(word.lower() in full_text for word in filter_any):
+            continue
+
+        matched.append((fname, data))
+
+    if not matched:
+        print("⚠️ Aucun tableau OCR ne correspond aux filtres")
+        return []
+
+    # 🔤 Tri naturel (alphanumérique)
+    matched_sorted = sorted(matched, key=lambda x: natural_sort_key(x[0]))
+
+    print(f"✅ {len(matched_sorted)} tableau(x) retenu(s) après filtre et tri naturel.")
+    for fname, _ in matched_sorted:
+        print(f"  ➕ {fname}")
+
+    return matched_sorted
 
 def parse_document(ocr_json, yaml_config, ocr_json_path):
     output = {}
@@ -539,27 +566,43 @@ def parse_document(ocr_json, yaml_config, ocr_json_path):
     if transactions_conf:
         source = transactions_conf.get('source', 'document')
         if source == 'table':
-            filter_words = transactions_conf.get('filter_contains', [])
             base_prefix = os.path.splitext(os.path.basename(ocr_json_path))[0]
-            ocr_table_data = find_matching_table_json("data/ocr", filter_words, base_prefix)
-            if ocr_table_data:
+            ocr_table_data = find_matching_tables_sorted(
+                ocr_dir="data/ocr",
+                base_prefix=base_prefix,
+                filter_all=transactions_conf.get('filter_contains'),
+                filter_any=transactions_conf.get('filter_contains_any')
+            )
+
+            all_transactions = []
+            all_excluded = []
+            fichiers_tables = []
+
+            for fname, data in ocr_table_data:
+                print(f"📄 Analyse du tableau : {fname}")
                 table_words = []
-                for page in ocr_table_data:
+                for page in data:
                     for block in page.get('blocks', []):
                         for line in block.get('lines', []):
                             table_words.extend(line.get('words', []))
-                transactions_result = extract_transactions(table_words, transactions_conf, normalisation)
-                output['transactions'] = transactions_result.get("transactions", [])
-                output['lignes_exclues'] = transactions_result.get("lignes_exclues", [])
-            else:
-                output['transactions'] = []
+
+                result = extract_transactions(table_words, transactions_conf, normalisation)
+                all_transactions.extend(result.get("transactions", []))
+                all_excluded.extend(result.get("lignes_exclues", []))
+                fichiers_tables.append(fname)
+
+            output['transactions'] = all_transactions
+            output['lignes_exclues'] = all_excluded
+            output['fichiers_tables'] = fichiers_tables
+
         else:
-            transactions_result = extract_transactions(all_words, transactions_conf, normalisation)
-            output['transactions'] = transactions_result.get("transactions", [])
-            output['lignes_exclues'] = transactions_result.get("lignes_exclues", [])
+            result = extract_transactions(all_words, transactions_conf, normalisation)
+            output['transactions'] = result.get("transactions", [])
+            output['lignes_exclues'] = result.get("lignes_exclues", [])
     else:
         output['transactions'] = []
 
+    print(f"Total transaction extraires : {len(output['transactions'])}, Total transaction exclues : {len(output['lignes_exclues'])}")
     return output
 
 
