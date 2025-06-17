@@ -50,10 +50,14 @@ def lancer_parsing(ocr_json_path, yaml_path, output_path):
     ]
     subprocess.run(args, check=True)
 
+
 def main():
-    parser = argparse.ArgumentParser(description="Extraction de données depuis un PDF bancaire avec OCR et parsing YAML")
+    parser = argparse.ArgumentParser(
+        description="Extraction de données depuis un PDF bancaire avec OCR et parsing YAML"
+    )
     parser.add_argument("--pdf", required=True, help="Chemin vers le fichier PDF")
     parser.add_argument("--config", required=True, help="Fichier de configuration YAML")
+    parser.add_argument("--output", required=False, help="Chemin de sortie du fichier JSON")
     args = parser.parse_args()
 
     config = charger_config_yaml(args.config)
@@ -65,7 +69,6 @@ def main():
     preprocess_pdf_flag = config.get("preprocess_pdf", False)
     preprocess_tables_flag = config.get("preprocess_tables", False)
     crop_tables = config.get("crop_tables", False)
-
     preprocessing_params = config.get("preprocessing_params")
 
     ocr_pdf_config = config.get("ocr", {}).get("pdf", {})
@@ -77,7 +80,13 @@ def main():
     oem_tables = ocr_tables_config.get("oem", 3)
 
     print("🔍 Lancement de l'OCR sur le PDF complet...")
-    lancer_ocr(args.pdf, psm=psm_pdf, oem=oem_pdf, preprocess=preprocess_pdf_flag, preprocessing_params=preprocessing_params)
+    lancer_ocr(
+        args.pdf,
+        psm=psm_pdf,
+        oem=oem_pdf,
+        preprocess=preprocess_pdf_flag,
+        preprocessing_params=preprocessing_params
+    )
 
     if crop_tables:
         print("✂️ Découpage des tableaux...")
@@ -87,10 +96,19 @@ def main():
         print(f"📁 {len(tableaux)} tableau(x) trouvé(s)")
         for tab_path in tableaux:
             print(f"🔍 OCR sur le tableau : {tab_path}")
-            lancer_ocr(tab_path, psm=psm_tables, oem=oem_tables, preprocess=preprocess_tables_flag, preprocessing_params=preprocessing_params)
+            lancer_ocr(
+                tab_path,
+                psm=psm_tables,
+                oem=oem_tables,
+                preprocess=preprocess_tables_flag,
+                preprocessing_params=preprocessing_params
+            )
 
     ocr_json_principal = f"data/ocr/{nom_base}.json"
-    output_path = f"data/output/{nom_base}_structured.json"
+
+    # 🔄 Gère la sortie personnalisée si elle est spécifiée
+    output_path = args.output if args.output else f"data/output/{nom_base}_structured.json"
+
     print(f"🧬 Parsing des données OCR vers fichier structuré...")
     lancer_parsing(ocr_json_principal, args.config, output_path)
     print(f"✅ Extraction terminée → {output_path}")
