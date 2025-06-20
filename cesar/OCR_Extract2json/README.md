@@ -15,6 +15,8 @@ Le pipeline d'analyse suit cette séquence :
 
 ## Arborescence du projet
 
+app.py # lance l'interface web permetant d'utiliser toutes les fonctionalités du projet. 
+
 parsers/  
 `extract_data.py` # script maître : prétraitement, OCR, parsing
 
@@ -74,8 +76,13 @@ export TESSDATA_PREFIX=/opt/homebrew/share/tessdata/
 source ~/.bashrc 
 ```
 
-##  Utilisation des scripts
-
+##  Utilisation 
+### Utilisation de l'interface graphique
+Pour utiliser l'interface graphique de l'application dans le navigateur : 
+```bash 
+streamlit run app.py
+```
+Et une fênetre devrait s'ouvrir automatiquement dans le navigateur. 
 
 ### Utilisation rapide
 
