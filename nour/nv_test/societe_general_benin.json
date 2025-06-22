@@ -1,0 +1,464 @@
+{
+  "entete": [
+    "EXTRAIT DE COMPTE DU 01/01/2020  AU 29/12/2020",
+    "036520420101-51              30 Decembre  2020 a  07:29",
+    "01001 COTONOU AGENCE PRINCIPALE",
+    "SUMMA TURIZM YATIRIMCILIGI SUCCURSAL ILOT 1143 L IMMEUBLE CABINET SODEXCA QUARTIER AGONTINKON COTONOU COTONOU",
+    "FRANC CFA BCEAO",
+    "SUMMA TURIZM YATIRIMCIUGI                                     Page.: 1"
+  ],
+  "tableau": [
+    {
+      "Date": "",
+      "Libellé": "Solde au 01/01/2020",
+      "Date_val": "",
+      "Débit": "",
+      "Crédit": "161.136"
+    },
+    {
+      "Date": "14/01",
+      "Libellé": "VIRT FAV: PAN 5E1D90F44B08CB00",
+      "Date_val": "14/01",
+      "Débit": "48.350",
+      "Crédit": ""
+    },
+    {
+      "Date": "14/01",
+      "Libellé": "FRAIS/VIRMENT",
+      "Date_val": "14/01",
+      "Débit": "5.500",
+      "Crédit": ""
+    },
+    {
+      "Date": "31/01",
+      "Libellé": "FRAIS FIXE AU 31/01/20",
+      "Date_val": "31/01",
+      "Débit": "5.000",
+      "Crédit": ""
+    },
+    {
+      "Date": "31/01",
+      "Libellé": "TAXE FRAIS FIXE AU 31/01/20",
+      "Date_val": "31/01",
+      "Débit": "500",
+      "Crédit": ""
+    },
+    {
+      "Date": "31/01",
+      "Libellé": "COMMISSION DE CPTE AU 31/01/20",
+      "Date_val": "31/01",
+      "Débit": "7",
+      "Crédit": ""
+    },
+    {
+      "Date": "31/01",
+      "Libellé": "TAXE COMM. DE CPTE AU 31/01/20",
+      "Date_val": "31/01",
+      "Débit": "1",
+      "Crédit": ""
+    },
+    {
+      "Date": "11/02",
+      "Libellé": "VIRT DE:  /0100001260110256020",
+      "Date_val": "11/02",
+      "Débit": "",
+      "Crédit": "400.000"
+    },
+    {
+      "Date": "13/02",
+      "Libellé": "VIRT FAV: PAN 5E440DFBF73A1000",
+      "Date_val": "13/02",
+      "Débit": "328.505",
+      "Crédit": ""
+    },
+    {
+      "Date": "13/02",
+      "Libellé": "FRAIS/VIRMENT",
+      "Date_val": "13/02",
+      "Débit": "5.500",
+      "Crédit": ""
+    },
+    {
+      "Date": "28/02",
+      "Libellé": "FRAIS FIXE AU 29/02/20",
+      "Date_val": "29/02",
+      "Débit": "5.000",
+      "Crédit": ""
+    },
+    {
+      "Date": "28/02",
+      "Libellé": "TAXE FRAIS FIXE AU 29/02/20",
+      "Date_val": "29/02",
+      "Débit": "500",
+      "Crédit": ""
+    },
+    {
+      "Date": "28/02",
+      "Libellé": "COMMISSION DE CPTE AU 29/02/20",
+      "Date_val": "29/02",
+      "Débit": "42",
+      "Crédit": ""
+    },
+    {
+      "Date": "28/02",
+      "Libellé": "TAXE COMM. DE CPTE AU 29/02/20",
+      "Date_val": "29/02",
+      "Débit": "4",
+      "Crédit": ""
+    },
+    {
+      "Date": "09/03",
+      "Libellé": "VIRT DE:  /0100001260110256020",
+      "Date_val": "09/03",
+      "Débit": "",
+      "Crédit": "5.500.000"
+    },
+    {
+      "Date": "10/03",
+      "Libellé": "VIRT FAV: PANIER5E6751B9E69052",
+      "Date_val": "10/03",
+      "Débit": "5.287.726",
+      "Crédit": ""
+    },
+    {
+      "Date": "10/03",
+      "Libellé": "FRAIS/VIRMENT",
+      "Date_val": "10/03",
+      "Débit": "5.500",
+      "Crédit": ""
+    },
+    {
+      "Date": "31/03",
+      "Libellé": "FRAIS FIXE AU 31/03/20",
+      "Date_val": "31/03",
+      "Débit": "5.000",
+      "Crédit": ""
+    },
+    {
+      "Date": "31/03",
+      "Libellé": "COMMISSION DE CPTE AU 31/03/20",
+      "Date_val": "31/03",
+      "Débit": "662",
+      "Crédit": ""
+    },
+    {
+      "Date": "31/03",
+      "Libellé": "TAXE FRAIS FIXE AU 31/03/20",
+      "Date_val": "31/03",
+      "Débit": "500",
+      "Crédit": ""
+    },
+    {
+      "Date": "31/03",
+      "Libellé": "TAXE COMM. DE CPTE AU 31/03/20",
+      "Date_val": "31/03",
+      "Débit": "66",
+      "Crédit": ""
+    },
+    {
+      "Date": "06/04",
+      "Libellé": "VERSEMENT NECATI YILDIRIM/APPR",
+      "Date_val": "06/04",
+      "Débit": "",
+      "Crédit": "200.000"
+    },
+    {
+      "Date": "10/04",
+      "Libellé": "VIRT FAV: PANIER5E8F16D5E69052",
+      "Date_val": "10/04",
+      "Débit": "127.800",
+      "Crédit": ""
+    },
+    {
+      "Date": "10/04",
+      "Libellé": "FRAIS/VIRMENT",
+      "Date_val": "10/04",
+      "Débit": "5.500",
+      "Crédit": ""
+    },
+    {
+      "Date": "30/04",
+      "Libellé": "FRAIS FIXE AU 30/04/20",
+      "Date_val": "30/04",
+      "Débit": "5.000",
+      "Crédit": ""
+    },
+    {
+      "Date": "30/04",
+      "Libellé": "TAXE FRAIS FIXE AU 30/04/20",
+      "Date_val": "30/04",
+      "Débit": "500",
+      "Crédit": ""
+    },
+    {
+      "Date": "30/04",
+      "Libellé": "COMMISSION DE CPTE AU 30/04/20",
+      "Date_val": "30/04",
+      "Débit": "17",
+      "Crédit": ""
+    },
+    {
+      "Date": "30/04",
+      "Libellé": "TAXE COMM. DE CPTE AU 30/04/20",
+      "Date_val": "30/04",
+      "Débit": "2",
+      "Crédit": ""
+    },
+    {
+      "Date": "11/05",
+      "Libellé": "VIRT FAV: PAN 5EB910FDB856F700",
+      "Date_val": "11/05",
+      "Débit": "143.400",
+      "Crédit": ""
+    },
+    {
+      "Date": "29/05",
+      "Libellé": "FRAIS FIXE AU 31/05/20",
+      "Date_val": "31/05",
+      "Débit": "5.000",
+      "Crédit": ""
+    },
+    {
+      "Date": "29/05",
+      "Libellé": "TAXE FRAIS FIXE AU 31/05/20",
+      "Date_val": "31/05",
+      "Débit": "500",
+      "Crédit": ""
+    },
+    {
+      "Date": "29/05",
+      "Libellé": "COMMISSION DE CPTE AU 31/05/20",
+      "Date_val": "31/05",
+      "Débit": "18",
+      "Crédit": ""
+    },
+    {
+      "Date": "29/05",
+      "Libellé": "TAXE COMM. DE CPTE AU 31/05/20",
+      "Date_val": "31/05",
+      "Débit": "2",
+      "Crédit": ""
+    },
+    {
+      "Date": "09/06",
+      "Libellé": "VIRT FAV: PAN 5EDF51E6BD8A1000",
+      "Date_val": "09/06",
+      "Débit": "158.400",
+      "Crédit": ""
+    },
+    {
+      "Date": "30/06",
+      "Libellé": "FRAIS FIXE AU 30/06/20",
+      "Date_val": "30/06",
+      "Débit": "5.000",
+      "Crédit": ""
+    },
+    {
+      "Date": "30/06",
+      "Libellé": "TAXE FRAIS FIXE AU 30/06/20",
+      "Date_val": "30/06",
+      "Débit": "500",
+      "Crédit": ""
+    },
+    {
+      "Date": "30/06",
+      "Libellé": "COMMISSION DE CPTE AU 30/06/20",
+      "Date_val": "30/06",
+      "Débit": "20",
+      "Crédit": ""
+    },
+    {
+      "Date": "30/06",
+      "Libellé": "TAXE COMM. DE CPTE AU 30/06/20",
+      "Date_val": "30/06",
+      "Débit": "2",
+      "Crédit": ""
+    },
+    {
+      "Date": "06/07",
+      "Libellé": "VERSEMENT APPRO/ MECATI YILDRI",
+      "Date_val": "06/07",
+      "Débit": "",
+      "Crédit": "200.000"
+    },
+    {
+      "Date": "13/07",
+      "Libellé": "VIRT FAV: PANIER 5F087F7AB856F",
+      "Date_val": "13/07",
+      "Débit": "90.000",
+      "Crédit": ""
+    },
+    {
+      "Date": "30/07",
+      "Libellé": "FRAIS FIXE AU 31/07/20",
+      "Date_val": "31/07",
+      "Débit": "5.000",
+      "Crédit": ""
+    },
+    {
+      "Date": "30/07",
+      "Libellé": "TAXE FRAIS FIXE AU 31/07/20",
+      "Date_val": "31/07",
+      "Débit": "500",
+      "Crédit": ""
+    },
+    {
+      "Date": "30/07",
+      "Libellé": "COMMISSION DE CPTE AU 31/07/20",
+      "Date_val": "31/07",
+      "Débit": "11",
+      "Crédit": ""
+    },
+    {
+      "Date": "30/07",
+      "Libellé": "TAXE COMM. DE CPTE AU 31/07/20",
+      "Date_val": "31/07",
+      "Débit": "1",
+      "Crédit": ""
+    },
+    {
+      "Date": "11/08",
+      "Libellé": "VIRT FAV: PAN 5F3177CF37AE6300",
+      "Date_val": "11/08",
+      "Débit": "66.400",
+      "Crédit": ""
+    },
+    {
+      "Date": "31/08",
+      "Libellé": "FRAIS FIXE AU 31/08/20",
+      "Date_val": "31/08",
+      "Débit": "5.000",
+      "Crédit": ""
+    },
+    {
+      "Date": "31/08",
+      "Libellé": "TAXE FRAIS FIXE AU 31/08/20",
+      "Date_val": "31/08",
+      "Débit": "500",
+      "Crédit": ""
+    },
+    {
+      "Date": "31/08",
+      "Libellé": "COMMISSION DE CPTE AU 31/08/20",
+      "Date_val": "31/08",
+      "Débit": "8",
+      "Crédit": ""
+    },
+    {
+      "Date": "31/08",
+      "Libellé": "TAXE COMM. DE CPTE AU 31/08/20",
+      "Date_val": "31/08",
+      "Débit": "1",
+      "Crédit": ""
+    },
+    {
+      "Date": "30/09",
+      "Libellé": "FRAIS FIXE AU 30/09/20",
+      "Date_val": "30/09",
+      "Débit": "5.000",
+      "Crédit": ""
+    },
+    {
+      "Date": "30/09",
+      "Libellé": "TAXE FRAIS FIXE AU 30/09/20",
+      "Date_val": "30/09",
+      "Débit": "500",
+      "Crédit": ""
+    },
+    {
+      "Date": "12/10",
+      "Libellé": "VIRT FAV: PANIER 5F83F4AFBC8EA",
+      "Date_val": "12/10",
+      "Débit": "77.400",
+      "Crédit": ""
+    },
+    {
+      "Date": "30/10",
+      "Libellé": "FRAIS FIXE AU 31/10/20",
+      "Date_val": "31/10",
+      "Débit": "5.000",
+      "Crédit": ""
+    },
+    {
+      "Date": "30/10",
+      "Libellé": "TAXE FRAIS FIXE AU 31/10/20",
+      "Date_val": "31/10",
+      "Débit": "500",
+      "Crédit": ""
+    },
+    {
+      "Date": "30/10",
+      "Libellé": "COMMISSION DE CPTE AU 31/10/20",
+      "Date_val": "31/10",
+      "Débit": "10",
+      "Crédit": ""
+    },
+    {
+      "Date": "30/10",
+      "Libellé": "TAXE COMM. DE CPTE AU 31/10/20",
+      "Date_val": "31/10",
+      "Débit": "1",
+      "Crédit": ""
+    },
+    {
+      "Date": "10/11",
+      "Libellé": "VIRT FAV: PANIER 5FAA80DAB86FE",
+      "Date_val": "10/11",
+      "Débit": "66.400",
+      "Crédit": ""
+    },
+    {
+      "Date": "10/11",
+      "Libellé": "VERSEMENT APPRO/ ERDEM ALPER Y",
+      "Date_val": "10/11",
+      "Débit": "",
+      "Crédit": "150.000"
+    },
+    {
+      "Date": "30/11",
+      "Libellé": "FRAIS FIXE AU 30/11/20",
+      "Date_val": "30/11",
+      "Débit": "5.000",
+      "Crédit": ""
+    },
+    {
+      "Date": "30/11",
+      "Libellé": "TAXE FRAIS FIXE AU 30/11/20",
+      "Date_val": "30/11",
+      "Débit": "500",
+      "Crédit": ""
+    },
+    {
+      "Date": "30/11",
+      "Libellé": "COMMISSION DE CPTE AU 30/11/20",
+      "Date_val": "30/11",
+      "Débit": "8",
+      "Crédit": ""
+    },
+    {
+      "Date": "30/11",
+      "Libellé": "TAXE COMM. DE CPTE AU 30/11/20",
+      "Date_val": "30/11",
+      "Débit": "1",
+      "Crédit": ""
+    },
+    {
+      "Date": "09/12",
+      "Libellé": "VIRT FAV: PANIER5FD0A779F921CE",
+      "Date_val": "09/12",
+      "Débit": "128.900",
+      "Crédit": ""
+    }
+  ],
+  "totaux": [
+    {
+      "Type": "Total general mouvement",
+      "Debit": "6.606.665",
+      "Credit": "6.450.000"
+    },
+    {
+      "Type": "Solde au 29/12/2020",
+      "Credit": "4.471"
+    }
+  ]
+}
