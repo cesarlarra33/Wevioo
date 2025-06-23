@@ -74,7 +74,7 @@ def construire_config_preprocessing():
     }
 
     config["background_cleaning"] = {
-        "enabled": st.checkbox("Nettoyage du fond", value=True),
+        "enabled": st.checkbox("Nettoyage du fond (tout pixel donc plus de x% du voisinnage est de la même teinte est mis à blanc):", value=True),
         "taille_voisinage": st.select_slider("Voisinage", options=impairs_1_20, value=5),
         "tol": st.slider("Tolérance", 0, 50, 15),
         "pourcentage_similaire": st.slider("% similaire", 0.0, 1.0, 0.35)
@@ -85,7 +85,7 @@ def construire_config_preprocessing():
     }
 
     config["binarization"] = {
-        "enabled": st.checkbox("Binarisation", value=True),
+        "enabled": st.checkbox("Binarisation : convertit le pdf en niveaux de gris", value=True),
         "block_size": st.select_slider("Taille de bloc", options=impairs_1_15, value=5),
         "C": st.slider("Constante C", -1, 5, 2)
     }
@@ -135,16 +135,18 @@ with col_centre:
                     with open(output_json, "r", encoding="utf-8") as f:
                         st.session_state["json_output"] = json.load(f)
 
-                    # ✅ Affichage JSON uniquement ici
-                    with st.expander("📦 Résultat JSON structuré", expanded=True):
-                        st.json(st.session_state["json_output"])
-
                     if os.path.exists(vis_path):
                         st.session_state["annot_images"] = convertir_pdf_en_images(vis_path, nom_base + "_annot")
 
                 except subprocess.CalledProcessError as e:
                     st.error("Erreur pendant l'exécution du parsing OCR")
                     st.text(str(e))
+
+            # ✅ Affichage du JSON en dehors du bouton, persistant entre reruns
+            if "json_output" in st.session_state:
+                with st.expander("📦 Résultat JSON structuré", expanded=True):
+                    st.json(st.session_state["json_output"])
+
 
 
         elif mode == "Preprocessing":
