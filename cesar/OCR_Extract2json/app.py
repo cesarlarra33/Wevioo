@@ -74,7 +74,7 @@ def construire_config_preprocessing():
     }
 
     config["background_cleaning"] = {
-        "enabled": st.checkbox("Nettoyage du fond (tout pixel donc plus de x% du voisinnage est de la même teinte est mis à blanc):", value=True),
+        "enabled": st.checkbox("Nettoyage du fond (tout pixel dont plus de x% du voisinnage est de la même teinte est mis à blanc):", value=True),
         "taille_voisinage": st.select_slider("Voisinage", options=impairs_1_20, value=5),
         "tol": st.slider("Tolérance", 0, 50, 15),
         "pourcentage_similaire": st.slider("% similaire", 0.0, 1.0, 0.35)
