@@ -116,9 +116,37 @@ with col_centre:
         st.session_state["current_mode"] = mode
 
         if mode == "Analyse OCR":
+            
+            from parsers.bank_detector import detect_bank_name
+
             config_dir = "configs"
             available_configs = [f for f in os.listdir(config_dir) if f.endswith(".yaml")]
-            selected_config = st.selectbox("⚙️ Choisir un fichier de configuration", available_configs)
+
+            choix_manuel = st.checkbox("🔧 Choisir manuellement le fichier de configuration")
+            selected_config = None
+
+            if choix_manuel:
+                selected_config = st.selectbox("⚙️ Fichier de configuration YAML", available_configs)
+            else:
+                with st.spinner("🔍 Détection automatique de la banque..."):
+                    banque_detectee = detect_bank_name(pdf_path)
+                    if banque_detectee == "inconnu":
+                        st.warning("🚫 Banque non détectée automatiquement. Veuillez choisir manuellement.")
+                        selected_config = st.selectbox("⚙️ Fichier de configuration YAML", available_configs)
+                        
+                    
+                    if banque_detectee == "uba":
+                        st.warning("⚠️ Il existe 2 fichiers de configs différents pour UBA. Veuillez choisir manuellement.")
+                        selected_config = st.selectbox("⚙️ Fichier de configuration YAML", available_configs)
+                    else:
+                        fichier_auto = f"{banque_detectee}.releve.yaml"
+                        if fichier_auto in available_configs:
+                            selected_config = fichier_auto
+                            st.success(f"✅ Banque détectée : **{banque_detectee.upper()}** — Fichier de config sélectionné automatiquement : `{fichier_auto}`")
+                        elif banque_detectee != "inconnu":
+                            st.warning(f"🔍 Banque détectée : **{banque_detectee}**, mais fichier de config `{fichier_auto}` introuvable.")
+                            selected_config = st.selectbox("⚙️ Choisir manuellement un fichier YAML", available_configs)
+
 
             if st.button("🚀 Lancer l'analyse OCR"):
                 output_json = os.path.join(TEMP_DIR, f"{nom_base}_output.json")
