@@ -6,7 +6,7 @@ import os
 from test_2 import detecter_nom_banque_par_image
 
 # Configuration des banques
-BANK_CONFIGS = {
+BANK_CONFIGS = { 
     "nsia": {
         "name": "NSIA Banque",
         "table_separator": None,
@@ -320,6 +320,7 @@ def process_pdf(file_path, debug=False):
             cleaned_sgbe_data = clean_empty_dicts(sgbe_data)
             
             # Écriture directe du fichier uniquement avec les données traitées
+            """
             try:
                 output_filename = "societe_general_benin.json"
                 with open(output_filename, "w", encoding="utf-8") as f:
@@ -327,7 +328,7 @@ def process_pdf(file_path, debug=False):
                 
                 print(f"Fichier structuré '{output_filename}' généré avec les données traitées (dictionnaires vides supprimés).")
             except Exception as e:
-                print(f"Erreur lors de l'écriture du fichier {output_filename} : {e}")
+                print(f"Erreur lors de l'écriture du fichier {output_filename} : {e}")"""
             
             return cleaned_sgbe_data
 
@@ -343,13 +344,14 @@ def process_pdf(file_path, debug=False):
             
         # Écriture dans un fichier JSON général
         output_filename = f"{bank_config['name'].replace(' ', '_').lower()}.json"
+        """
         try:
             with open(output_filename, "w", encoding="utf-8") as f:
                 json.dump(cleaned_extracted_data, f, indent=2, ensure_ascii=False)
                 
             print(f"Fichier '{output_filename}' généré (dictionnaires vides supprimés).")
         except Exception as e:
-            print(f"Erreur lors de l'écriture du fichier {output_filename} : {e}")
+            print(f"Erreur lors de l'écriture du fichier {output_filename} : {e}")"""
             
         return cleaned_extracted_data
         
