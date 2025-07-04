@@ -208,13 +208,16 @@ def extract_transactions(pdf_path):
                         tableau.append(transaction)
 
 
-
-def main(pdf_path):
+def main(pdf_path=None):  # CHANGEMENT: Accepter un paramètre optionnel
     """Fonction principale"""
     global text_tableau, tableau
     text_tableau = []
     tableau = []
 
+    # CHANGEMENT: Utiliser le paramètre fourni ou le chemin par défaut
+    if pdf_path is None:
+        pdf_path = "pdfs/coris.pdf"  # Chemin par défaut pour la compatibilité
+    
     try:
         extract_header_data(pdf_path)
         extract_transactions(pdf_path)
@@ -236,9 +239,6 @@ def main(pdf_path):
         raise FileNotFoundError(f"Fichier introuvable : {pdf_path}")
     except Exception as e:
         raise Exception(f"Erreur lors de l'extraction : {e}")
-
-   
-
 
 if __name__ == "__main__":
     main()
