@@ -74,7 +74,7 @@ def construire_config_preprocessing():
     }
 
     config["background_cleaning"] = {
-        "enabled": st.checkbox("Nettoyage du fond", value=True),
+        "enabled": st.checkbox("Nettoyage du fond (tout pixel dont plus de x% du voisinnage est de la même teinte est mis à blanc):", value=True),
         "taille_voisinage": st.select_slider("Voisinage", options=impairs_1_20, value=5),
         "tol": st.slider("Tolérance", 0, 50, 15),
         "pourcentage_similaire": st.slider("% similaire", 0.0, 1.0, 0.35)
@@ -85,7 +85,7 @@ def construire_config_preprocessing():
     }
 
     config["binarization"] = {
-        "enabled": st.checkbox("Binarisation", value=True),
+        "enabled": st.checkbox("Binarisation : convertit le pdf en niveaux de gris", value=True),
         "block_size": st.select_slider("Taille de bloc", options=impairs_1_15, value=5),
         "C": st.slider("Constante C", -1, 5, 2)
     }
@@ -116,9 +116,37 @@ with col_centre:
         st.session_state["current_mode"] = mode
 
         if mode == "Analyse OCR":
+            
+            from parsers.bank_detector import detect_bank_name
+
             config_dir = "configs"
             available_configs = [f for f in os.listdir(config_dir) if f.endswith(".yaml")]
-            selected_config = st.selectbox("⚙️ Choisir un fichier de configuration", available_configs)
+
+            choix_manuel = st.checkbox("🔧 Choisir manuellement le fichier de configuration")
+            selected_config = None
+
+            if choix_manuel:
+                selected_config = st.selectbox("⚙️ Fichier de configuration YAML", available_configs)
+            else:
+                with st.spinner("🔍 Détection automatique de la banque..."):
+                    banque_detectee = detect_bank_name(pdf_path)
+                    if banque_detectee == "inconnu":
+                        st.warning("🚫 Banque non détectée automatiquement. Veuillez choisir manuellement.")
+                        selected_config = st.selectbox("⚙️ Fichier de configuration YAML", available_configs)
+                        
+                    
+                    if banque_detectee == "uba":
+                        st.warning("⚠️ Il existe 2 fichiers de configs différents pour UBA. Veuillez choisir manuellement.")
+                        selected_config = st.selectbox("⚙️ Fichier de configuration YAML", available_configs)
+                    else:
+                        fichier_auto = f"{banque_detectee}.releve.yaml"
+                        if fichier_auto in available_configs:
+                            selected_config = fichier_auto
+                            st.success(f"✅ Banque détectée : **{banque_detectee.upper()}** — Fichier de config sélectionné automatiquement : `{fichier_auto}`")
+                        elif banque_detectee != "inconnu":
+                            st.warning(f"🔍 Banque détectée : **{banque_detectee}**, mais fichier de config `{fichier_auto}` introuvable.")
+                            selected_config = st.selectbox("⚙️ Choisir manuellement un fichier YAML", available_configs)
+
 
             if st.button("🚀 Lancer l'analyse OCR"):
                 output_json = os.path.join(TEMP_DIR, f"{nom_base}_output.json")
@@ -135,16 +163,18 @@ with col_centre:
                     with open(output_json, "r", encoding="utf-8") as f:
                         st.session_state["json_output"] = json.load(f)
 
-                    # ✅ Affichage JSON uniquement ici
-                    with st.expander("📦 Résultat JSON structuré", expanded=True):
-                        st.json(st.session_state["json_output"])
-
                     if os.path.exists(vis_path):
                         st.session_state["annot_images"] = convertir_pdf_en_images(vis_path, nom_base + "_annot")
 
                 except subprocess.CalledProcessError as e:
                     st.error("Erreur pendant l'exécution du parsing OCR")
                     st.text(str(e))
+
+            # ✅ Affichage du JSON en dehors du bouton, persistant entre reruns
+            if "json_output" in st.session_state:
+                with st.expander("📦 Résultat JSON structuré", expanded=True):
+                    st.json(st.session_state["json_output"])
+
 
 
         elif mode == "Preprocessing":
